@@ -26,29 +26,46 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Scroll Animation for Navbar
-    let isScrolled = false;
+    // Progressive Scroll Animation for Navbar
+    const scrollThreshold = 200; // Distance to complete animation
 
     window.addEventListener('scroll', () => {
         const scrollY = window.pageYOffset;
+        const progress = Math.min(scrollY / scrollThreshold, 1); // 0 to 1
 
-        if (scrollY > 100 && !isScrolled) {
-            nav.classList.add('scrolled');
-            isScrolled = true;
-        } else if (scrollY <= 100 && isScrolled) {
-            nav.classList.remove('scrolled');
-            isScrolled = false;
+        // Calculate logo movement distance (from left to right, but stay on screen)
+        // Move from 0 to approximately 80% of viewport width
+        const maxDistance = window.innerWidth * 0.80; // Logo moves to ~80% of screen width
+        const currentDistance = progress * maxDistance;
+
+        // Apply smooth transform
+        logoContainer.style.transform = `translateX(${currentDistance}px)`;
+
+        // Fade out nav links progressively
+        navLinks.style.opacity = 1 - progress;
+        if (progress > 0.5) {
+            navLinks.style.visibility = 'hidden';
+        } else {
+            navLinks.style.visibility = 'visible';
         }
+
+        // Fade navbar background
+        const bgOpacity = 0.7 - (progress * 0.7); // From 0.7 to 0.0 (fully transparent)
+        nav.style.background = `rgba(5, 5, 5, ${bgOpacity})`;
+        nav.style.backdropFilter = `blur(${10 - (progress * 10)}px)`; // 10px to 0px
+        nav.style.borderBottom = progress > 0.5 ? '1px solid transparent' : '1px solid rgba(255, 255, 255, 0.1)';
+
+        // Shrink logo slightly
+        const logoHeight = 50 - (progress * 10); // 50px to 40px
+        document.querySelector('.nav-logo').style.height = `${logoHeight}px`;
     });
 
-    // Logo Click to Scroll Top (when scrolled)
+    // Logo Click to Scroll Top
     logoContainer.addEventListener('click', () => {
-        if (isScrolled) {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        }
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
     });
 
     // Scroll Animations using Intersection Observer
