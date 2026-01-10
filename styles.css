@@ -20,6 +20,8 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 body {
@@ -99,6 +101,7 @@ a {
 .highlight {
     background: var(--gradient-main);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -184,26 +187,29 @@ a {
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 0 1rem;
+    padding: 0 5%;
+    /* Increased side padding for mobile */
     padding-top: 80px;
     /* Offset for fixed nav */
 }
 
 .hero-subtitle {
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 2vw, 1.5rem);
     color: var(--text-secondary);
     margin-bottom: 2.5rem;
-    max-width: 600px;
+    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
+    line-height: 1.6;
 }
 
 .glitch {
-    font-size: 3.5rem;
+    font-size: clamp(3rem, 8vw, 5rem);
     margin-bottom: 1rem;
     position: relative;
     color: var(--text-primary);
-    line-height: 1.2;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
 }
 
 /* Buttons */
@@ -281,7 +287,7 @@ a {
 /* About Grid */
 .about-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
 }
 
@@ -294,6 +300,7 @@ a {
     margin-bottom: 1.5rem;
     background: var(--gradient-main);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -309,7 +316,7 @@ a {
 /* Projects Grid */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2.5rem;
 }
 
@@ -535,8 +542,82 @@ footer {
     visibility: visible;
 }
 
-.toast i {
-    font-size: 1.5rem;
-    color: var(--accent-purple);
-    text-shadow: 0 0 10px var(--accent-purple);
+/* Scroll Progress Bar */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: var(--gradient-main);
+    z-index: 1001;
+    box-shadow: 0 0 10px var(--accent-purple);
+    transition: width 0.1s linear;
+}
+
+/* Typewriter Effect */
+/* Typewriter Effect (Desktop Only) */
+@media (min-width: 769px) {
+    .typing-text {
+        border-right: 2px solid var(--accent-cyan);
+        white-space: nowrap;
+        overflow: hidden;
+        animation: typing 4s steps(60, end), blink-caret 0.75s step-end infinite;
+        display: inline-block;
+        max-width: 100%;
+    }
+}
+
+/* Mobile Subtitle Fade In */
+@media (max-width: 768px) {
+    .typing-text {
+        border: none;
+        white-space: normal;
+        overflow: visible;
+        width: auto;
+        opacity: 0;
+        animation: fadeInUpText 1s ease-out forwards;
+        animation-delay: 0.5s;
+    }
+
+    @keyframes fadeInUpText {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: var(--accent-cyan)
+    }
+}
+
+/* 3D Tilt Prerequisite */
+.glass-card {
+    transition: transform 0.1s ease, box-shadow 0.3s ease;
+    transform-style: preserve-3d;
+    perspective: 1000px;
 }

@@ -100,4 +100,40 @@ document.addEventListener('DOMContentLoaded', () => {
             toast.classList.remove('show');
         }, 3000);
     }
+
+    // Scroll Progress Bar
+    const progressBar = document.querySelector('.scroll-progress');
+    window.addEventListener('scroll', () => {
+        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (winScroll / height) * 100;
+        if (progressBar) {
+            progressBar.style.width = scrolled + "%";
+        }
+    });
+
+    // 3D Tilt Effect for Cards
+    const cards = document.querySelectorAll('.glass-card');
+
+    cards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            // Calculate rotation based on cursor position
+            const xRotation = -((y - rect.height / 2) / 20); // Rotate X axis
+            const yRotation = (x - rect.width / 2) / 20;   // Rotate Y axis
+
+            // Apply transform
+            card.style.transform = `perspective(1000px) scale(1.02) rotateX(${xRotation}deg) rotateY(${yRotation}deg)`;
+            card.style.boxShadow = `0 20px 40px rgba(0,0,0,0.4), 0 0 20px rgba(139, 92, 246, 0.2)`;
+        });
+
+        card.addEventListener('mouseleave', () => {
+            // Reset position
+            card.style.transform = 'perspective(1000px) scale(1) rotateX(0) rotateY(0)';
+            card.style.boxShadow = 'none';
+        });
+    });
 });
