@@ -115,12 +115,17 @@ a {
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--card-border);
     z-index: 1000;
-    transition: background 0.3s ease, backdrop-filter 0.3s ease, border-bottom 0.3s ease;
+    transition: padding 0.3s ease, background 0.3s ease;
+}
+
+/* Scrolled state */
+.glass-nav.scrolled {
+    padding: 1rem 5%;
+    background: rgba(5, 5, 5, 0.9);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .logo-container {
-    transition: none;
-    /* Will be controlled by JS for smooth scroll */
     cursor: pointer;
 }
 
@@ -129,12 +134,14 @@ a {
     transition: height 0.3s ease;
 }
 
+.glass-nav.scrolled .nav-logo {
+    height: 40px;
+}
+
 .nav-links {
     display: flex;
     gap: 3rem;
     list-style: none;
-    transition: none;
-    /* Will be controlled by JS */
 }
 
 .nav-links a {

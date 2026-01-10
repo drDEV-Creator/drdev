@@ -26,46 +26,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Progressive Scroll Animation for Navbar
-    const scrollThreshold = 200; // Distance to complete animation
-
+    // Simple Scroll Animation (Shrink Header)
     window.addEventListener('scroll', () => {
-        const scrollY = window.pageYOffset;
-        const progress = Math.min(scrollY / scrollThreshold, 1); // 0 to 1
-
-        // Calculate logo movement distance (from left to right, but stay on screen)
-        // Move from 0 to approximately 80% of viewport width
-        const maxDistance = window.innerWidth * 0.80; // Logo moves to ~80% of screen width
-        const currentDistance = progress * maxDistance;
-
-        // Apply smooth transform
-        logoContainer.style.transform = `translateX(${currentDistance}px)`;
-
-        // Fade out nav links progressively
-        navLinks.style.opacity = 1 - progress;
-        if (progress > 0.5) {
-            navLinks.style.visibility = 'hidden';
+        if (window.scrollY > 50) {
+            nav.classList.add('scrolled');
         } else {
-            navLinks.style.visibility = 'visible';
+            nav.classList.remove('scrolled');
         }
-
-        // Fade navbar background
-        const bgOpacity = 0.7 - (progress * 0.7); // From 0.7 to 0.0 (fully transparent)
-        nav.style.background = `rgba(5, 5, 5, ${bgOpacity})`;
-        nav.style.backdropFilter = `blur(${10 - (progress * 10)}px)`; // 10px to 0px
-        nav.style.borderBottom = progress > 0.5 ? '1px solid transparent' : '1px solid rgba(255, 255, 255, 0.1)';
-
-        // Shrink logo slightly
-        const logoHeight = 50 - (progress * 10); // 50px to 40px
-        document.querySelector('.nav-logo').style.height = `${logoHeight}px`;
-    });
-
-    // Logo Click to Scroll Top
-    logoContainer.addEventListener('click', () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
     });
 
     // Scroll Animations using Intersection Observer
