@@ -2,6 +2,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Navigation Toggle for Mobile
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
+    const nav = document.querySelector('.glass-nav');
+    const logoContainer = document.querySelector('.logo-container');
 
     hamburger.addEventListener('click', () => {
         navLinks.classList.toggle('active');
@@ -22,6 +24,31 @@ document.addEventListener('DOMContentLoaded', () => {
             hamburger.querySelector('i').classList.remove('fa-times');
             hamburger.querySelector('i').classList.add('fa-bars');
         });
+    });
+
+    // Scroll Animation for Navbar
+    let isScrolled = false;
+
+    window.addEventListener('scroll', () => {
+        const scrollY = window.pageYOffset;
+
+        if (scrollY > 100 && !isScrolled) {
+            nav.classList.add('scrolled');
+            isScrolled = true;
+        } else if (scrollY <= 100 && isScrolled) {
+            nav.classList.remove('scrolled');
+            isScrolled = false;
+        }
+    });
+
+    // Logo Click to Scroll Top (when scrolled)
+    logoContainer.addEventListener('click', () => {
+        if (isScrolled) {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
     });
 
     // Scroll Animations using Intersection Observer
