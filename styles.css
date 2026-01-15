@@ -1,15 +1,19 @@
 /* CSS Variables & Reset */
 :root {
-    --bg-color: #050505;
-    --card-bg: rgba(255, 255, 255, 0.03);
-    --card-border: rgba(255, 255, 255, 0.1);
+    --bg-color: #02040a;
+    --card-bg: rgba(255, 255, 255, 0.02);
+    --card-border: rgba(0, 240, 255, 0.15);
     --text-primary: #ffffff;
-    --text-secondary: #a0a0a0;
-    --accent-cyan: #00f3ff;
-    --accent-purple: #bd00ff;
-    --gradient-main: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+    --text-secondary: #b0c4de;
+    --accent-cyan: #00f0ff;
+    --accent-blue: #0066ff;
+    --accent-holo: #e0f7fa;
+    --gradient-main: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
+    --gradient-holo: linear-gradient(45deg, rgba(0, 240, 255, 0.1), rgba(0, 102, 255, 0.1), rgba(224, 247, 250, 0.1));
     --font-heading: 'Outfit', sans-serif;
     --font-body: 'Inter', sans-serif;
+    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    --glass-blur: blur(16px);
 }
 
 * {
@@ -56,10 +60,11 @@ body {
 .orb-1 {
     width: 400px;
     height: 400px;
-    background: var(--accent-purple);
+    background: var(--accent-blue);
     top: -100px;
     left: -100px;
     animation: floating 10s infinite ease-in-out;
+    opacity: 0.5;
 }
 
 .orb-2 {
@@ -69,6 +74,20 @@ body {
     bottom: -50px;
     right: -50px;
     animation: floating 12s infinite ease-in-out reverse;
+    opacity: 0.5;
+}
+
+.orb-3 {
+    position: fixed;
+    width: 250px;
+    height: 250px;
+    background: #e0f7fa;
+    top: 40%;
+    left: 40%;
+    filter: blur(100px);
+    opacity: 0.3;
+    z-index: -1;
+    animation: floating 15s infinite ease-in-out 2s;
 }
 
 @keyframes floating {
@@ -115,9 +134,10 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(5, 5, 5, 0.7);
-    backdrop-filter: blur(10px);
+    background: rgba(2, 4, 10, 0.6);
+    backdrop-filter: var(--glass-blur);
     border-bottom: 1px solid var(--card-border);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     transition: padding 0.3s ease, background 0.3s ease;
 }
@@ -233,8 +253,9 @@ a {
 
 .btn-primary {
     background: var(--gradient-main);
-    color: #fff;
-    box-shadow: 0 0 20px rgba(0, 243, 255, 0.4);
+    color: #000;
+    font-weight: 700;
+    box-shadow: 0 0 20px rgba(0, 240, 255, 0.3);
 }
 
 .btn-primary:hover {
@@ -272,17 +293,19 @@ a {
 .glass-card {
     background: var(--card-bg);
     border: 1px solid var(--card-border);
-    backdrop-filter: blur(10px);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
     border-radius: 16px;
     padding: 2rem;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
 .glass-card:hover {
     background: rgba(255, 255, 255, 0.05);
-    border-color: rgba(255, 255, 255, 0.2);
+    border-color: var(--accent-cyan);
     transform: translateY(-5px);
-    box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 20px rgba(0, 240, 255, 0.1), inset 0 0 20px rgba(0, 240, 255, 0.05);
 }
 
 /* About Grid */
