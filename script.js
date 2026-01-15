@@ -94,12 +94,22 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    function showToast() {
+    function showToast(message = 'Email Copied to Clipboard!') {
+        toast.innerHTML = `${message} <i class="fas fa-info-circle"></i>`;
         toast.classList.add('show');
         setTimeout(() => {
             toast.classList.remove('show');
         }, 3000);
     }
+
+    // Handle "coming soon" links
+    const comingSoonLinks = document.querySelectorAll('.coming-soon');
+    comingSoonLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            showToast('Updating soon...');
+        });
+    });
 
     // Scroll Progress Bar
     const progressBar = document.querySelector('.scroll-progress');
