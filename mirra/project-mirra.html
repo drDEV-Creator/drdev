@@ -277,7 +277,7 @@
             text-align: center;
             min-height: 100vh;
             justify-content: center;
-            padding-top: 80px;
+            padding-top: 120px;
             position: relative;
             overflow: hidden;
             /* Ensure grid doesn't spill */
@@ -649,20 +649,22 @@
                 margin: 10px 0 !important;
             }
 
-            /* Fix hero section on mobile */
+            /* Fix hero section on mobile - disable vertical centering */
             .hero-section {
-                padding-top: 120px !important;
+                padding-top: 100px !important;
                 min-height: 100vh;
+                align-items: flex-start !important;
+                justify-content: flex-start !important;
             }
 
-            .hero-content img {
-                margin-top: 10px !important;
+            .mirra-logo {
+                margin-top: 20px !important;
             }
 
             /* Show scroll indicator on mobile */
             .scroll-indicator {
-                margin-top: 40px !important;
-                margin-bottom: 20px;
+                margin-top: 30px !important;
+                margin-bottom: 30px;
             }
         }
     </style>
@@ -692,8 +694,8 @@
     <section class="hero-section">
         <div class="hero-grid"></div>
         <div class="container hero-content">
-            <img src="./SiteFile/App.png" alt="Mirra Logo"
-                style="width: 120px; margin-top: 40px; margin-bottom: 20px; filter: drop-shadow(0 0 40px rgba(0,243,255,0.4));">
+            <img src="./SiteFile/App.png" alt="Mirra Logo" class="mirra-logo"
+                style="width: 120px; margin-bottom: 20px; filter: drop-shadow(0 0 40px rgba(0,243,255,0.4));">
 
             <h1 class="hero-title">Mirra</h1>
             <h3 class="hero-subtitle">One Action, Two Browsers. Zero Lag.</h3>
@@ -1043,6 +1045,36 @@
 
         // Simple Intersection Observer for scroll animations
         document.addEventListener('DOMContentLoaded', () => {
+            // Hamburger Menu Toggle
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+
+            if (hamburger && navLinks) {
+                hamburger.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                    const icon = hamburger.querySelector('i');
+                    if (navLinks.classList.contains('active')) {
+                        icon.classList.remove('fa-bars');
+                        icon.classList.add('fa-times');
+                    } else {
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
+                });
+
+                // Close menu when a link is clicked
+                document.querySelectorAll('.nav-links a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        navLinks.classList.remove('active');
+                        const icon = hamburger.querySelector('i');
+                        if (icon) {
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        }
+                    });
+                });
+            }
+
             const observerOptions = {
                 root: null,
                 rootMargin: '0px',
