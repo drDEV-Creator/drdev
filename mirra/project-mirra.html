@@ -648,6 +648,22 @@
                 /* Point down */
                 margin: 10px 0 !important;
             }
+
+            /* Fix hero section on mobile */
+            .hero-section {
+                padding-top: 100px !important;
+                min-height: 100vh;
+            }
+
+            .hero-content img {
+                margin-top: 20px !important;
+            }
+
+            /* Show scroll indicator on mobile */
+            .scroll-indicator {
+                margin-top: 40px !important;
+                margin-bottom: 20px;
+            }
         }
     </style>
 </head>
@@ -699,7 +715,7 @@
                     class="btn-primary">Download Alpha</a>
             </div>
 
-            <div style="margin-top: 80px; opacity: 0.5; animation: bounce 2s infinite;">
+            <div class="scroll-indicator" style="margin-top: 40px; opacity: 0.5; animation: bounce 2s infinite;">
                 <p style="margin-bottom: 5px; font-size: 0.8rem; letter-spacing: 2px;">SCROLL TO EXPLORE</p>
                 <div style="color: var(--mirra-purple); font-size: 1.5rem;">⌄</div>
             </div>
