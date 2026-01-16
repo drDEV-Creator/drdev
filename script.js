@@ -172,9 +172,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Attach to ALL buttons (excluding coming-soon)
-    const allButtons = document.querySelectorAll('.btn, .btn-primary, .btn-secondary, .btn-link:not(.coming-soon), .btn-large');
-    allButtons.forEach(btn => {
+    // Attach to ALL clickable elements (a, button)
+    const allClickables = document.querySelectorAll('a, button');
+    allClickables.forEach(btn => {
         btn.addEventListener('click', (e) => {
             // Use click event coordinates for accurate position
             const x = e.clientX;
