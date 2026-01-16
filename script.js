@@ -184,13 +184,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
             createStarBurst(x, y);
 
-            // Check if it's a link that should navigate
+            // Check if it's a link that should navigate (not internal anchor)
             const href = btn.getAttribute('href');
-            if (href && href !== '#' && !btn.classList.contains('coming-soon')) {
+            if (href && href !== '#' && !href.startsWith('#') && !btn.classList.contains('coming-soon')) {
                 e.preventDefault();
+
+                // Trigger page transition overlay
+                const overlay = document.querySelector('.page-transition-overlay');
+                if (overlay) {
+                    overlay.classList.add('active');
+                }
+
                 setTimeout(() => {
                     window.location.href = href;
-                }, 400);
+                }, 500);
             }
         });
     });
