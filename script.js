@@ -172,22 +172,24 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Attach to non-coming-soon .btn-link elements
-    const viewProjectLinks = document.querySelectorAll('.btn-link:not(.coming-soon)');
-    viewProjectLinks.forEach(link => {
-        link.addEventListener('click', (e) => {
-            e.preventDefault();
-            const rect = link.getBoundingClientRect();
-            const x = rect.left + rect.width / 2;
-            const y = rect.top + rect.height / 2;
+    // Attach to ALL buttons (excluding coming-soon)
+    const allButtons = document.querySelectorAll('.btn, .btn-primary, .btn-secondary, .btn-link:not(.coming-soon), .btn-large');
+    allButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            // Use click event coordinates for accurate position
+            const x = e.clientX;
+            const y = e.clientY;
 
             createStarBurst(x, y);
 
-            // Navigate after animation
-            const href = link.getAttribute('href');
-            setTimeout(() => {
-                window.location.href = href;
-            }, 400);
+            // Check if it's a link that should navigate
+            const href = btn.getAttribute('href');
+            if (href && href !== '#' && !btn.classList.contains('coming-soon')) {
+                e.preventDefault();
+                setTimeout(() => {
+                    window.location.href = href;
+                }, 400);
+            }
         });
     });
 });
