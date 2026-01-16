@@ -308,10 +308,9 @@ a {
 
 .glass-card:hover {
     background: rgba(255, 255, 255, 0.05);
-    border-color: var(--accent-cyan);
     transform: translateY(-5px);
-    /* Add a 1px solid shadow to simulate 2px border without layout shift, plus stronger glow */
-    box-shadow: 0 0 0 1px var(--accent-cyan), 0 0 30px rgba(0, 240, 255, 0.2), inset 0 0 20px rgba(0, 240, 255, 0.05);
+    /* Pure glow effect without border */
+    box-shadow: 0 8px 40px rgba(0, 240, 255, 0.25), 0 0 60px rgba(0, 240, 255, 0.15), inset 0 0 30px rgba(0, 240, 255, 0.05);
 }
 
 /* About Grid */
