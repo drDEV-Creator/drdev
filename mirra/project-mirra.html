@@ -671,6 +671,17 @@
 </head>
 
 <body>
+    <div class="scroll-progress"></div>
+    <style>
+        /* Override default scroll progress for Mirra Page */
+        .scroll-progress {
+            background: var(--mirra-blue);
+            box-shadow: 0 0 15px var(--mirra-blue), 0 0 30px var(--mirra-blue);
+            height: 4px;
+            /* Slightly thicker for holographic feel */
+            z-index: 9999;
+        }
+    </style>
 
     <!-- NAVIGATION -->
     <nav class="glass-nav">
@@ -1045,6 +1056,17 @@
 
         // Simple Intersection Observer for scroll animations
         document.addEventListener('DOMContentLoaded', () => {
+            // Scroll Progress Bar Logic
+            const progressBar = document.querySelector('.scroll-progress');
+            window.addEventListener('scroll', () => {
+                const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrolled = (winScroll / height) * 100;
+                if (progressBar) {
+                    progressBar.style.width = scrolled + "%";
+                }
+            });
+
             // Hamburger Menu Toggle
             const hamburger = document.querySelector('.hamburger');
             const navLinks = document.querySelector('.nav-links');
