@@ -122,30 +122,32 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // 3D Tilt Effect for Cards
+    // 3D Tilt Effect for Cards (Desktop only)
     const cards = document.querySelectorAll('.glass-card');
 
-    cards.forEach(card => {
-        card.addEventListener('mousemove', (e) => {
-            const rect = card.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
+    if (window.innerWidth > 768) {
+        cards.forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
 
-            // Calculate rotation based on cursor position
-            const xRotation = -((y - rect.height / 2) / 20); // Rotate X axis
-            const yRotation = (x - rect.width / 2) / 20;   // Rotate Y axis
+                // Calculate rotation based on cursor position
+                const xRotation = -((y - rect.height / 2) / 20); // Rotate X axis
+                const yRotation = (x - rect.width / 2) / 20;   // Rotate Y axis
 
-            // Apply transform
-            card.style.transform = `perspective(1000px) scale(1.02) rotateX(${xRotation}deg) rotateY(${yRotation}deg)`;
-            card.style.boxShadow = `0 20px 40px rgba(0,0,0,0.4), 0 0 20px rgba(139, 92, 246, 0.2)`;
+                // Apply transform
+                card.style.transform = `perspective(1000px) scale(1.02) rotateX(${xRotation}deg) rotateY(${yRotation}deg)`;
+                card.style.boxShadow = `0 20px 40px rgba(0,0,0,0.4), 0 0 20px rgba(139, 92, 246, 0.2)`;
+            });
+
+            card.addEventListener('mouseleave', () => {
+                // Reset position
+                card.style.transform = 'perspective(1000px) scale(1) rotateX(0) rotateY(0)';
+                card.style.boxShadow = 'none';
+            });
         });
-
-        card.addEventListener('mouseleave', () => {
-            // Reset position
-            card.style.transform = 'perspective(1000px) scale(1) rotateX(0) rotateY(0)';
-            card.style.boxShadow = 'none';
-        });
-    });
+    }
 
     // Star Burst Animation on 'View Project' Click
     function createStarBurst(x, y) {
