@@ -146,4 +146,48 @@ document.addEventListener('DOMContentLoaded', () => {
             card.style.boxShadow = 'none';
         });
     });
+
+    // Star Burst Animation on 'View Project' Click
+    function createStarBurst(x, y) {
+        const particleCount = 12;
+        for (let i = 0; i < particleCount; i++) {
+            const particle = document.createElement('div');
+            particle.classList.add('star-burst');
+
+            // Randomize direction
+            const angle = (Math.PI * 2 / particleCount) * i;
+            const distance = 60 + Math.random() * 40; // 60-100px
+            const tx = Math.cos(angle) * distance + 'px';
+            const ty = Math.sin(angle) * distance + 'px';
+
+            particle.style.left = x + 'px';
+            particle.style.top = y + 'px';
+            particle.style.setProperty('--tx', tx);
+            particle.style.setProperty('--ty', ty);
+
+            document.body.appendChild(particle);
+
+            // Remove particle after animation
+            setTimeout(() => particle.remove(), 600);
+        }
+    }
+
+    // Attach to non-coming-soon .btn-link elements
+    const viewProjectLinks = document.querySelectorAll('.btn-link:not(.coming-soon)');
+    viewProjectLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const rect = link.getBoundingClientRect();
+            const x = rect.left + rect.width / 2;
+            const y = rect.top + rect.height / 2;
+
+            createStarBurst(x, y);
+
+            // Navigate after animation
+            const href = link.getAttribute('href');
+            setTimeout(() => {
+                window.location.href = href;
+            }, 400);
+        });
+    });
 });
