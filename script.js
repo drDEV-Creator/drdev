@@ -186,10 +186,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Check if it's a link that should navigate (not internal anchor)
             const href = btn.getAttribute('href');
+            const target = btn.getAttribute('target');
             if (href && href !== '#' && !href.startsWith('#') && !btn.classList.contains('coming-soon')) {
                 e.preventDefault();
                 setTimeout(() => {
-                    window.location.href = href;
+                    if (target === '_blank') {
+                        window.open(href, '_blank');
+                    } else {
+                        window.location.href = href;
+                    }
                 }, 400);
             }
         });
