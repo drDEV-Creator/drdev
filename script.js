@@ -188,16 +188,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const href = btn.getAttribute('href');
             if (href && href !== '#' && !href.startsWith('#') && !btn.classList.contains('coming-soon')) {
                 e.preventDefault();
-
-                // Trigger page transition overlay
-                const overlay = document.querySelector('.page-transition-overlay');
-                if (overlay) {
-                    overlay.classList.add('active');
-                }
-
                 setTimeout(() => {
                     window.location.href = href;
-                }, 500);
+                }, 400);
             }
         });
     });
