@@ -174,7 +174,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (consoleBody && typingSpan) {
         const linesToOutput = [
-            { text: "npm run compile drdevx-lab", type: "input" },
+            { text: "npm run compile drdevs", type: "input" },
             { text: "↳ Initializing build tasks...", type: "output", color: "#64748b" },
             { text: "[1/3] Compiling C# WPF Core Components... Done (340ms)", type: "output", color: "#34d399" },
             { text: "[2/3] Packaging MirraBrowser.exe assets... Done (680ms)", type: "output", color: "#34d399" },
