@@ -557,10 +557,9 @@ a {
     gap: 4rem;
 }
 
-/* Flagship Product Showcase layout */
 .flagship-showcase {
     display: grid;
-    grid-template-columns: 1.15fr 0.85fr;
+    grid-template-columns: 0.85fr 1.15fr;
     gap: 3.5rem;
     align-items: center;
 }
