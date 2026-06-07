@@ -13,41 +13,41 @@
         gtag('js', new Date());
         gtag('config', 'G-JK61WGNC8G');
     </script>
-    <title>drDEV | Premium Software Solutions & Custom Development</title>
-    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <title>drDEVX | Premium Software Product Lab & Custom Development</title>
+    <link rel="icon" type="image/png" href="assets/dlogo.png">
 
     <!-- SEO Meta Tags -->
     <meta name="description"
-        content="drDEV creates innovative software solutions, custom applications, and premium development services. Specializing in C#, .NET, WPF, and modern web technologies.">
+        content="drDEVX designs and engineers premium software products, developer utilities, and desktop applications. Specializing in C#, .NET, WPF, Electron, and high-performance technologies.">
     <meta name="keywords"
-        content="software development, custom software, drDEV, C#, .NET, WPF, web development, app development, Mirra Browser, developer portfolio">
-    <meta name="author" content="drDEV">
+        content="software product lab, custom software, drDEVX, C#, .NET, WPF, Electron, web development, app development, Mirra Browser, product builder">
+    <meta name="author" content="drDEVX">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://drdev.pages.dev/">
+    <link rel="canonical" href="https://drdevx.pages.dev/">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://drdev.pages.dev/">
-    <meta property="og:title" content="drDEV | Premium Software Solutions">
+    <meta property="og:url" content="https://drdevx.pages.dev/">
+    <meta property="og:title" content="drDEVX | Premium Software Product Lab">
     <meta property="og:description"
-        content="Custom software development and innovative solutions. Building powerful applications with modern technologies.">
-    <meta property="og:image" content="https://drdev.pages.dev/assets/logo.png">
-    <meta property="og:site_name" content="drDEV">
+        content="We architect and build premium software products and custom developer tools. Discover our active projects and upcoming releases.">
+    <meta property="og:image" content="https://drdevx.pages.dev/assets/dlogo.png">
+    <meta property="og:site_name" content="drDEVX">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://drdev.pages.dev/">
-    <meta name="twitter:title" content="drDEV | Premium Software Solutions">
+    <meta name="twitter:url" content="https://drdevx.pages.dev/">
+    <meta name="twitter:title" content="drDEVX | Premium Software Product Lab">
     <meta name="twitter:description"
-        content="Custom software development and innovative solutions. Building powerful applications with modern technologies.">
-    <meta name="twitter:image" content="https://drdev.pages.dev/assets/logo.png">
+        content="We architect and build premium software products and custom developer tools. Discover our active projects and upcoming releases.">
+    <meta name="twitter:image" content="https://drdevx.pages.dev/assets/dlogo.png">
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@300;500;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -56,150 +56,293 @@
     {
         "@context": "https://schema.org",
         "@type": "Organization",
-        "name": "drDEV",
-        "url": "https://drdev.pages.dev",
-        "logo": "https://drdev.pages.dev/assets/logo.png",
-        "description": "Premium software solutions and custom application development",
+        "name": "drDEVX",
+        "url": "https://drdevx.pages.dev",
+        "logo": "https://drdevx.pages.dev/assets/dlogo.png",
+        "description": "Premium software solutions and custom product engineering",
         "sameAs": [
-            "https://github.com/drDEV-Creator"
+            "https://github.com/drDEVX-Creator"
         ]
     }
     </script>
 </head>
 
 <body>
-    <div class="scroll-progress"></div>
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress" id="scroll-progress-bar"></div>
+    
+    <!-- Background Design Overlay layers -->
     <div class="noise-overlay"></div>
+    <div class="cursor-glow" id="custom-cursor-glow"></div>
+    
+    <!-- Soft Glow Orbs -->
     <div class="glow-orb orb-1"></div>
     <div class="glow-orb orb-2"></div>
     <div class="glow-orb orb-3"></div>
 
-    <nav class="glass-nav">
+    <!-- Navigation Header -->
+    <nav class="glass-nav" id="main-navigation">
         <div class="logo-container">
             <a href="#home">
-                <img src="assets/logo.png" alt="drDEV Logo" class="nav-logo">
+                <img src="assets/dlogo.png" alt="drDEVX Logo" class="nav-logo" id="nav-brand-logo">
+                <span class="brand-text">
+                    <span class="brand-dr">dr</span><span class="brand-dev">DEV</span><span class="brand-x">X</span>
+                </span>
             </a>
         </div>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
+        <ul class="nav-links" id="nav-links-list">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#philosophy">Philosophy</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#pipeline">Pipeline</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
-        <div class="hamburger">
+        <div class="hamburger" id="nav-toggle-btn" aria-label="Toggle Menu">
             <i class="fas fa-bars"></i>
         </div>
     </nav>
 
+    <!-- Hero Section -->
     <header id="home" class="hero-section">
-        <div class="hero-content fade-in-up">
-            <h1 class="glitch" data-text="Issues In. Solutions Out.">Issues In. Solutions Out.</h1>
-            <p class="hero-subtitle typing-text">We design and build custom software tailored to your exact
-                requirements.</p>
-            <div class="cta-group">
-                <a href="#projects" class="btn btn-primary">View Work <i class="fas fa-arrow-right"></i></a>
-                <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+        <div class="hero-grid-container">
+            <div class="hero-text-side fade-in-up">
+                <h1 class="glitch">Engineering High-Performance Software Products.</h1>
+                <p class="hero-subtitle">We build developer utilities, native desktop tools, and reliable software environments designed for speed, efficiency, and elite user experience.</p>
+                <div class="cta-group">
+                    <a href="#products" class="btn btn-primary" id="cta-explore-products">Explore Products <i class="fas fa-arrow-right"></i></a>
+                    <a href="#contact" class="btn btn-secondary" id="cta-partner-up">Partner with Us</a>
+                </div>
+            </div>
+            <div class="hero-visual-side fade-in-up">
+                <!-- Interactive IDE/Terminal Card Widget -->
+                <div class="terminal-card" id="terminal-widget">
+                    <div class="terminal-header">
+                        <div class="terminal-buttons">
+                            <span class="t-btn close"></span>
+                            <span class="t-btn minimize"></span>
+                            <span class="t-btn maximize"></span>
+                        </div>
+                        <span class="terminal-title">drdevx-compiler.sh</span>
+                        <div style="width: 33px;"></div>
+                    </div>
+                    <div class="terminal-body" id="terminal-console-body">
+                        <div class="terminal-line">
+                            <span class="terminal-prompt">&gt;</span>
+                            <span class="terminal-typing" id="terminal-typing-span">npm run compile drdevx-lab</span>
+                        </div>
+                        <!-- Remaining lines are injected dynamically via script.js -->
+                    </div>
+                </div>
             </div>
         </div>
     </header>
 
-    <section id="about" class="section-padding">
+    <!-- Engineering Philosophy -->
+    <section id="philosophy" class="section-padding">
         <div class="container">
-            <h2 class="section-title fade-in">Who is <span class="highlight">drDEV</span>?</h2>
+            <div class="section-header fade-in">
+                <h2 class="section-title">Our Engineering <span class="highlight">Philosophy</span></h2>
+                <p class="section-subtitle">We believe software should be lightning-fast, robust by default, and a joy to interact with.</p>
+            </div>
             <div class="about-grid">
                 <div class="about-card glass-card fade-in">
-                    <i class="fas fa-code icon-large"></i>
-                    <h3>Development</h3>
-                    <p>Crafting clean, efficient, and scalable code for web and mobile applications.</p>
+                    <i class="fas fa-microchip icon-large" aria-hidden="true"></i>
+                    <h3>Desktop Mastery</h3>
+                    <p>Leveraging native operating system frameworks like WPF, C#, and Electron to craft high-fps applications with zero unnecessary overhead.</p>
                 </div>
-                <div class="about-card glass-card fade-in delay-100">
-                    <i class="fas fa-layer-group icon-large"></i>
-                    <h3>Design</h3>
-                    <p>Creating intuitive and visually stunning user interfaces with a focus on UX.</p>
+                <div class="about-card glass-card fade-in">
+                    <i class="fas fa-code icon-large" aria-hidden="true"></i>
+                    <h3>Developer Experience (DX)</h3>
+                    <p>Building CLI utilities, extensions, and tooling workflow layers that respect developer time, ergonomics, and productivity flow.</p>
                 </div>
-                <div class="about-card glass-card fade-in delay-200">
-                    <i class="fas fa-rocket icon-large"></i>
-                    <h3>Innovation</h3>
-                    <p>Pushing boundaries with modern tech stacks and creative problem solving.</p>
+                <div class="about-card glass-card fade-in">
+                    <i class="fas fa-cube icon-large" aria-hidden="true"></i>
+                    <h3>Reliable Architecture</h3>
+                    <p>Writing clean, localized, offline-first structures that work predictably under stress, without requiring heavy cloud connections.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="projects" class="section-padding">
+    <!-- Product Hub -->
+    <section id="products" class="section-padding">
         <div class="container">
-            <h2 class="section-title fade-in">Featured <span class="highlight">Projects</span></h2>
-            <div class="projects-grid">
-                <!-- Project 1 -->
-                <div class="project-card glass-card fade-in">
-                    <div class="project-image">
-                        <img src="mirra/App.png" alt="Mirra Browser Logo"
-                            style="width: 100%; height: 100%; object-fit: contain; padding: 20px; background: rgba(0,0,0,0.5);">
+            <div class="section-header fade-in">
+                <h2 class="section-title">The Product <span class="highlight">Hub</span></h2>
+                <p class="section-subtitle">A collection of custom applications built in-house for production use and public release.</p>
+            </div>
+            
+            <div class="products-grid">
+                <!-- Flagship Product: Mirra Browser -->
+                <div class="flagship-showcase glass-card fade-in" id="flagship-product-mirra">
+                    <div class="flagship-image-side">
+                        <div class="flagship-img-wrapper">
+                            <img src="mirra/App.png" alt="Mirra Browser Workspace Visual">
+                        </div>
                     </div>
-                    <div class="project-info">
+                    <div class="flagship-info-side">
+                        <span class="badge-tag flagship">Flagship Product</span>
                         <h3>Mirra Browser</h3>
-                        <p class="project-tech"><span>C#</span> <span>.NET</span> <span>WPF</span></p>
-                        <p>A tool that allows you to replicate every action you perform on one website onto another site
-                            in real time. Instead of opening two tabs and manually repeating the same actions to compare
-                            different versions of a site, software testers can use this tool to perform efficient and
-                            accurate UI comparisons.</p>
-                        <a href="mirra/project-mirra.html" class="btn-link">View Project <i
-                                class="fas fa-external-link-alt"></i></a>
+                        <div class="project-tech">
+                            <span>C#</span> <span>.NET Core</span> <span>WPF</span> <span>WebView2</span>
+                        </div>
+                        <p>A specialized dual-pane testing browser built for software QA teams. Replicate every scroll, click, keystroke, and navigability trigger across two distinct staging URLs in real time. Perfect for side-by-side UI layout validation, version comparisons, and quick responsiveness testing.</p>
+                        
+                        <ul class="feature-bullets">
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Real-time Scroll & Interaction Mirroring</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Overlay and Side-by-Side Visual Diff engines</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Embedded Axe accessibility audit engine</li>
+                        </ul>
+                        
+                        <div style="display: flex; gap: 1.5rem; align-items: center;">
+                            <a href="mirra/project-mirra.html" class="btn-link" id="mirra-details-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                            <a href="https://github.com/drDEVX-Creator/drdevx/releases/download/v1.0.0/MirraInstaller.exe" class="btn btn-primary" style="padding: 0.5rem 1.25rem; font-size: 0.85rem;" id="mirra-download-link"><i class="fas fa-download"></i> Get Installer</a>
+                        </div>
                     </div>
                 </div>
-                <!-- Project 2 -->
-                <div class="project-card glass-card fade-in delay-100">
-                    <div class="project-image">
-                        <div class="placeholder-img color-2"></div>
+
+                <!-- Secondary Products -->
+                <div class="products-subgrid">
+                    <!-- Cashbook Android -->
+                    <div class="product-card glass-card fade-in" id="product-cashbook">
+                        <div>
+                            <div class="product-card-header">
+                                <span class="badge-tag beta">Active Beta</span>
+                                <i class="fab fa-android" style="font-size: 1.5rem; color: #16a34a;"></i>
+                            </div>
+                            <h4>Cashbook Android</h4>
+                            <p>An offline-first, private personal accounting app. Built using Kotlin and Room SQLite to track ledger balances and income distribution without sending data to external cloud servers.</p>
+                        </div>
+                        <div class="product-card-footer">
+                            <div class="project-tech" style="margin-bottom: 0;">
+                                <span>Kotlin</span> <span>Jetpack Compose</span> <span>Room SQLite</span>
+                            </div>
+                            <a href="#" class="btn-link coming-soon" id="cashbook-project-link">View <i class="fas fa-external-link-alt"></i></a>
+                        </div>
                     </div>
-                    <div class="project-info">
-                        <h3>Cashbook Android</h3>
-                        <p class="project-tech"><span>Android</span> <span>Kotlin</span> <span>SQLite</span></p>
-                        <p>Comprehensive financial management app for tracking daily expenses and income.</p>
-                        <a href="#" class="btn-link coming-soon">View Project <i
-                                class="fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
-                <!-- Project 3 -->
-                <div class="project-card glass-card fade-in delay-200">
-                    <div class="project-image">
-                        <div class="placeholder-img color-3"></div>
-                    </div>
-                    <div class="project-info">
-                        <h3>FinReport Engine</h3>
-                        <p class="project-tech"><span>Node.js</span> <span>SQL</span> <span>Electron</span></p>
-                        <p>High-performance reporting engine generating complex financial statements.</p>
-                        <a href="#" class="btn-link coming-soon">View Project <i
-                                class="fas fa-external-link-alt"></i></a>
+
+                    <!-- FinReport Engine -->
+                    <div class="product-card glass-card fade-in" id="product-finreport">
+                        <div>
+                            <div class="product-card-header">
+                                <span class="badge-tag beta">Utility</span>
+                                <i class="fas fa-chart-line" style="font-size: 1.5rem; color: var(--accent-indigo);"></i>
+                            </div>
+                            <h4>FinReport Engine</h4>
+                            <p>A desktop-based reporting utility built to query local SQL ledgers. Generates and exports beautiful, regulatory-compliant PDF sheets and financial statements instantly.</p>
+                        </div>
+                        <div class="product-card-footer">
+                            <div class="project-tech" style="margin-bottom: 0;">
+                                <span>Electron</span> <span>Node.js</span> <span>SQL</span> <span>PDFKit</span>
+                            </div>
+                            <a href="#" class="btn-link coming-soon" id="finreport-project-link">View <i class="fas fa-external-link-alt"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Upcoming Pipeline (R&D Lab) -->
+    <section id="pipeline" class="section-padding">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">The R&D <span class="highlight">Pipeline</span></h2>
+                <p class="section-subtitle">What's currently cooking in our labs. Track our progress towards the next product releases.</p>
+            </div>
+            
+            <div class="pipeline-timeline">
+                <!-- Pipeline Item 1: DevFlow Extension -->
+                <div class="pipeline-card glass-card fade-in" id="pipeline-devflow">
+                    <div>
+                        <div class="pipeline-meta">
+                            <span class="badge-tag pipeline">IDE Extension</span>
+                            <span style="font-size: 0.8rem; font-weight: 600; color: var(--accent-indigo);">Q3 2026</span>
+                        </div>
+                        <h4>DevFlow commit-analyst</h4>
+                        <p>An IDE integration tool designed to parse local diff states prior to committing, identifying API breaking changes and recommending semantic version bumps.</p>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-header">
+                            <span>Development Progress</span>
+                            <span>65%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 65%;" aria-label="65 percent complete"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pipeline Item 2: AeroDB -->
+                <div class="pipeline-card glass-card fade-in" id="pipeline-aerodb">
+                    <div>
+                        <div class="pipeline-meta">
+                            <span class="badge-tag pipeline">Database</span>
+                            <span style="font-size: 0.8rem; font-weight: 600; color: var(--accent-indigo);">Q4 2026</span>
+                        </div>
+                        <h4>AeroDB Lite</h4>
+                        <p>A zero-configuration, lightning-fast embedded database engine compiled in C++ for C# desktop projects, designed for low latency storage needs.</p>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-header">
+                            <span>Prototyping Progress</span>
+                            <span>35%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 35%;" aria-label="35 percent complete"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pipeline Item 3: WPF Glass Kit -->
+                <div class="pipeline-card glass-card fade-in" id="pipeline-glasskit">
+                    <div>
+                        <div class="pipeline-meta">
+                            <span class="badge-tag pipeline">Design Lib</span>
+                            <span style="font-size: 0.8rem; font-weight: 600; color: var(--accent-indigo);">Q1 2027</span>
+                        </div>
+                        <h4>WPF Acrylic UI Kit</h4>
+                        <p>A comprehensive open-source theme library for .NET WPF desktop developers to build modern, fluent-style Windows apps with ease.</p>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-header">
+                            <span>Planning Progress</span>
+                            <span>15%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 15%;" aria-label="15 percent complete"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collaboration & Contact -->
     <section id="contact" class="section-padding">
         <div class="container contact-container">
-            <h2 class="section-title fade-in">Let's <span class="highlight">Collaborate</span></h2>
-            <div class="contact-box glass-card fade-in-up">
-                <p>Have a project in mind? Let's build something amazing together.</p>
-                <a href="mailto:drdeveloper123@gmail.com" id="contact-btn" class="btn btn-primary btn-large">Say Hello
-                    <i class="fas fa-envelope"></i></a>
+            <h2 class="section-title fade-in">Let's Build <span class="highlight">Together</span></h2>
+            <div class="contact-box glass-card fade-in-up" id="contact-box-panel">
+                <p>Have an application design, complex integration tool, or a customized desktop project in mind? We partner with companies and developers to build high-performance software.</p>
+                <a href="mailto:drdeveloper123@gmail.com" id="contact-btn" class="btn btn-primary btn-large">Initiate Discussion <i class="fas fa-envelope"></i></a>
                 <div class="social-links">
-                    <a href="https://github.com/drDEV-Creator" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/rishan-cm-b88712283" target="_blank"><i
-                            class="fab fa-linkedin"></i></a>
-                    <a href="https://wa.me/919995338972" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://github.com/drDEVX-Creator" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/rishan-cm-b88712283" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://wa.me/919995338972" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
         </div>
     </section>
 
-    <div id="toast" class="toast">Email Copied to Clipboard! <i class="fas fa-check"></i></div>
+    <!-- Toast Notification -->
+    <div id="toast" class="toast" role="alert" aria-live="polite">Email Copied to Clipboard! <i class="fas fa-check"></i></div>
 
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2026 drDEV. All Rights Reserved.</p>
+        <p>&copy; 2026 drDEVX. All Rights Reserved. Custom Engineering & Product Development.</p>
     </footer>
 
+    <!-- Scripts -->
     <script src="script.js"></script>
 </body>
 
