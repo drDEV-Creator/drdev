@@ -109,7 +109,11 @@ document.addEventListener('DOMContentLoaded', () => {
     comingSoonLinks.forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
-            showToast('Access restricted. Updating soon...');
+            if (link.id === 'btag-project-link') {
+                showToast('btag Chrome extension will be available soon!');
+            } else {
+                showToast('Access restricted. Updating soon...');
+            }
         });
     });
 

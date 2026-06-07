@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -13,34 +13,32 @@
         gtag('js', new Date());
         gtag('config', 'G-JK61WGNC8G');
     </script>
-    <title>Mirra Browser - Dual-Pane Browser Testing Tool | drDEVX</title>
+    <title>Saudi Cashbook - Fast-Entry Desktop Ledger & VAT Analytics | drDEVX</title>
     <link rel="icon" type="image/png" href="../assets/dlogo.png">
 
     <!-- SEO Meta Tags -->
     <meta name="description"
-        content="Mirra Browser - Test two browser instances simultaneously with synchronized scrolling, click mirroring, and visual diff comparison. Built with C#, .NET, and WPF.">
+        content="Saudi Cashbook - A simplified desktop cashbook and tally utility built for fast transaction entry and quick business insights. Offline-first with integrated KSA VAT calculations.">
     <meta name="keywords"
-        content="Mirra Browser, browser testing, visual regression testing, dual pane browser, scroll sync, click mirroring, C#, .NET, WPF, drDEVX, QA testing tool">
+        content="Saudi Cashbook, Cashbook desktop app, Tally utility, WPF, C#, SQLite, KSA VAT, offline-first ledger, accounting software, drDEVX">
     <meta name="author" content="drDEVX">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://drdevx.pages.dev/mirra/project-mirra.html">
+    <link rel="canonical" href="https://drdevx.pages.dev/Saudi-Cashbook/project-cashbook.html">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://drdevx.pages.dev/mirra/project-mirra.html">
-    <meta property="og:title" content="Mirra Browser - One Action, Two Browsers">
-    <meta property="og:description"
-        content="Dual-pane browser testing tool with synchronized mirroring and visual diff comparison. Test smarter, not harder.">
-    <meta property="og:image" content="https://drdevx.pages.dev/mirra/App.png">
+    <meta property="og:url" content="https://drdevx.pages.dev/Saudi-Cashbook/project-cashbook.html">
+    <meta property="og:title" content="Saudi Cashbook - Fast-Entry Desktop Ledger & VAT Analytics">
+    <meta property="og:description" content="A simplified offline-first cashbook utility designed for rapid data entry and automatic VAT reporting. Built for desktop speed with C# and WPF.">
+    <meta property="og:image" content="https://drdevx.pages.dev/Saudi-Cashbook/dashboard.png">
     <meta property="og:site_name" content="drDEVX">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://drdevx.pages.dev/mirra/project-mirra.html">
-    <meta name="twitter:title" content="Mirra Browser - One Action, Two Browsers">
-    <meta name="twitter:description"
-        content="Dual-pane browser testing tool with synchronized mirroring and visual diff comparison. Test smarter, not harder.">
-    <meta name="twitter:image" content="https://drdevx.pages.dev/mirra/App.png">
+    <meta name="twitter:url" content="https://drdevx.pages.dev/Saudi-Cashbook/project-cashbook.html">
+    <meta name="twitter:title" content="Saudi Cashbook - Fast-Entry Desktop Ledger & VAT Analytics">
+    <meta name="twitter:description" content="A simplified offline-first cashbook utility designed for rapid data entry and automatic VAT reporting. Built for desktop speed with C# and WPF.">
+    <meta name="twitter:image" content="https://drdevx.pages.dev/Saudi-Cashbook/dashboard.png">
 
     <!-- Google Fonts -->
     <link
@@ -51,14 +49,12 @@
 
     <style>
         :root {
-            --mirra-blue: #1e40af; /* Premium Dark Blue */
-            --mirra-purple: #1e3a8a; /* Deep Navy Blue */
-            --mirra-deep-blue: #1e3a8a;
-            --mirra-bg-dark: #f8fafc; /* Soft slate 50 */
+            --cashbook-blue: #1e40af; /* Solid Dark Blue */
+            --cashbook-deep: #1e3a8a; /* Deep Navy Blue */
+            --cashbook-bg-dark: #f8fafc;
             --glass-bg: rgba(255, 255, 255, 0.75);
             --glass-border: rgba(226, 232, 240, 0.8);
             
-            /* Enhanced layered box shadows for distinct separation */
             --glass-shadow: 0 12px 30px -8px rgba(15, 23, 42, 0.15), 0 4px 12px -2px rgba(15, 23, 42, 0.05);
             --glass-shadow-hover: 0 24px 48px -12px rgba(30, 64, 175, 0.18), 0 8px 20px -4px rgba(15, 23, 42, 0.08);
         }
@@ -71,13 +67,13 @@
         }
 
         body {
-            background-color: var(--mirra-bg-dark);
+            background-color: var(--cashbook-bg-dark);
             background-image:
                 radial-gradient(circle at 10% 20%, rgba(30, 64, 175, 0.03) 0%, transparent 40%),
                 radial-gradient(circle at 90% 80%, rgba(30, 64, 175, 0.02) 0%, transparent 40%),
                 linear-gradient(to bottom, #f8fafc, #ffffff);
             font-family: 'Inter', sans-serif;
-            color: #0f172a; /* Slate 900 */
+            color: #0f172a;
             overflow-x: hidden;
             line-height: 1.6;
         }
@@ -93,7 +89,7 @@
         h1 {
             font-size: 3.5rem;
             line-height: 1.1;
-            color: var(--mirra-blue);
+            color: var(--cashbook-blue);
             filter: drop-shadow(0 4px 12px rgba(30, 64, 175, 0.08));
         }
 
@@ -105,7 +101,7 @@
 
         p {
             font-size: 1rem;
-            color: #475569; /* Slate 600 */
+            color: #475569;
             margin-bottom: 20px;
             font-weight: 400;
         }
@@ -117,10 +113,10 @@
         }
 
         /* ========== UTILITIES & ACCENTS ========== */
-        .highlight-blue { color: var(--mirra-blue); }
-        .highlight-purple { color: var(--mirra-purple); }
+        .highlight-blue { color: var(--cashbook-blue); }
+        .highlight-deep { color: var(--cashbook-deep); }
         .gradient-text {
-            color: var(--mirra-blue);
+            color: var(--cashbook-blue);
             font-weight: bold;
         }
 
@@ -131,12 +127,12 @@
         }
 
         section {
-            padding: 70px 0; /* Tightened padding to reduce empty space */
+            padding: 70px 0;
             position: relative;
         }
 
         section:nth-child(even) {
-            background: rgba(241, 245, 249, 0.35); /* Soft background contrast */
+            background: rgba(241, 245, 249, 0.35);
         }
 
         /* ========== HOLOGRAPHIC CARDS & GLASSMORPHISM ========== */
@@ -157,7 +153,7 @@
         .glass-card:hover {
             transform: translateY(-4px);
             box-shadow: var(--glass-shadow-hover);
-            border-color: rgba(37, 99, 235, 0.3);
+            border-color: rgba(30, 64, 175, 0.3);
         }
 
         .hol-image {
@@ -179,7 +175,7 @@
             align-items: center;
             justify-content: center;
             gap: 0.6rem;
-            background: var(--mirra-blue);
+            background: var(--cashbook-blue);
             padding: 12px 30px;
             border-radius: 8px;
             color: #ffffff !important;
@@ -195,6 +191,29 @@
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(30, 64, 175, 0.35);
             color: #ffffff;
+        }
+
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+            background: #ffffff;
+            border: 1px solid var(--glass-border);
+            padding: 12px 30px;
+            border-radius: 8px;
+            color: #0f172a !important;
+            font-weight: 600;
+            font-size: 0.95rem;
+            font-family: 'Outfit', sans-serif;
+            box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            transform: translateY(-2px);
+            background: var(--cashbook-bg-dark);
+            border-color: #cbd5e1;
         }
 
         .split-grid {
@@ -219,28 +238,49 @@
 
         ul.feature-list li::before {
             content: "➔";
-            color: var(--mirra-blue);
+            color: var(--cashbook-blue);
             margin-right: 12px;
             font-size: 0.8em;
         }
 
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 24px;
             margin-top: 30px;
         }
 
-        /* Bento Grid Specifics */
-        .bento-grid {
-            display: grid;
-            grid-template-columns: 1.25fr 1fr;
-            gap: 24px;
-            margin-top: 40px;
+        .panel-info h4 {
+            font-size: 1.25rem;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
-        .bento-tall {
-            grid-row: span 2;
+        .panel-info p {
+            font-size: 0.9rem;
+            margin-bottom: 0;
+            color: #475569;
+        }
+
+        .panel-media {
+            border-radius: 8px;
+            overflow: hidden;
+            background: #0f172a;
+            border: 1px solid rgba(15, 23, 42, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: auto;
+            padding: 12px;
+        }
+
+        .panel-media img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            display: block;
         }
 
         /* ========== HERO SECTION SPECIFIC ========== */
@@ -249,14 +289,14 @@
             padding-bottom: 60px;
             position: relative;
             overflow: hidden;
-            min-height: auto; /* Remove vh height to keep content dense */
+            min-height: auto;
         }
 
         .hero-grid-container {
             max-width: 1200px;
             width: 100%;
             display: grid;
-            grid-template-columns: 0.9fr 1.1fr; /* Split layout to utilize width */
+            grid-template-columns: 0.92fr 1.08fr;
             gap: 40px;
             align-items: center;
         }
@@ -296,8 +336,6 @@
             border: 1px solid rgba(15, 23, 42, 0.05);
         }
 
-
-
         .hero-title {
             font-size: 3.6rem;
             line-height: 1.1;
@@ -335,9 +373,9 @@
 
         .badge:hover {
             transform: translateY(-2px);
-            border-color: rgba(37, 99, 235, 0.3);
-            background: rgba(37, 99, 235, 0.04);
-            color: var(--mirra-blue);
+            border-color: rgba(30, 64, 175, 0.3);
+            background: rgba(30, 64, 175, 0.04);
+            color: var(--cashbook-blue);
         }
 
         .hero-cta-group {
@@ -346,7 +384,7 @@
             align-items: center;
         }
 
-        /* ========== DENSE CAPABILITIES BENTO SECTION ========== */
+        /* ========== DENSE CAPABILITIES SECTION ========== */
         .section-header {
             text-align: center;
             max-width: 650px;
@@ -361,82 +399,6 @@
         .section-subtitle {
             color: #475569;
             font-size: 1.02rem;
-        }
-
-        /* Bento Grid Panel Styling */
-        .bento-showcase {
-            display: grid;
-            grid-template-columns: repeat(12, 1fr);
-            gap: 24px;
-            margin-top: 35px;
-        }
-
-        .bento-panel {
-            grid-column: span 6;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .bento-panel.large {
-            grid-column: span 8;
-        }
-
-        .bento-panel.small {
-            grid-column: span 4;
-        }
-
-        .bento-panel.full {
-            grid-column: span 12;
-        }
-
-        .panel-info {
-            margin-bottom: 20px;
-        }
-
-        .panel-info h4 {
-            font-size: 1.35rem;
-            margin-bottom: 8px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .panel-info p {
-            font-size: 0.92rem;
-            margin-bottom: 0;
-            color: #475569;
-        }
-
-        .panel-media {
-            border-radius: 8px;
-            overflow: hidden;
-            background: #0f172a; /* Unified dark background for dark-themed app screenshots */
-            border: 1px solid rgba(15, 23, 42, 0.1);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: auto;
-            padding: 12px;
-        }
-
-        .panel-media img {
-            width: 100%;
-            height: auto;
-            object-fit: contain;
-            display: block;
-        }
-
-        /* Custom graphic mapping widget for Mirroring */
-        .mirror-mapping-widget {
-            padding: 30px;
-            background: #ffffff;
-            border-radius: 8px;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 1px solid rgba(15, 23, 42, 0.05);
         }
 
         /* ========== TECH SPECS & ARCHITECTURE ========== */
@@ -461,7 +423,7 @@
 
         .tech-card:hover {
             transform: translateY(-5px);
-            border-color: rgba(124, 58, 237, 0.3);
+            border-color: rgba(30, 64, 175, 0.3);
             box-shadow: var(--glass-shadow-hover);
         }
 
@@ -491,8 +453,8 @@
             letter-spacing: 0.05em;
             padding: 4px 10px;
             border-radius: 10px;
-            background: rgba(37, 99, 235, 0.06);
-            color: var(--mirra-blue);
+            background: rgba(30, 64, 175, 0.06);
+            color: var(--cashbook-blue);
             margin-bottom: 15px;
             font-weight: 700;
         }
@@ -511,15 +473,6 @@
         }
 
         /* ========== RESPONSIVE ========== */
-        @media screen and (max-width: 1024px) {
-            .bento-showcase {
-                gap: 20px;
-            }
-            .bento-panel, .bento-panel.large, .bento-panel.small {
-                grid-column: span 6;
-            }
-        }
-
         @media screen and (max-width: 900px) {
             .hero-grid-container {
                 grid-template-columns: 1fr;
@@ -540,20 +493,18 @@
 
             .hero-cta-group {
                 justify-content: center;
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .btn-primary, .btn-secondary {
+                width: 100%;
             }
 
             .split-grid {
                 grid-template-columns: 1fr;
                 gap: 30px;
                 text-align: center;
-            }
-
-            .bento-showcase {
-                grid-template-columns: 1fr;
-            }
-
-            .bento-panel, .bento-panel.large, .bento-panel.small, .bento-panel.full {
-                grid-column: span 12;
             }
 
             .tech-spec-grid {
@@ -567,7 +518,7 @@
             }
         }
 
-        @media screen homemade (max-width: 480px) {
+        @media screen and (max-width: 480px) {
             .hero-title { font-size: 2.4rem !important; }
             section { padding: 50px 0; }
             
@@ -575,14 +526,11 @@
                 display: grid;
                 grid-template-columns: 1fr 1fr;
             }
-            .btn-primary {
-                width: 100%;
-            }
         }
 
         /* Scroll Progress */
         .scroll-progress {
-            background: var(--mirra-blue);
+            background: var(--cashbook-blue);
             box-shadow: 0 0 10px rgba(30, 64, 175, 0.4);
             height: 3px;
             z-index: 9999;
@@ -601,6 +549,39 @@
             transition: opacity 0.5s ease;
             opacity: 0;
         }
+
+        /* Soft Glow Orbs */
+        .glow-orb {
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(130px);
+            z-index: -1;
+            opacity: 0.7;
+        }
+
+        .orb-1 {
+            width: 500px;
+            height: 500px;
+            background: rgba(30, 64, 175, 0.05);
+            top: -150px;
+            left: -150px;
+            animation: floating-orb 15s infinite ease-in-out;
+        }
+
+        .orb-2 {
+            width: 400px;
+            height: 400px;
+            background: rgba(30, 64, 175, 0.03);
+            bottom: -100px;
+            right: -100px;
+            animation: floating-orb 18s infinite ease-in-out reverse;
+        }
+
+        @keyframes floating-orb {
+            0% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(50px, 80px) scale(1.1); }
+            100% { transform: translate(0, 0) scale(1); }
+        }
     </style>
 </head>
 
@@ -608,6 +589,10 @@
     <div class="scroll-progress" id="scroll-progress-bar"></div>
     <div class="noise-overlay"></div>
     <div class="cursor-glow" id="custom-cursor-glow"></div>
+
+    <!-- Soft Glow Orbs -->
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
 
     <!-- NAVIGATION -->
     <nav class="glass-nav">
@@ -636,266 +621,239 @@
             <div class="hero-grid-container">
                 <div class="hero-text-side fade-in-up">
                     <div class="logo-badge-card" style="width: 76px; height: 76px; display: inline-flex; align-items: center; justify-content: center; background: #0f172a; border-radius: 14px; border: 1px solid rgba(255, 255, 255, 0.1); margin-bottom: 20px; box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.15), inset 0 1px 1px rgba(255,255,255,0.05);">
-                        <img src="./SiteFile/App.png" alt="Mirra Logo" style="width: 46px; height: 46px; object-fit: contain; filter: drop-shadow(0 4px 10px rgba(37,99,235,0.35));">
+                        <i class="fas fa-calculator" style="font-size: 2.2rem; color: #38bdf8; filter: drop-shadow(0 4px 10px rgba(30,64,175,0.35));"></i>
                     </div>
-                    <h1 class="hero-title">Mirra</h1>
-                    <h3 class="hero-subtitle">One Action, Two Browsers. Zero Lag. A native dual-pane workspace built for synchronized web application testing and side-by-side verification.</h3>
+                    <span class="badge" style="background: rgba(30, 64, 175, 0.08); color: var(--cashbook-blue); border-color: rgba(30, 64, 175, 0.2); width: fit-content; margin-bottom: 15px;">Client Solution</span>
+                    <h1 class="hero-title">Saudi Cashbook</h1>
+                    <h3 class="hero-subtitle">A simplified offline cashbook and bookkeeping application built for ultra-fast data entry and quick business reporting. Engineered as a native, offline-first desktop application.</h3>
 
                     <div class="hero-badges">
-                        <div class="badge"><span>Windows App</span></div>
-                        <div class="badge"><span>Dual-Pane Window</span></div>
-                        <div class="badge"><span>CDP Mirroring</span></div>
-                        <div class="badge"><span>Visual Diffing</span></div>
+                        <div class="badge"><span>C# WPF .NET Core</span></div>
+                        <div class="badge"><span>SQLite Offline DB</span></div>
+                        <div class="badge"><span>KSA VAT Engine</span></div>
+                        <div class="badge"><span>Hotkey Fast Entry</span></div>
                     </div>
 
                     <div class="hero-cta-group">
-                        <a href="https://github.com/drDEV-Creator/drdev/releases/download/v1.0.0/MirraInstaller.exe"
-                            class="btn-primary" id="download-alpha-btn" target="_blank"><i class="fas fa-download"></i> Download Alpha v1.0</a>
+                        <a href="../index.html#contact" class="btn-primary" id="request-quote-btn"><i class="fas fa-envelope"></i> Request Similar Solution</a>
                     </div>
-                    <p style="margin-top: 10px; font-size: 0.82rem; opacity: 0.65;">
-                        Runs locally on Windows 10 & 11
+                    <p style="margin-top: 15px; font-size: 0.82rem; opacity: 0.65;">
+                        Developed custom for a private retail client operating in Saudi Arabia.
                     </p>
                 </div>
                 <div class="hero-visual-side fade-in-up">
                     <div class="hero-mockup-wrapper">
-                        <!-- Shows the actual workspace right in the hero section -->
-                        <img src="./SplitView.png" class="hero-mockup-img" alt="Mirra Dual-Pane Split View Mockup">
+                        <!-- Displays the Saudi Cashbook main dashboard -->
+                        <img src="./dashboard.png" class="hero-mockup-img" alt="Saudi Cashbook Desktop Dashboard">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- PROBLEM & SOLUTION COMPARISON -->
-    <section id="problem-solution">
+    <!-- PROJECT OVERVIEW -->
+    <section id="project-overview">
         <div class="container">
             <div class="section-header reveal-on-scroll">
-                <h2 class="section-title">Re-engineering Browser QA</h2>
-                <p class="section-subtitle">Why manual multi-environment testing is fundamentally broken, and how Mirra fixes it.</p>
+                <h2 class="section-title">Ultra-Fast Ledger Logging & VAT Tracking</h2>
+                <p class="section-subtitle">A simplified tally solution built for desktop speed, minimal keyboard actions, and local compliance accounting.</p>
             </div>
             
             <div class="split-grid">
-                <!-- Problem Card -->
-                <div class="glass-card reveal-on-scroll" style="border-left: 4px solid var(--mirra-purple);">
-                    <h3 style="font-size: 1.35rem; margin-bottom: 15px; display: flex; align-items: center; gap: 8px; color: var(--mirra-purple);">
-                        <i class="fas fa-exclamation-triangle"></i> The Testing Bottleneck
-                    </h3>
-                    <ul class="feature-list">
-                        <li>Manual comparative testing is slow and repetitive</li>
-                        <li>Constant Alt-Tab window switching breaks developer focus</li>
-                        <li>Minor visual regressions slip through to production</li>
-                        <li>Accessibility checks require opening separate utilities</li>
-                    </ul>
+                <div class="reveal-on-scroll">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: var(--cashbook-blue);">The Business Requirement</h3>
+                    <p style="color: #475569; font-size: 1.02rem; line-height: 1.7;">
+                        Modern cloud-based POS and accounting packages often introduce significant friction for high-speed cashiers and manual ledger entry. The client required a desktop utility capable of running without internet connectivity, utilizing local hotkeys to submit credit/debit records in under 3 seconds, and compiling tax-compliant VAT sheets dynamically.
+                    </p>
+                    <p style="color: #475569; font-size: 1.02rem; line-height: 1.7;">
+                        By pairing a lightweight WPF interface with SQLite database indexes, we achieved zero-overhead voucher processing, instantaneous record searching, and offline KSA regulatory reports.
+                    </p>
                 </div>
-                
-                <!-- Solution Card -->
-                <div class="glass-card reveal-on-scroll" style="border-left: 4px solid var(--mirra-blue);">
-                    <h3 style="font-size: 1.35rem; margin-bottom: 15px; display: flex; align-items: center; gap: 8px; color: var(--mirra-blue);">
-                        <i class="fas fa-magic"></i> The Mirra Paradigm
-                    </h3>
+                <div class="glass-card reveal-on-scroll" style="border-left: 4px solid var(--cashbook-blue);">
+                    <h4 style="font-size: 1.25rem; margin-bottom: 12px;"><i class="fas fa-bolt" style="color: var(--cashbook-blue);"></i> Core Operational Principles</h4>
                     <ul class="feature-list">
-                        <li>Perform actions on Source; Target mirrors instantly</li>
-                        <li>Contained dual-viewport keeps both views centered</li>
-                        <li>Heatmaps highlight pixel differences automatically</li>
-                        <li>Embedded axe-core auditing checks both panels in one click</li>
+                        <li>Keyboard-only focus: complete vouchers without using a mouse</li>
+                        <li>Offline availability: 100% operation with local SQL backups</li>
+                        <li>Automated tax calculations compliant with KSA VAT laws</li>
+                        <li>High-framerate rendering UI utilizing WPF layout composition</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- BENTO SHOWCASE: FEATURE CAPABILITIES -->
-    <section id="features">
+    <!-- ARCHITECTURAL COMPONENTS -->
+    <section id="components">
         <div class="container">
             <div class="section-header reveal-on-scroll">
-                <h2 class="section-title">Product Capabilities</h2>
-                <p class="section-subtitle">A dashboard of tools designed to streamline environment checks and regression testing.</p>
+                <h2 class="section-title">Key Operational Interfaces</h2>
+                <p class="section-subtitle">Engineered workflows targeting speed, layout readability, and account overview.</p>
             </div>
 
-            <div class="bento-showcase reveal-on-scroll">
-                <!-- Bento Panel 1: Synchronized Mirroring (Large) -->
-                <div class="glass-card bento-panel large">
-                    <div class="panel-info">
-                        <h4><i class="fas fa-sync highlight-blue"></i> Synchronized Input Mirroring</h4>
-                        <p>Interact with one panel; the other mimics inputs dynamically. Synchronizes cursor mouse coordinates, page scrolls, and form fields via Chrome DevTools Protocol.</p>
-                    </div>
-                    
-                    <div class="mirror-mapping-widget">
-                        <div class="input-mirror-viz" style="display: flex; align-items: center; justify-content: center; gap: 30px;">
-                            <div style="text-align: center; color: var(--mirra-purple); font-size: 3rem;">
-                                🖱️<br><small style="font-size: 0.25em; font-weight: 700; font-family: var(--font-heading);">Source Panel</small>
-                            </div>
-                            <div class="input-mirror-arrow" style="color: var(--mirra-blue); font-size: 1.8rem; font-weight: 700;">➔</div>
-                            <div style="text-align: center; color: var(--mirra-blue); font-size: 3rem;">
-                                🖱️<br><small style="font-size: 0.25em; font-weight: 700; font-family: var(--font-heading);">Target Panel</small>
-                            </div>
-                        </div>
-                    </div>
+            <!-- Component 1: Dashboard (Image Right) -->
+            <div class="split-grid reveal-on-scroll" style="margin-bottom: 60px;">
+                <div>
+                    <span class="badge" style="background: rgba(30, 64, 175, 0.08); color: var(--cashbook-blue); border-color: rgba(30, 64, 175, 0.2); width: fit-content; margin-bottom: 15px;">Executive Overview</span>
+                    <h3 style="font-size: 1.8rem; margin-bottom: 15px;"><i class="fas fa-tachometer-alt" style="color: var(--cashbook-blue);"></i> SAR KPI Dashboard</h3>
+                    <p style="font-size: 1.05rem; line-height: 1.7; color: #475569; margin-bottom: 20px;">
+                        The main landing layout provides cashiers and owners with immediate insight into the store's current financial status. Large telemetry cards track total cash-in, cash-out, outstanding vat receivables, and net balances in Saudi Riyal (SAR).
+                    </p>
+                    <ul class="feature-list">
+                        <li>Real-time telemetry counters tracking active cash inflows/outflows</li>
+                        <li>Integrated visual reports indicating weekly ledger growth</li>
+                        <li>Dynamic account ledger quick-access columns</li>
+                    </ul>
                 </div>
+                <div class="glass-card" style="padding: 12px; display: flex; justify-content: center; align-items: center; background: #0f172a;">
+                    <img src="./dashboard.png" class="hol-image" alt="Saudi Cashbook Dashboard UI" style="border-radius: 8px; width: 100%;">
+                </div>
+            </div>
 
-                <!-- Bento Panel 2: Accessibility Check (Small) -->
-                <div class="glass-card bento-panel small">
-                    <div class="panel-info">
-                        <h4><i class="fas fa-universal-access highlight-purple"></i> Accessibility Audit</h4>
-                        <p>Evaluate accessibility guidelines. Flags rules regressions with inline indicators, powered by axe-core.</p>
-                    </div>
-                    <div class="panel-media">
-                        <img src="./axe.png" class="hol-image" alt="Axe Accessibility Testing Panel">
-                    </div>
+            <!-- Component 2: Sales Voucher Dialog (Image Left) -->
+            <div class="split-grid reveal-on-scroll" style="margin-bottom: 80px;">
+                <div class="glass-card" style="padding: 12px; display: flex; justify-content: center; align-items: center; background: #0f172a;">
+                    <img src="./sales_voucher.png" class="hol-image" alt="Saudi Cashbook Sales Voucher Billing Dialog" style="border-radius: 8px; width: 100%;">
                 </div>
-
-                <!-- Bento Panel 3: Visual Diff / Heatmap (Small) -->
-                <div class="glass-card bento-panel small">
-                    <div class="panel-info">
-                        <h4><i class="fas fa-eye-dropper highlight-blue"></i> Heatmap & Overlay</h4>
-                        <p>Stack elements transparently or toggle heatmap visual diffs to outline style variances.</p>
-                    </div>
-                    <div class="panel-media">
-                        <img src="./overlay.png" class="hol-image" alt="Overlay Diffing Mode">
-                    </div>
-                </div>
-
-                <!-- Bento Panel 4: Console Sync (Large) -->
-                <div class="glass-card bento-panel large">
-                    <div class="panel-info">
-                        <h4><i class="fas fa-terminal highlight-purple"></i> Synchronized Console & Network</h4>
-                        <p>Isolate runtime problems. Side-by-side debugger outlines network query responses, warnings, and javascript logs. Isolates deviations between panel states.</p>
-                    </div>
-                    <div class="panel-media">
-                        <img src="./Console.png" class="hol-image" alt="Mirra Console Output Sync View" style="max-height: 180px; object-fit: contain;">
-                    </div>
-                </div>
-                
-                <!-- Bento Panel 5: Visual Regression Heatmap (Full Width) -->
-                <div class="glass-card bento-panel full">
-                    <div class="panel-info" style="text-align: center; max-width: 600px; margin: 0 auto 20px auto;">
-                        <h4><i class="fas fa-binoculars highlight-blue"></i> Pixel-Perfect Heatmap regression</h4>
-                        <p>Spot alignment deviations automatically. Generates pixel-difference mappings highlighting color drifts, margins changes, and content mismatches.</p>
-                    </div>
-                    <div class="panel-media" style="padding: 24px 12px;">
-                        <img src="./heatmap.png" class="hol-image" alt="Heatmap Accuracy comparison" style="max-height: 250px; object-fit: contain;">
-                    </div>
+                <div>
+                    <span class="badge" style="background: rgba(30, 64, 175, 0.08); color: var(--cashbook-blue); border-color: rgba(30, 64, 175, 0.2); width: fit-content; margin-bottom: 15px;">Data Entry Engine</span>
+                    <h3 style="font-size: 1.8rem; margin-bottom: 15px;"><i class="fas fa-edit" style="color: var(--cashbook-blue);"></i> Rapid Voucher Billing</h3>
+                    <p style="font-size: 1.05rem; line-height: 1.7; color: #475569; margin-bottom: 20px;">
+                        The sales and purchase entry screens are optimized for maximum efficiency. cashiers use local shortcuts to open billing vouchers, quickly autocomplete client ledgers, type invoice values, and hit enter to submit. The system handles automated credit/debit dual balancing.
+                    </p>
+                    <ul class="feature-list">
+                        <li>Automatic VAT ledger balancing and percentage tracking</li>
+                        <li>Predictive client account dropdown matching based on keystrokes</li>
+                        <li>Sub-millisecond data commit loop targeting local SQLite indexes</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- DEVELOPER TOOLKIT -->
-    <section id="toolkit">
+    <!-- REPORTS GALLERY -->
+    <section id="gallery">
         <div class="container">
             <div class="section-header reveal-on-scroll">
-                <h2 class="section-title">Developer Toolkit</h2>
-                <p class="section-subtitle">Built-in utilities to assist in quick layouts checks and environment auditing.</p>
+                <h2 class="section-title">Local Accounting & Auditing Suite</h2>
+                <p class="section-subtitle">Offline reporting forms ensuring accurate tax returns and ledger transparency.</p>
             </div>
-            
+
             <div class="features-grid reveal-on-scroll">
-                <div class="glass-card" style="text-align: center; padding: 25px;">
-                    <div style="font-size: 2.2rem; margin-bottom: 12px;">📐</div>
-                    <h4 class="highlight-blue" style="font-size: 1.15rem; margin-bottom: 6px;">Smart Ruler</h4>
-                    <p style="font-size: 0.88rem; margin: 0; color: #475569;">Measure element paddings, margins, and vertical offsets instantly.</p>
+                <!-- Report Card 1: Reports Menu -->
+                <div class="glass-card" style="display: flex; flex-direction: column; justify-content: space-between; align-items: center; text-align: center;">
+                    <div class="panel-info">
+                        <h4 style="font-size: 1.15rem; margin-bottom: 8px; justify-content: center;">
+                            <i class="fas fa-folder" style="color: var(--cashbook-blue);"></i> Reports Hub
+                        </h4>
+                        <p style="font-size: 0.88rem; color: #475569; margin-bottom: 15px;">
+                            Quickly access Day Books, VAT sheets, stock logs, and detailed ledgers from a keyboard-guided hub.
+                        </p>
+                    </div>
+                    <div style="background: #0f172a; padding: 8px; border-radius: 8px; margin-top: auto; border: 1px solid rgba(15, 23, 42, 0.1);">
+                        <img src="./reports_menu.png" class="hol-image" alt="Reports Hub Selection" style="width: 100%; border-radius: 6px;">
+                    </div>
                 </div>
-                <div class="glass-card" style="text-align: center; padding: 25px;">
-                    <div style="font-size: 2.2rem; margin-bottom: 12px;">📑</div>
-                    <h4 class="highlight-blue" style="font-size: 1.15rem; margin-bottom: 6px;">Bookmarks</h4>
-                    <p style="font-size: 0.88rem; margin: 0; color: #475569;">Save staging/production URL pairs to automate daily test cases.</p>
+
+                <!-- Report Card 2: Transactions Search -->
+                <div class="glass-card" style="display: flex; flex-direction: column; justify-content: space-between; align-items: center; text-align: center;">
+                    <div class="panel-info">
+                        <h4 style="font-size: 1.15rem; margin-bottom: 8px; justify-content: center;">
+                            <i class="fas fa-search" style="color: var(--cashbook-blue);"></i> Search Ledger
+                        </h4>
+                        <p style="font-size: 0.88rem; color: #475569; margin-bottom: 15px;">
+                            Search through thousands of historical vouchers instantly. Filter by date, amount, account, or number.
+                        </p>
+                    </div>
+                    <div style="background: #0f172a; padding: 8px; border-radius: 8px; margin-top: auto; border: 1px solid rgba(15, 23, 42, 0.1);">
+                        <img src="./transactions_list.png" class="hol-image" alt="Ledger Search Listing" style="width: 100%; border-radius: 6px;">
+                    </div>
                 </div>
-                <div class="glass-card" style="text-align: center; padding: 25px;">
-                    <div style="font-size: 2.2rem; margin-bottom: 12px;">⌨️</div>
-                    <h4 class="highlight-blue" style="font-size: 1.15rem; margin-bottom: 6px;">Hotkey Macros</h4>
-                    <p style="font-size: 0.88rem; margin: 0; color: #475569;">Toggle visual modes and synchronization options without touching the mouse.</p>
+
+                <!-- Report Card 3: Day Book -->
+                <div class="glass-card" style="display: flex; flex-direction: column; justify-content: space-between; align-items: center; text-align: center;">
+                    <div class="panel-info">
+                        <h4 style="font-size: 1.15rem; margin-bottom: 8px; justify-content: center;">
+                            <i class="fas fa-book" style="color: var(--cashbook-blue);"></i> Day Book
+                        </h4>
+                        <p style="font-size: 0.88rem; color: #475569; margin-bottom: 15px;">
+                            Review chronological credit/debit records, tally totals, and inspect daily net cashier transactions.
+                        </p>
+                    </div>
+                    <div style="background: #0f172a; padding: 8px; border-radius: 8px; margin-top: auto; border: 1px solid rgba(15, 23, 42, 0.1);">
+                        <img src="./day_book.png" class="hol-image" alt="Day Book Statement" style="width: 100%; border-radius: 6px;">
+                    </div>
+                </div>
+
+                <!-- Report Card 4: Purchase Entry -->
+                <div class="glass-card" style="display: flex; flex-direction: column; justify-content: space-between; align-items: center; text-align: center;">
+                    <div class="panel-info">
+                        <h4 style="font-size: 1.15rem; margin-bottom: 8px; justify-content: center;">
+                            <i class="fas fa-receipt" style="color: var(--cashbook-blue);"></i> Purchase Forms
+                        </h4>
+                        <p style="font-size: 0.88rem; color: #475569; margin-bottom: 15px;">
+                            Quickly log supplier invoices, calculate tax splits, and track active accounts payable.
+                        </p>
+                    </div>
+                    <div style="background: #0f172a; padding: 8px; border-radius: 8px; margin-top: auto; border: 1px solid rgba(15, 23, 42, 0.1);">
+                        <img src="./purchase_voucher.png" class="hol-image" alt="Purchase Entry Screen" style="width: 100%; border-radius: 6px;">
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ARCHITECTURE & SPEED -->
-    <section style="position: relative;" id="performance">
+    <!-- ARCHITECTURE SPECIFICATIONS -->
+    <section style="position: relative;" id="specifications">
         <div class="container reveal-on-scroll">
             <div class="section-header">
-                <h2 style="font-size: 2.25rem;">Built for Speed</h2>
-                <p>Native desktop execution delivering zero input lag.</p>
+                <h2 style="font-size: 2.25rem;">Technical Infrastructure</h2>
+                <p>Designed for sub-millisecond local latency, absolute data safety, and zero external software dependencies.</p>
             </div>
 
             <div class="tech-spec-grid">
-                <!-- Card 1: Core Architecture -->
+                <!-- Specification 1: WPF Snappy UI -->
                 <div class="tech-card">
-                    <div class="tech-icon-circle" style="border-color: var(--mirra-purple);">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--mirra-purple)"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
-                        </svg>
+                    <div class="tech-icon-circle" style="border-color: var(--cashbook-blue);">
+                        <i class="fas fa-window-restore" style="color: var(--cashbook-blue);"></i>
                     </div>
-                    <span class="tech-tag" style="background: rgba(124, 58, 237, 0.08); color: var(--mirra-purple);">Core Architecture</span>
-                    <h4>WPF + .NET</h4>
-                    <p style="font-size: 0.88rem; margin: 0; color: #475569;">Engineered as a native Windows desktop app. Bypassing Electron ensures minimal memory use and high-performance UI updates.</p>
+                    <span class="tech-tag">Desktop Framework</span>
+                    <h4>WPF & MVVM Architecture</h4>
+                    <p style="font-size: 0.88rem; margin: 0; color: #475569;">Written entirely using modern C# WPF structures. Keeps memory footprint extremely low (under 60MB) while maintaining instantaneous keyboard input responses and rendering speeds.</p>
                 </div>
 
-                <!-- Card 2: Rendering Engine -->
+                <!-- Specification 2: SQLite Local Store -->
                 <div class="tech-card">
-                    <div class="tech-icon-circle" style="border-color: var(--mirra-blue);">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--mirra-blue)"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <line x1="2" y1="12" x2="22" y2="12"></line>
-                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-                        </svg>
+                    <div class="tech-icon-circle" style="border-color: var(--cashbook-blue);">
+                        <i class="fas fa-database" style="color: var(--cashbook-blue);"></i>
                     </div>
-                    <span class="tech-tag">Rendering Engine</span>
-                    <h4>WebView2 Chromium</h4>
-                    <p style="font-size: 0.88rem; margin: 0; color: #475569;">Powered by Microsoft Edge WebView2, ensuring 100% rendering parity with modern Google Chrome builds.</p>
+                    <span class="tech-tag">Storage Layer</span>
+                    <h4>Offline-First SQLite</h4>
+                    <p style="font-size: 0.88rem; margin: 0; color: #475569;">Uses local, transactional SQLite file databases. Ensures ACID compliance so that data remains undamaged even during sudden cashier system power cuts or OS crashes.</p>
                 </div>
 
-                <!-- Card 3: Protocol -->
+                <!-- Specification 3: VAT Calculation Engine -->
                 <div class="tech-card">
-                    <div class="tech-icon-circle" style="border-color: var(--mirra-blue);">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--mirra-blue)" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="4 17 10 11 10 17"></polyline>
-                            <line x1="12" y1="19" x2="20" y2="19"></line>
-                            <polyline points="4 7 10 13 10 7"></polyline>
-                            <line x1="12" y1="5" x2="20" y2="5"></line>
-                        </svg>
+                    <div class="tech-icon-circle" style="border-color: var(--cashbook-blue);">
+                        <i class="fas fa-percent" style="color: var(--cashbook-blue);"></i>
                     </div>
-                    <span class="tech-tag" style="background: rgba(37, 99, 235, 0.06); color: var(--mirra-blue);">Protocol Layer</span>
-                    <h4>CDP Event Line</h4>
-                    <p style="font-size: 0.88rem; margin: 0; color: #475569;">Bypasses standard layout drivers, communicating directly via Chrome DevTools Protocol to mirror inputs instantly.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- USE CASES -->
-    <section id="use-cases">
-        <div class="container">
-            <div class="section-header reveal-on-scroll">
-                <h2 class="section-title">Target Workflows</h2>
-                <p class="section-subtitle">How testing teams incorporate Mirra in their release pipelines.</p>
-            </div>
-            
-            <div class="features-grid reveal-on-scroll">
-                <div class="glass-card">
-                    <h4 class="highlight-blue" style="font-size: 1.15rem; margin-bottom: 8px;">Regression Auditing</h4>
-                    <p style="margin: 0; font-size: 0.88rem; color: #475569;">Compare v1 vs v2 staging deployments side-by-side to make sure styling elements remain intact.</p>
-                </div>
-                <div class="glass-card">
-                    <h4 class="highlight-purple" style="font-size: 1.15rem; margin-bottom: 8px;">Environment Matching</h4>
-                    <p style="margin: 0; font-size: 0.88rem; color: #475569;">Verify local developments match production outputs, finding configuration drifts immediately.</p>
-                </div>
-                <div class="glass-card">
-                    <h4 class="highlight-blue" style="font-size: 1.15rem; margin-bottom: 8px;">Technology Migration</h4>
-                    <p style="margin: 0; font-size: 0.88rem; color: #475569;">Benchmark older frameworks alongside Next.js transitions to assert pixel-perfect structure replication.</p>
+                    <span class="tech-tag">Calculation Engine</span>
+                    <h4>Regulatory VAT Parser</h4>
+                    <p style="font-size: 0.88rem; margin: 0; color: #475569;">A strict local calculation class mapped to official Saudi KSA tax brackets. Handles multi-ledger allocations, roundings, and tax breakdown splits automatically.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- FOOTER CTA -->
-    <section style="text-align: center; padding: 60px 0;" id="download-footer">
+    <section style="text-align: center; padding: 60px 0;" id="request-footer">
         <div class="container reveal-on-scroll">
-            <h2 class="gradient-text" style="font-size: 3.5rem; margin-bottom: 8px;">Test Smarter with Mirra</h2>
-            <p style="font-size: 1.1rem; margin-bottom: 30px; color: #475569;">Automate comparative browser testing in a native dual-viewport workspace.</p>
-            <a href="https://github.com/drDEV-Creator/drdev/releases/download/v1.0.0/MirraInstaller.exe"
-                class="btn-primary" id="download-alpha-btn-footer" target="_blank"><i class="fas fa-download"></i> Download Alpha v1.0</a>
+            <h2 style="font-size: 3rem; margin-bottom: 8px; color: var(--cashbook-blue);">Need a Custom Desktop Utility?</h2>
+            <p style="font-size: 1.1rem; margin-bottom: 30px; color: #475569; max-width: 700px; margin-left: auto; margin-right: auto;">
+                We partner with businesses to engineer offline-first desktop tools, fast data entry panels, and customized transaction ledgers. Get in touch to build a solution tailored for your team.
+            </p>
+            <div style="display: flex; gap: 15px; justify-content: center; align-items: center; flex-wrap: wrap;">
+                <a href="../index.html#contact" class="btn-primary"><i class="fas fa-envelope"></i> Request Similar Solution</a>
+            </div>
         </div>
     </section>
 
@@ -971,6 +929,32 @@
                 });
             }
 
+            // 3D Card Tilt Effect (Desktop only)
+            const cards = document.querySelectorAll('.glass-card, .tech-card');
+            if (cards.length > 0 && window.innerWidth > 768) {
+                cards.forEach(card => {
+                    card.addEventListener('mousemove', (e) => {
+                        const rect = card.getBoundingClientRect();
+                        const x = e.clientX - rect.left;
+                        const y = e.clientY - rect.top;
+
+                        const xRotation = -((y - rect.height / 2) / (rect.height / 16));
+                        const yRotation = (x - rect.width / 2) / (rect.width / 16);
+
+                        card.style.transform = `perspective(1000px) scale(1.015) rotateX(${xRotation}deg) rotateY(${yRotation}deg)`;
+                        card.style.boxShadow = `0 20px 45px -10px rgba(30, 64, 175, 0.12), 0 0 1px rgba(30, 64, 175, 0.1)`;
+                    });
+
+                    card.style.transition = 'transform 0.1s ease, box-shadow 0.1s ease';
+
+                    card.addEventListener('mouseleave', () => {
+                        card.style.transform = 'perspective(1000px) scale(1) rotateX(0) rotateY(0)';
+                        card.style.boxShadow = '';
+                        card.style.transition = 'transform 0.4s ease, box-shadow 0.4s ease';
+                    });
+                });
+            }
+
             // Scroll Animation Observer
             const observerOptions = {
                 root: null,
@@ -982,7 +966,7 @@
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('visible');
-                        observer.unobserve(entry.target); // Only animate once
+                        observer.unobserve(entry.target);
                     }
                 });
             }, observerOptions);
@@ -1007,13 +991,17 @@
                     particle.style.setProperty('--tx', tx);
                     particle.style.setProperty('--ty', ty);
 
+                    // Add dynamic coloring matching the cashbook dark blue theme
+                    particle.style.background = 'var(--cashbook-blue)';
+                    particle.style.boxShadow = '0 0 8px rgba(30, 64, 175, 0.6)';
+
                     document.body.appendChild(particle);
                     setTimeout(() => particle.remove(), 600);
                 }
             }
 
             // Attach to clickables
-            const clickables = document.querySelectorAll('a, button');
+            const clickables = document.querySelectorAll('a, button, .btn');
             clickables.forEach(btn => {
                 btn.addEventListener('click', (e) => {
                     createStarBurst(e.clientX, e.clientY);
