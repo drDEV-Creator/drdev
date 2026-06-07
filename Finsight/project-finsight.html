@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JK61WGNC8G"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-JK61WGNC8G');
+    </script>
+    <title>Finsight - Custom Tally ERP to Cloud & Mobile Sync System | drDEVX</title>
+    <link rel="icon" type="image/png" href="../assets/dlogo.png">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Finsight - A custom enterprise bridge developed for Finite Global. Securely sync Tally ERP local accounts data to cloud databases and view balance sheets, profit & loss, and daybooks in real time via mobile app.">
+    <meta name="keywords"
+        content="Finsight, Tally connector, Tally to cloud, Tally mobile app, Finite Global, financial dashboard, custom accounting software, ERP bridge, C#, Flutter, drDEVX">
+    <meta name="author" content="drDEVX">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://drdevx.pages.dev/Finsight/project-finsight.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://drdevx.pages.dev/Finsight/project-finsight.html">
+    <meta property="og:title" content="Finsight - Tally ERP Cloud Sync Solution">
+    <meta property="og:description" content="Securely sync Tally ERP accounting data to cloud databases and view financial reports on dynamic mobile dashboards. Engineered custom for Finite Global.">
+    <meta property="og:image" content="https://drdevx.pages.dev/Finsight/desktopApp.png">
+    <meta property="og:site_name" content="drDEVX">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://drdevx.pages.dev/Finsight/project-finsight.html">
+    <meta name="twitter:title" content="Finsight - Tally ERP Cloud Sync Solution">
+    <meta name="twitter:description" content="Securely sync Tally ERP accounting data to cloud databases and view financial reports on dynamic mobile dashboards. Engineered custom for Finite Global.">
+    <meta name="twitter:image" content="https://drdevx.pages.dev/Finsight/desktopApp.png">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../styles.css">
+
+    <style>
+        :root {
+            --finsight-blue: #1e40af; /* Solid Dark Blue */
+            --finsight-deep: #1e3a8a; /* Deep Navy Blue */
+            --finsight-bg-dark: #f8fafc;
+            --glass-bg: rgba(255, 255, 255, 0.75);
+            --glass-border: rgba(226, 232, 240, 0.8);
+            
+            --glass-shadow: 0 12px 30px -8px rgba(15, 23, 42, 0.15), 0 4px 12px -2px rgba(15, 23, 42, 0.05);
+            --glass-shadow-hover: 0 24px 48px -12px rgba(30, 64, 175, 0.18), 0 8px 20px -4px rgba(15, 23, 42, 0.08);
+        }
+
+        /* ========== BASE STYLES ========== */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--finsight-bg-dark);
+            background-image:
+                radial-gradient(circle at 10% 20%, rgba(30, 64, 175, 0.03) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(30, 64, 175, 0.02) 0%, transparent 40%),
+                linear-gradient(to bottom, #f8fafc, #ffffff);
+            font-family: 'Inter', sans-serif;
+            color: #0f172a;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            margin-bottom: 15px;
+            letter-spacing: -0.02em;
+            color: #0f172a;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            line-height: 1.1;
+            color: var(--finsight-blue);
+            filter: drop-shadow(0 4px 12px rgba(30, 64, 175, 0.08));
+        }
+
+        h2 {
+            font-size: 2.25rem;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.75rem;
+        }
+
+        p {
+            font-size: 1rem;
+            color: #475569;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+        }
+
+        /* ========== UTILITIES & ACCENTS ========== */
+        .highlight-blue { color: var(--finsight-blue); }
+        .highlight-deep { color: var(--finsight-deep); }
+        .gradient-text {
+            color: var(--finsight-blue);
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 70px 0;
+            position: relative;
+        }
+
+        section:nth-child(even) {
+            background: rgba(241, 245, 249, 0.35);
+        }
+
+        /* ========== HOLOGRAPHIC CARDS & GLASSMORPHISM ========== */
+        .glass-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 2rem;
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            box-shadow: var(--glass-shadow);
+            transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+                        box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+                        border-color 0.4s ease;
+            will-change: transform, box-shadow;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--glass-shadow-hover);
+            border-color: rgba(30, 64, 175, 0.3);
+        }
+
+        .hol-image {
+            border-radius: 12px;
+            box-shadow: 0 15px 35px -10px rgba(15, 23, 42, 0.12), 0 0 0 1px rgba(15, 23, 42, 0.05);
+            transition: transform 0.4s ease;
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .hol-image:hover {
+            transform: scale(1.015);
+        }
+
+        /* ========== COMPONENTS ========== */
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+            background: var(--finsight-blue);
+            padding: 12px 30px;
+            border-radius: 8px;
+            color: #ffffff !important;
+            font-weight: 600;
+            font-size: 0.95rem;
+            font-family: 'Outfit', sans-serif;
+            border: none;
+            box-shadow: 0 4px 14px rgba(30, 64, 175, 0.25);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(30, 64, 175, 0.35);
+            color: #ffffff;
+        }
+
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+            background: #ffffff;
+            border: 1px solid var(--glass-border);
+            padding: 12px 30px;
+            border-radius: 8px;
+            color: #0f172a !important;
+            font-weight: 600;
+            font-size: 0.95rem;
+            font-family: 'Outfit', sans-serif;
+            box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            transform: translateY(-2px);
+            background: var(--finsight-bg-dark);
+            border-color: #cbd5e1;
+        }
+
+        .split-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        ul.feature-list {
+            list-style: none;
+        }
+
+        ul.feature-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(15, 23, 42, 0.05);
+            display: flex;
+            align-items: center;
+            font-size: 0.95rem;
+            color: #334155;
+        }
+
+        ul.feature-list li::before {
+            content: "➔";
+            color: var(--finsight-blue);
+            margin-right: 12px;
+            font-size: 0.8em;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+            margin-top: 30px;
+        }
+
+        .panel-info h4 {
+            font-size: 1.25rem;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .panel-info p {
+            font-size: 0.9rem;
+            margin-bottom: 0;
+            color: #475569;
+        }
+
+        .panel-media {
+            border-radius: 8px;
+            overflow: hidden;
+            background: #0f172a;
+            border: 1px solid rgba(15, 23, 42, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: auto;
+            padding: 12px;
+        }
+
+        .panel-media img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            display: block;
+        }
+
+        /* ========== HERO SECTION SPECIFIC ========== */
+        .hero-section {
+            padding-top: 130px;
+            padding-bottom: 60px;
+            position: relative;
+            overflow: hidden;
+            min-height: auto;
+        }
+
+        .hero-grid-container {
+            max-width: 1200px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 0.92fr 1.08fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .hero-text-side {
+            text-align: left;
+        }
+
+        .hero-visual-side {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .hero-mockup-wrapper {
+            background: #ffffff;
+            border: 1px solid var(--glass-border);
+            padding: 12px;
+            border-radius: 16px;
+            box-shadow: var(--glass-shadow);
+            width: 100%;
+            max-width: 580px;
+            transition: transform 0.4s ease;
+        }
+
+        .hero-mockup-wrapper:hover {
+            transform: translateY(-4px) scale(1.01);
+            box-shadow: var(--glass-shadow-hover);
+        }
+
+        .hero-mockup-img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+            border: 1px solid rgba(15, 23, 42, 0.05);
+        }
+
+        .hero-title {
+            font-size: 3.6rem;
+            line-height: 1.1;
+            margin-bottom: 15px;
+            letter-spacing: -0.04em;
+        }
+
+        .hero-subtitle {
+            font-size: 1.15rem;
+            color: #475569;
+            margin-bottom: 30px;
+            line-height: 1.5;
+        }
+
+        .hero-badges {
+            display: flex;
+            gap: 10px;
+            margin: 25px 0;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid var(--glass-border);
+            padding: 8px 16px;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            font-size: 0.82rem;
+            color: #334155;
+            font-weight: 600;
+            box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
+            transition: all 0.3s ease;
+        }
+
+        .badge:hover {
+            transform: translateY(-2px);
+            border-color: rgba(30, 64, 175, 0.3);
+            background: rgba(30, 64, 175, 0.04);
+            color: var(--finsight-blue);
+        }
+
+        .hero-cta-group {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        /* ========== DENSE CAPABILITIES SECTION ========== */
+        .section-header {
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto 40px auto;
+        }
+
+        .section-title {
+            font-size: 2.25rem;
+            margin-bottom: 10px;
+        }
+
+        .section-subtitle {
+            color: #475569;
+            font-size: 1.02rem;
+        }
+
+        /* ========== TECH SPECS & ARCHITECTURE ========== */
+        .tech-spec-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .tech-card {
+            background: rgba(255, 255, 255, 0.75);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 30px 25px;
+            text-align: left;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            position: relative;
+            overflow: hidden;
+            height: 100%;
+            box-shadow: var(--glass-shadow);
+        }
+
+        .tech-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(30, 64, 175, 0.3);
+            box-shadow: var(--glass-shadow-hover);
+        }
+
+        .tech-icon-circle {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.35rem;
+            margin-bottom: 20px;
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 4px 10px rgba(15, 23, 42, 0.02);
+        }
+
+        .tech-card h4 {
+            font-size: 1.25rem;
+            margin-bottom: 8px;
+        }
+
+        .tech-tag {
+            display: inline-block;
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 4px 10px;
+            border-radius: 10px;
+            background: rgba(30, 64, 175, 0.06);
+            color: var(--finsight-blue);
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        /* ========== SCROLL ANIMATION CSS ========== */
+        .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.7s cubic-bezier(0.165, 0.84, 0.44, 1),
+                        transform 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .reveal-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ========== RESPONSIVE ========== */
+        @media screen and (max-width: 900px) {
+            .hero-grid-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 30px;
+            }
+
+            .hero-text-side {
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .hero-badges {
+                justify-content: center;
+            }
+
+            .hero-cta-group {
+                justify-content: center;
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .btn-primary, .btn-secondary {
+                width: 100%;
+            }
+
+            .split-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                text-align: center;
+            }
+
+            .tech-spec-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            ul.feature-list {
+                text-align: left;
+                display: inline-block;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .hero-title { font-size: 2.4rem !important; }
+            section { padding: 50px 0; }
+            
+            .hero-badges {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        /* Scroll Progress */
+        .scroll-progress {
+            background: var(--finsight-blue);
+            box-shadow: 0 0 10px rgba(30, 64, 175, 0.4);
+            height: 3px;
+            z-index: 9999;
+        }
+
+        /* Custom cursor highlight */
+        .cursor-glow {
+            position: fixed;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(30, 64, 175, 0.04) 0%, rgba(255, 255, 255, 0) 70%);
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+            z-index: 0;
+            transition: opacity 0.5s ease;
+            opacity: 0;
+        }
+
+        /* Soft Glow Orbs */
+        .glow-orb {
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(130px);
+            z-index: -1;
+            opacity: 0.7;
+        }
+
+        .orb-1 {
+            width: 500px;
+            height: 500px;
+            background: rgba(30, 64, 175, 0.05);
+            top: -150px;
+            left: -150px;
+            animation: floating-orb 15s infinite ease-in-out;
+        }
+
+        .orb-2 {
+            width: 400px;
+            height: 400px;
+            background: rgba(30, 64, 175, 0.03);
+            bottom: -100px;
+            right: -100px;
+            animation: floating-orb 18s infinite ease-in-out reverse;
+        }
+
+        @keyframes floating-orb {
+            0% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(50px, 80px) scale(1.1); }
+            100% { transform: translate(0, 0) scale(1); }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="scroll-progress" id="scroll-progress-bar"></div>
+    <div class="noise-overlay"></div>
+    <div class="cursor-glow" id="custom-cursor-glow"></div>
+
+    <!-- Soft Glow Orbs -->
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+
+    <!-- NAVIGATION -->
+    <nav class="glass-nav">
+        <div class="logo-container">
+            <a href="../index.html">
+                <img src="../assets/dlogo.png" alt="drDEVX Logo" class="nav-logo">
+                <span class="brand-text">
+                    <span class="brand-dr">dr</span><span class="brand-dev">DEV</span><span class="brand-x">X</span>
+                </span>
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="../index.html#home">Home</a></li>
+            <li><a href="../index.html#focus">Focus</a></li>
+            <li><a href="../index.html#products">Products</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-grid-container">
+                <div class="hero-text-side fade-in-up">
+                    <div class="logo-badge-card" style="width: 76px; height: 76px; display: inline-flex; align-items: center; justify-content: center; background: #0f172a; border-radius: 14px; border: 1px solid rgba(255, 255, 255, 0.1); margin-bottom: 20px; box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.15), inset 0 1px 1px rgba(255,255,255,0.05);">
+                        <i class="fas fa-sync" style="font-size: 2.2rem; color: #38bdf8; filter: drop-shadow(0 4px 10px rgba(30,64,175,0.35));"></i>
+                    </div>
+                    <span class="badge" style="background: rgba(30, 64, 175, 0.08); color: var(--finsight-blue); border-color: rgba(30, 64, 175, 0.2); width: fit-content; margin-bottom: 15px;">Client Solution</span>
+                    <h1 class="hero-title">Finsight</h1>
+                    <h3 class="hero-subtitle">A custom corporate financial data sync and reporting platform engineered for Finite Global. Bridges local Tally ERP software securely to executive web and mobile dashboards.</h3>
+
+                    <div class="hero-badges">
+                        <div class="badge"><span>Tally ERP ODBC</span></div>
+                        <div class="badge"><span>Desktop Connector</span></div>
+                        <div class="badge"><span>Flutter Mobile App</span></div>
+                        <div class="badge"><span>Secure Cloud Storage</span></div>
+                    </div>
+
+                    <div class="hero-cta-group">
+                        <a href="../index.html#contact" class="btn-primary" id="request-quote-btn"><i class="fas fa-envelope"></i> Request Similar Solution</a>
+                        <a href="https://www.finiteglobal.com/" target="_blank" class="btn-secondary" id="client-website-btn"><i class="fas fa-external-link-alt"></i> Visit Client Website</a>
+                    </div>
+                    <p style="margin-top: 15px; font-size: 0.82rem; opacity: 0.65;">
+                        Developed custom for Finite Tax & Global Corp.
+                    </p>
+                </div>
+                <div class="hero-visual-side fade-in-up">
+                    <div class="hero-mockup-wrapper">
+                        <!-- Displays the Tally Connector Desktop Sync Utility -->
+                        <img src="./desktopApp.png" class="hero-mockup-img" alt="Tally Connector Desktop Utility">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECT OVERVIEW -->
+    <section id="project-overview">
+        <div class="container">
+            <div class="section-header reveal-on-scroll">
+                <h2 class="section-title">Bridging Offline Accounting & Mobile Executives</h2>
+                <p class="section-subtitle">Tally ERP is the industry standard for financial bookkeeping, but its data remains locked on local desktop office machines. Finsight bridges this gap securely.</p>
+            </div>
+            
+            <div class="split-grid">
+                <div class="reveal-on-scroll">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: var(--finsight-blue);">The Business Requirement</h3>
+                    <p style="color: #475569; font-size: 1.02rem; line-height: 1.7;">
+                        Finite Global required a secure, background automation bridge that could extract accounting ledgers, invoices, vouchers, and receivables directly from local desktop computers running Tally ERP, transmit them securely to a cloud datastore, and display beautiful financial insights on the client's mobile devices.
+                    </p>
+                    <p style="color: #475569; font-size: 1.02rem; line-height: 1.7;">
+                        The system is split into two primary components: the **Tally Connector Desktop Utility** and the **Finsight Mobile Dashboard App**.
+                    </p>
+                </div>
+                <div class="glass-card reveal-on-scroll" style="border-left: 4px solid var(--finsight-blue);">
+                    <h4 style="font-size: 1.25rem; margin-bottom: 12px;"><i class="fas fa-shield-alt" style="color: var(--finsight-blue);"></i> Core Architecture Attributes</h4>
+                    <ul class="feature-list">
+                        <li>ODBC data fetching query cycles running locally</li>
+                        <li>Automated, secure cloud payloads using REST API hooks</li>
+                        <li>Multi-tenant cloud structure partitioned by credentials</li>
+                        <li>Flutter mobile dashboard compiling real-time Tally states</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ARCHITECTURAL COMPONENTS -->
+    <section id="components">
+        <div class="container">
+            <div class="section-header reveal-on-scroll">
+                <h2 class="section-title">Architectural Components</h2>
+                <p class="section-subtitle">How data travels from local office PCs to secure mobile devices.</p>
+            </div>
+
+            <!-- Component 1: Tally Connector (Image Right) -->
+            <div class="split-grid reveal-on-scroll" style="margin-bottom: 60px;">
+                <div>
+                    <span class="badge" style="background: rgba(30, 64, 175, 0.08); color: var(--finsight-blue); border-color: rgba(30, 64, 175, 0.2); width: fit-content; margin-bottom: 15px;">Desktop Daemon</span>
+                    <h3 style="font-size: 1.8rem; margin-bottom: 15px;"><i class="fas fa-desktop" style="color: var(--finsight-blue);"></i> Tally Desktop Connector</h3>
+                    <p style="font-size: 1.05rem; line-height: 1.7; color: #475569; margin-bottom: 20px;">
+                        The desktop application is installed locally on the accountant's PC where Tally runs. It operates quietly in the background, communicating with Tally via local ports to fetch active company books. Once fetched, it structuralizes company ledgers and compiles upload payloads to push to the cloud.
+                    </p>
+                    <ul class="feature-list">
+                        <li>Automatic local port verification and connection diagnostics</li>
+                        <li>Active company list loading with individual fetch controls</li>
+                        <li>Encrypted cloud sync status logs showing precise upload histories</li>
+                    </ul>
+                </div>
+                <div class="glass-card" style="padding: 12px; display: flex; justify-content: center; align-items: center; background: #0f172a;">
+                    <img src="./desktopApp.png" class="hol-image" alt="Tally Connector Desktop Utility UI" style="border-radius: 8px; width: 100%;">
+                </div>
+            </div>
+
+            <!-- Component 2: Mobile App Dashboard (Image Left) -->
+            <div class="split-grid reveal-on-scroll" style="margin-bottom: 80px;">
+                <div class="glass-card" style="padding: 12px; display: flex; justify-content: center; align-items: center; background: #0f172a; max-width: 380px; margin: 0 auto;">
+                    <img src="./Mobile app/mobile_dashboard.jpeg" class="hol-image" alt="Finsight Mobile Dashboard Screen" style="border-radius: 8px; width: 100%;">
+                </div>
+                <div>
+                    <span class="badge" style="background: rgba(30, 64, 175, 0.08); color: var(--finsight-blue); border-color: rgba(30, 64, 175, 0.2); width: fit-content; margin-bottom: 15px;">Flutter Mobile App</span>
+                    <h3 style="font-size: 1.8rem; margin-bottom: 15px;"><i class="fas fa-mobile-alt" style="color: var(--finsight-blue);"></i> Executive Mobile Dashboard</h3>
+                    <p style="font-size: 1.05rem; line-height: 1.7; color: #475569; margin-bottom: 20px;">
+                        The client-side mobile app acts as the front-end dashboard for business owners. After passing credential validation, executives view outstanding receivables and payables, check live bank ledger balances, and drill down into orders and deliveries instantly.
+                    </p>
+                    <ul class="feature-list">
+                        <li>Secure user profiles matched with cloud-synced databases</li>
+                        <li>Outstanding receivables/payables tiles updated in real time</li>
+                        <li>Clean UI displaying order statuses and delivery summaries</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MOBILE REPORTS GALLERY -->
+    <section id="gallery">
+        <div class="container">
+            <div class="section-header reveal-on-scroll">
+                <h2 class="section-title">Mobile Reporting Suite</h2>
+                <p class="section-subtitle">Drill down into standard compliance statements and daily books on the go.</p>
+            </div>
+
+            <div class="features-grid reveal-on-scroll">
+                <!-- Report Card 1: Balance Sheet -->
+                <div class="glass-card" style="display: flex; flex-direction: column; justify-content: space-between; align-items: center; text-align: center;">
+                    <div class="panel-info">
+                        <h4 style="font-size: 1.15rem; margin-bottom: 8px; justify-content: center;">
+                            <i class="fas fa-balance-scale" style="color: var(--finsight-blue);"></i> Balance Sheet
+                        </h4>
+                        <p style="font-size: 0.88rem; color: #475569; margin-bottom: 15px;">
+                            Check assets, dynamic current liabilities, net profit reserves, and capitals in a structured format.
+                        </p>
+                    </div>
+                    <div style="background: #0f172a; padding: 8px; border-radius: 8px; max-width: 180px; margin-top: auto; border: 1px solid rgba(15, 23, 42, 0.1);">
+                        <img src="./Mobile app/mobile_balance_sheet.jpeg" class="hol-image" alt="Mobile Balance Sheet" style="width: 100%; border-radius: 6px;">
+                    </div>
+                </div>
+
+                <!-- Report Card 2: Profit & Loss -->
+                <div class="glass-card" style="display: flex; flex-direction: column; justify-content: space-between; align-items: center; text-align: center;">
+                    <div class="panel-info">
+                        <h4 style="font-size: 1.15rem; margin-bottom: 8px; justify-content: center;">
+                            <i class="fas fa-chart-line" style="color: var(--finsight-blue);"></i> Profit & Loss
+                        </h4>
+                        <p style="font-size: 0.88rem; color: #475569; margin-bottom: 15px;">
+                            Monitor sales records, closing stocks, purchase expenses, indirect charges, and net profits.
+                        </p>
+                    </div>
+                    <div style="background: #0f172a; padding: 8px; border-radius: 8px; max-width: 180px; margin-top: auto; border: 1px solid rgba(15, 23, 42, 0.1);">
+                        <img src="./Mobile app/mobile_profit_loss.jpeg" class="hol-image" alt="Mobile Profit & Loss" style="width: 100%; border-radius: 6px;">
+                    </div>
+                </div>
+
+                <!-- Report Card 3: Daybook -->
+                <div class="glass-card" style="display: flex; flex-direction: column; justify-content: space-between; align-items: center; text-align: center;">
+                    <div class="panel-info">
+                        <h4 style="font-size: 1.15rem; margin-bottom: 8px; justify-content: center;">
+                            <i class="fas fa-book" style="color: var(--finsight-blue);"></i> Daybook Logs
+                        </h4>
+                        <p style="font-size: 0.88rem; color: #475569; margin-bottom: 15px;">
+                            Track daily transactions, vouchers, debit notes, and payment releases with filters.
+                        </p>
+                    </div>
+                    <div style="background: #0f172a; padding: 8px; border-radius: 8px; max-width: 180px; margin-top: auto; border: 1px solid rgba(15, 23, 42, 0.1);">
+                        <img src="./Mobile app/mobile_daybook.jpeg" class="hol-image" alt="Mobile Daybook Logs" style="width: 100%; border-radius: 6px;">
+                    </div>
+                </div>
+
+                <!-- Report Card 4: Reports Menu -->
+                <div class="glass-card" style="display: flex; flex-direction: column; justify-content: space-between; align-items: center; text-align: center;">
+                    <div class="panel-info">
+                        <h4 style="font-size: 1.15rem; margin-bottom: 8px; justify-content: center;">
+                            <i class="fas fa-folder-open" style="color: var(--finsight-blue);"></i> Reports Menu
+                        </h4>
+                        <p style="font-size: 0.88rem; color: #475569; margin-bottom: 15px;">
+                            Toggle smoothly between Daybooks, Balance Sheets, and Profit & Loss cards from a central panel.
+                        </p>
+                    </div>
+                    <div style="background: #0f172a; padding: 8px; border-radius: 8px; max-width: 180px; margin-top: auto; border: 1px solid rgba(15, 23, 42, 0.1);">
+                        <img src="./Mobile app/mobile_reports.jpeg" class="hol-image" alt="Mobile Reports List" style="width: 100%; border-radius: 6px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ARCHITECTURE SPECIFICATIONS -->
+    <section style="position: relative;" id="specifications">
+        <div class="container reveal-on-scroll">
+            <div class="section-header">
+                <h2 style="font-size: 2.25rem;">Technical Infrastructure</h2>
+                <p>A secure, low-overhead sync pipeline connecting local bookkeeping systems to mobile devices.</p>
+            </div>
+
+            <div class="tech-spec-grid">
+                <!-- Specification 1: ODBC Gateway -->
+                <div class="tech-card">
+                    <div class="tech-icon-circle" style="border-color: var(--finsight-blue);">
+                        <i class="fas fa-network-wired" style="color: var(--finsight-blue);"></i>
+                    </div>
+                    <span class="tech-tag">ODBC Query Engine</span>
+                    <h4>Local Tally API Bridge</h4>
+                    <p style="font-size: 0.88rem; margin: 0; color: #475569;">Binds locally to Tally's local server port (typically 9000), using XML payload fetches to retrieve ledger accounts, daybooks, and outstanding balance sheets without affecting database runtime performance.</p>
+                </div>
+
+                <!-- Specification 2: Cloud Sync -->
+                <div class="tech-card">
+                    <div class="tech-icon-circle" style="border-color: var(--finsight-blue);">
+                        <i class="fas fa-cloud-upload-alt" style="color: var(--finsight-blue);"></i>
+                    </div>
+                    <span class="tech-tag">Cloud Daemon</span>
+                    <h4>Sync Service Gateway</h4>
+                    <p style="font-size: 0.88rem; margin: 0; color: #475569;">Encrypts Tally data packets using AES-256 standard protocols before transmitting them over secure HTTP interfaces. Upload logs show successful sync records.</p>
+                </div>
+
+                <!-- Specification 3: Flutter Mobile App -->
+                <div class="tech-card">
+                    <div class="tech-icon-circle" style="border-color: var(--finsight-blue);">
+                        <i class="fas fa-code" style="color: var(--finsight-blue);"></i>
+                    </div>
+                    <span class="tech-tag">Mobile Framework</span>
+                    <h4>Flutter Client Dashboard</h4>
+                    <p style="font-size: 0.88rem; margin: 0; color: #475569;">A unified Android & iOS dashboard compiled in Flutter, ensuring smooth rendering speeds, visual chart updates, and secure auth verification routines.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER CTA -->
+    <section style="text-align: center; padding: 60px 0;" id="request-footer">
+        <div class="container reveal-on-scroll">
+            <h2 style="font-size: 3rem; margin-bottom: 8px; color: var(--finsight-blue);">Need a Custom Sync Bridge?</h2>
+            <p style="font-size: 1.1rem; margin-bottom: 30px; color: #475569; max-width: 700px; margin-left: auto; margin-right: auto;">
+                We partner with corporate clients to build custom background sync utilities, cloud bridges, and mobile reporting dashboards. Get in touch to engineer a solution tailored to your operational workflows.
+            </p>
+            <div style="display: flex; gap: 15px; justify-content: center; align-items: center; flex-wrap: wrap;">
+                <a href="../index.html#contact" class="btn-primary"><i class="fas fa-envelope"></i> Request Similar Solution</a>
+                <a href="https://www.finiteglobal.com/" target="_blank" class="btn-secondary"><i class="fas fa-external-link-alt"></i> Visit Client Site</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 drDEVX. All Rights Reserved. Custom Engineering & Product Development.</p>
+    </footer>
+
+    <script>
+        // Header shrink on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.glass-nav');
+            if (header) {
+                if (window.scrollY > 40) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Scroll Progress Bar Logic
+            const progressBar = document.getElementById('scroll-progress-bar');
+            window.addEventListener('scroll', () => {
+                const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrolled = (winScroll / height) * 100;
+                if (progressBar) {
+                    progressBar.style.width = scrolled + "%";
+                }
+            });
+
+            // Hamburger Menu Toggle
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+
+            if (hamburger && navLinks) {
+                hamburger.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                    const icon = hamburger.querySelector('i');
+                    if (navLinks.classList.contains('active')) {
+                        icon.classList.remove('fa-bars');
+                        icon.classList.add('fa-times');
+                    } else {
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
+                });
+
+                // Close menu when a link is clicked
+                document.querySelectorAll('.nav-links a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        navLinks.classList.remove('active');
+                        const icon = hamburger.querySelector('i');
+                        if (icon) {
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        }
+                    });
+                });
+            }
+
+            // Custom cursor glow (desktop only)
+            const cursorGlow = document.getElementById('custom-cursor-glow');
+            if (cursorGlow && window.innerWidth > 768) {
+                document.addEventListener('mousemove', (e) => {
+                    cursorGlow.style.left = e.clientX + 'px';
+                    cursorGlow.style.top = e.clientY + 'px';
+                    cursorGlow.style.opacity = '1';
+                });
+                document.addEventListener('mouseleave', () => {
+                    cursorGlow.style.opacity = '0';
+                });
+            }
+
+            // 3D Card Tilt Effect (Desktop only)
+            const cards = document.querySelectorAll('.glass-card, .tech-card');
+            if (cards.length > 0 && window.innerWidth > 768) {
+                cards.forEach(card => {
+                    card.addEventListener('mousemove', (e) => {
+                        const rect = card.getBoundingClientRect();
+                        const x = e.clientX - rect.left;
+                        const y = e.clientY - rect.top;
+
+                        const xRotation = -((y - rect.height / 2) / (rect.height / 16));
+                        const yRotation = (x - rect.width / 2) / (rect.width / 16);
+
+                        card.style.transform = `perspective(1000px) scale(1.015) rotateX(${xRotation}deg) rotateY(${yRotation}deg)`;
+                        card.style.boxShadow = `0 20px 45px -10px rgba(30, 64, 175, 0.12), 0 0 1px rgba(30, 64, 175, 0.1)`;
+                    });
+
+                    card.addEventListener('mouseleave', () => {
+                        card.style.transform = 'perspective(1000px) scale(1) rotateX(0) rotateY(0)';
+                        card.style.boxShadow = '';
+                    });
+                });
+            }
+
+            // Scroll Animation Observer
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px 0px -50px 0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            const elements = document.querySelectorAll('.reveal-on-scroll');
+            elements.forEach(el => observer.observe(el));
+
+            // Star Burst Click Particle Animation
+            function createStarBurst(x, y) {
+                const particleCount = 12;
+                for (let i = 0; i < particleCount; i++) {
+                    const particle = document.createElement('div');
+                    particle.classList.add('star-burst');
+
+                    const angle = (Math.PI * 2 / particleCount) * i;
+                    const distance = 50 + Math.random() * 30;
+                    const tx = Math.cos(angle) * distance + 'px';
+                    const ty = Math.sin(angle) * distance + 'px';
+
+                    particle.style.left = x + 'px';
+                    particle.style.top = y + 'px';
+                    particle.style.setProperty('--tx', tx);
+                    particle.style.setProperty('--ty', ty);
+
+                    // Add dynamic coloring matching the Finsight dark blue theme
+                    particle.style.background = 'var(--finsight-blue)';
+                    particle.style.boxShadow = '0 0 8px rgba(30, 64, 175, 0.6)';
+
+                    document.body.appendChild(particle);
+                    setTimeout(() => particle.remove(), 600);
+                }
+            }
+
+            // Attach to clickables
+            const clickables = document.querySelectorAll('a, button, .btn');
+            clickables.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    createStarBurst(e.clientX, e.clientY);
+
+                    const href = btn.getAttribute('href');
+                    const target = btn.getAttribute('target');
+                    if (href && href !== '#' && !href.startsWith('#')) {
+                        e.preventDefault();
+                        setTimeout(() => {
+                            if (target === '_blank') {
+                                window.open(href, '_blank');
+                            } else {
+                                window.location.href = href;
+                            }
+                        }, 350);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

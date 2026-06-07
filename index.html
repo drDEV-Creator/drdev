@@ -61,7 +61,7 @@
         "logo": "https://drdevx.pages.dev/assets/dlogo.png",
         "description": "Premium software solutions and custom product engineering",
         "sameAs": [
-            "https://github.com/drDEVX-Creator"
+            "https://github.com/drDEV-Creator"
         ]
     }
     </script>
@@ -92,9 +92,8 @@
         </div>
         <ul class="nav-links" id="nav-links-list">
             <li><a href="#home" class="active">Home</a></li>
-            <li><a href="#philosophy">Philosophy</a></li>
+            <li><a href="#focus">Focus</a></li>
             <li><a href="#products">Products</a></li>
-            <li><a href="#pipeline">Pipeline</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
         <div class="hamburger" id="nav-toggle-btn" aria-label="Toggle Menu">
@@ -110,7 +109,7 @@
                 <p class="hero-subtitle">We build developer utilities, native desktop tools, and reliable software environments designed for speed, efficiency, and elite user experience.</p>
                 <div class="cta-group">
                     <a href="#products" class="btn btn-primary" id="cta-explore-products">Explore Products <i class="fas fa-arrow-right"></i></a>
-                    <a href="#contact" class="btn btn-secondary" id="cta-partner-up">Partner with Us</a>
+                    <a href="#contact" class="btn btn-secondary" id="cta-partner-up">Contact Us</a>
                 </div>
             </div>
             <div class="hero-visual-side fade-in-up">
@@ -137,11 +136,11 @@
         </div>
     </header>
 
-    <!-- Engineering Philosophy -->
-    <section id="philosophy" class="section-padding">
+    <!-- Engineering Focus -->
+    <section id="focus" class="section-padding">
         <div class="container">
             <div class="section-header fade-in">
-                <h2 class="section-title">Our Engineering <span class="highlight">Philosophy</span></h2>
+                <h2 class="section-title">Our Engineering <span class="highlight">Focus</span></h2>
                 <p class="section-subtitle">We believe software should be lightning-fast, robust by default, and a joy to interact with.</p>
             </div>
             <div class="about-grid">
@@ -173,13 +172,36 @@
             </div>
             
             <div class="products-grid">
-                <!-- Flagship Product: Mirra Browser -->
-                <div class="flagship-showcase glass-card fade-in" id="flagship-product-mirra">
+                <!-- Flagship Product: PlayGround -->
+                <div class="flagship-showcase glass-card fade-in" id="flagship-product-playground">
                     <div class="flagship-image-side">
-                        <div class="flagship-img-wrapper">
-                            <img src="mirra/App.png" alt="Mirra Browser Workspace Visual">
+                        <div class="flagship-img-wrapper" style="background: #0f172a;">
+                            <img src="Playground/2026-06-07_09h37_10.png" alt="PlayGround Editor Workspace">
                         </div>
                     </div>
+                    <div class="flagship-info-side">
+                        <span class="badge-tag flagship">Flagship Product</span>
+                        <h3>PlayGround</h3>
+                        <div class="project-tech">
+                            <span>Node.js</span> <span>Playwright</span> <span>MCP</span> <span>Chromium</span> <span>AI Debugger</span>
+                        </div>
+                        <p>A powerful developer workspace built on top of Playwright, designed to speed up script creation, element localization, and live browser testing for QA and automation engineers.</p>
+                        
+                        <ul class="feature-bullets">
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Advanced Interactive Codegen with locator testing</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Locator prompt generation for complex DOM elements</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Model Context Protocol (MCP) Server for live browser control</li>
+                        </ul>
+                        
+                        <div style="display: flex; gap: 1.5rem; align-items: center;">
+                            <a href="Playground/project-playground.html" class="btn-link" id="playground-details-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                            <a href="Playground/project-playground.html#download" class="btn btn-primary" style="padding: 0.5rem 1.25rem; font-size: 0.85rem;" id="playground-download-link"><i class="fas fa-download"></i> Get Installer</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Flagship Product: Mirra Browser -->
+                <div class="flagship-showcase glass-card fade-in" id="flagship-product-mirra" style="grid-template-columns: 0.85fr 1.15fr;">
                     <div class="flagship-info-side">
                         <span class="badge-tag flagship">Flagship Product</span>
                         <h3>Mirra Browser</h3>
@@ -196,46 +218,105 @@
                         
                         <div style="display: flex; gap: 1.5rem; align-items: center;">
                             <a href="mirra/project-mirra.html" class="btn-link" id="mirra-details-link">Learn More <i class="fas fa-arrow-right"></i></a>
-                            <a href="https://github.com/drDEVX-Creator/drdevx/releases/download/v1.0.0/MirraInstaller.exe" class="btn btn-primary" style="padding: 0.5rem 1.25rem; font-size: 0.85rem;" id="mirra-download-link"><i class="fas fa-download"></i> Get Installer</a>
+                            <a href="https://github.com/drDEV-Creator/drdev/releases/download/v1.0.0/MirraInstaller.exe" class="btn btn-primary" style="padding: 0.5rem 1.25rem; font-size: 0.85rem;" id="mirra-download-link" target="_blank"><i class="fas fa-download"></i> Get Installer</a>
+                        </div>
+                    </div>
+                    <div class="flagship-image-side">
+                        <div class="flagship-img-wrapper">
+                            <img src="mirra/FirstScreen.png" alt="Mirra Browser Workspace Visual">
                         </div>
                     </div>
                 </div>
 
                 <!-- Secondary Products -->
                 <div class="products-subgrid">
-                    <!-- Cashbook Android -->
+                    <!-- Finsight -->
+                    <div class="product-card glass-card fade-in" id="product-finsight">
+                        <div>
+                            <div class="product-card-header">
+                                <span class="badge-tag flagship">Client Solution</span>
+                                <i class="fas fa-sync" style="font-size: 1.5rem; color: var(--accent-blue);"></i>
+                            </div>
+                            <h4>Finsight</h4>
+                            <p>A custom Tally ERP cloud sync daemon and mobile financial dashboard created for Finite Global. Seamlessly syncs local accounts to a secure mobile app.</p>
+                        </div>
+                        <div class="product-card-footer">
+                            <div class="project-tech" style="margin-bottom: 0;">
+                                <span>C#</span> <span>Flutter</span> <span>Node.js</span> <span>Secure Cloud</span>
+                            </div>
+                            <a href="Finsight/project-finsight.html" class="btn-link" id="finsight-project-link">View <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Wisdom Portal -->
+                    <div class="product-card glass-card fade-in" id="product-wisdom">
+                        <div>
+                            <div class="product-card-header">
+                                <span class="badge-tag flagship">Web Application</span>
+                                <i class="fas fa-calendar-alt" style="font-size: 1.5rem; color: var(--accent-indigo);"></i>
+                            </div>
+                            <h4>Wisdom Portal</h4>
+                            <p>A custom community portal built for Wisdom Manjeri units to coordinate public lectures, weekend classes, and track attendee registrations in real time.</p>
+                        </div>
+                        <div class="product-card-footer">
+                            <div class="project-tech" style="margin-bottom: 0;">
+                                <span>React</span> <span>Vite</span> <span>Node.js</span> <span>Tailwind CSS</span> <span>MongoDB</span>
+                            </div>
+                            <a href="Wisdom/project-wisdom.html" class="btn-link" id="wisdom-project-link">View <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Saudi Cashbook -->
                     <div class="product-card glass-card fade-in" id="product-cashbook">
                         <div>
                             <div class="product-card-header">
-                                <span class="badge-tag beta">Active Beta</span>
-                                <i class="fab fa-android" style="font-size: 1.5rem; color: #16a34a;"></i>
+                                <span class="badge-tag flagship">Client Solution</span>
+                                <i class="fas fa-calculator" style="font-size: 1.5rem; color: var(--accent-blue);"></i>
                             </div>
-                            <h4>Cashbook Android</h4>
-                            <p>An offline-first, private personal accounting app. Built using Kotlin and Room SQLite to track ledger balances and income distribution without sending data to external cloud servers.</p>
+                            <h4>Saudi Cashbook</h4>
+                            <p>A simplified Tally/Cashbook desktop utility designed for ultra-fast transaction entry and quick local reporting. Offline-first with integrated KSA VAT calculations.</p>
                         </div>
                         <div class="product-card-footer">
                             <div class="project-tech" style="margin-bottom: 0;">
-                                <span>Kotlin</span> <span>Jetpack Compose</span> <span>Room SQLite</span>
+                                <span>C#</span> <span>WPF</span> <span>.NET Core</span> <span>SQLite</span> <span>VAT Engine</span>
                             </div>
-                            <a href="#" class="btn-link coming-soon" id="cashbook-project-link">View <i class="fas fa-external-link-alt"></i></a>
+                            <a href="Saudi-Cashbook/project-cashbook.html" class="btn-link" id="cashbook-project-link">View <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
 
-                    <!-- FinReport Engine -->
-                    <div class="product-card glass-card fade-in" id="product-finreport">
+                    <!-- Excel Daybook -->
+                    <div class="product-card glass-card fade-in" id="product-excel">
                         <div>
                             <div class="product-card-header">
-                                <span class="badge-tag beta">Utility</span>
-                                <i class="fas fa-chart-line" style="font-size: 1.5rem; color: var(--accent-indigo);"></i>
+                                <span class="badge-tag flagship">Client Solution</span>
+                                <i class="fas fa-file-excel" style="font-size: 1.5rem; color: #16a34a;"></i>
                             </div>
-                            <h4>FinReport Engine</h4>
-                            <p>A desktop-based reporting utility built to query local SQL ledgers. Generates and exports beautiful, regulatory-compliant PDF sheets and financial statements instantly.</p>
+                            <h4>Excel Daybook</h4>
+                            <p>A custom web and Android bookkeeping platform created for a retail shop to replace manual Excel tracking. Replicates spreadsheet structures with automated daybook reports.</p>
                         </div>
                         <div class="product-card-footer">
                             <div class="project-tech" style="margin-bottom: 0;">
-                                <span>Electron</span> <span>Node.js</span> <span>SQL</span> <span>PDFKit</span>
+                                <span>React</span> <span>Flutter</span> <span>Firebase</span> <span>Offline-First</span>
                             </div>
-                            <a href="#" class="btn-link coming-soon" id="finreport-project-link">View <i class="fas fa-external-link-alt"></i></a>
+                            <a href="Excel-Daybook/project-excel.html" class="btn-link" id="excel-project-link">View <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- btag -->
+                    <div class="product-card glass-card fade-in" id="product-btag">
+                        <div>
+                            <div class="product-card-header">
+                                <span class="badge-tag prototype">In Progress</span>
+                                <i class="fas fa-bug" style="font-size: 1.5rem; color: #d97706;"></i>
+                            </div>
+                            <h4>btag</h4>
+                            <p>A collaborative bug marking Chrome extension. Highlight and pin issues directly on web pages so other testers can instantly see identified bugs, eliminating duplicate Jira tickets.</p>
+                        </div>
+                        <div class="product-card-footer">
+                            <div class="project-tech" style="margin-bottom: 0;">
+                                <span>Chrome Extension</span> <span>JavaScript</span> <span>Real-Time Sync</span>
+                            </div>
+                            <a href="#" class="btn-link coming-soon" id="btag-project-link">View <i class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
                 </div>
@@ -243,80 +324,6 @@
         </div>
     </section>
 
-    <!-- Upcoming Pipeline (R&D Lab) -->
-    <section id="pipeline" class="section-padding">
-        <div class="container">
-            <div class="section-header fade-in">
-                <h2 class="section-title">The R&D <span class="highlight">Pipeline</span></h2>
-                <p class="section-subtitle">What's currently cooking in our labs. Track our progress towards the next product releases.</p>
-            </div>
-            
-            <div class="pipeline-timeline">
-                <!-- Pipeline Item 1: DevFlow Extension -->
-                <div class="pipeline-card glass-card fade-in" id="pipeline-devflow">
-                    <div>
-                        <div class="pipeline-meta">
-                            <span class="badge-tag pipeline">IDE Extension</span>
-                            <span style="font-size: 0.8rem; font-weight: 600; color: var(--accent-indigo);">Q3 2026</span>
-                        </div>
-                        <h4>DevFlow commit-analyst</h4>
-                        <p>An IDE integration tool designed to parse local diff states prior to committing, identifying API breaking changes and recommending semantic version bumps.</p>
-                    </div>
-                    <div class="progress-container">
-                        <div class="progress-header">
-                            <span>Development Progress</span>
-                            <span>65%</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress-fill" style="width: 65%;" aria-label="65 percent complete"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Pipeline Item 2: AeroDB -->
-                <div class="pipeline-card glass-card fade-in" id="pipeline-aerodb">
-                    <div>
-                        <div class="pipeline-meta">
-                            <span class="badge-tag pipeline">Database</span>
-                            <span style="font-size: 0.8rem; font-weight: 600; color: var(--accent-indigo);">Q4 2026</span>
-                        </div>
-                        <h4>AeroDB Lite</h4>
-                        <p>A zero-configuration, lightning-fast embedded database engine compiled in C++ for C# desktop projects, designed for low latency storage needs.</p>
-                    </div>
-                    <div class="progress-container">
-                        <div class="progress-header">
-                            <span>Prototyping Progress</span>
-                            <span>35%</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress-fill" style="width: 35%;" aria-label="35 percent complete"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Pipeline Item 3: WPF Glass Kit -->
-                <div class="pipeline-card glass-card fade-in" id="pipeline-glasskit">
-                    <div>
-                        <div class="pipeline-meta">
-                            <span class="badge-tag pipeline">Design Lib</span>
-                            <span style="font-size: 0.8rem; font-weight: 600; color: var(--accent-indigo);">Q1 2027</span>
-                        </div>
-                        <h4>WPF Acrylic UI Kit</h4>
-                        <p>A comprehensive open-source theme library for .NET WPF desktop developers to build modern, fluent-style Windows apps with ease.</p>
-                    </div>
-                    <div class="progress-container">
-                        <div class="progress-header">
-                            <span>Planning Progress</span>
-                            <span>15%</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress-fill" style="width: 15%;" aria-label="15 percent complete"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Collaboration & Contact -->
     <section id="contact" class="section-padding">
@@ -326,7 +333,7 @@
                 <p>Have an application design, complex integration tool, or a customized desktop project in mind? We partner with companies and developers to build high-performance software.</p>
                 <a href="mailto:drdeveloper123@gmail.com" id="contact-btn" class="btn btn-primary btn-large">Initiate Discussion <i class="fas fa-envelope"></i></a>
                 <div class="social-links">
-                    <a href="https://github.com/drDEVX-Creator" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://github.com/drDEV-Creator" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
                     <a href="https://www.linkedin.com/in/rishan-cm-b88712283" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
                     <a href="https://wa.me/919995338972" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                 </div>

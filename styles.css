@@ -5,24 +5,24 @@
     --bg-color: #f8fafc; /* Slate 50 */
     --bg-card: rgba(255, 255, 255, 0.75);
     --border-color: rgba(226, 232, 240, 0.8); /* Slate 200 */
-    --border-hover: rgba(99, 102, 241, 0.3); /* Indigo 500 translucent */
+    --border-hover: rgba(30, 64, 175, 0.3); /* Dark Blue translucent */
     --text-primary: #0f172a; /* Slate 900 */
     --text-secondary: #475569; /* Slate 600 */
     --text-muted: #64748b; /* Slate 500 */
-    --accent-blue: #2563eb; /* Cobalt Blue */
-    --accent-indigo: #4f46e5; /* Indigo */
-    --accent-cyan: #0ea5e9; /* Sky Blue */
+    --accent-blue: #1e40af; /* Premium Dark Blue */
+    --accent-indigo: #1e3a8a; /* Deep Navy Blue */
+    --accent-cyan: #0284c7; /* Sky Blue */
     
-    --gradient-primary: linear-gradient(135deg, var(--accent-blue), var(--accent-indigo));
-    --gradient-glow: linear-gradient(135deg, rgba(37, 99, 235, 0.05), rgba(79, 70, 229, 0.05));
-    --gradient-highlight: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(79, 70, 229, 0.1));
+    --gradient-primary: var(--accent-blue);
+    --gradient-glow: rgba(30, 64, 175, 0.03);
+    --gradient-highlight: rgba(30, 64, 175, 0.08);
     
     --font-heading: 'Outfit', sans-serif;
     --font-body: 'Inter', sans-serif;
     --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
     
     --glass-shadow: 0 12px 30px -8px rgba(15, 23, 42, 0.15), 0 4px 12px -2px rgba(15, 23, 42, 0.05);
-    --glass-shadow-hover: 0 24px 48px -12px rgba(79, 70, 229, 0.22), 0 8px 20px -4px rgba(15, 23, 42, 0.08);
+    --glass-shadow-hover: 0 24px 48px -12px rgba(30, 64, 175, 0.18), 0 8px 20px -4px rgba(15, 23, 42, 0.08);
     --glass-blur: blur(16px);
     
     --transition-speed: 0.3s;
@@ -137,10 +137,7 @@ a {
 }
 
 .highlight {
-    background: var(--gradient-primary);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--gradient-primary);
 }
 
 /* ==========================================
@@ -201,10 +198,7 @@ a {
 }
 
 .brand-text .brand-x {
-    background: linear-gradient(135deg, #94a3b8 0%, #475569 100%); /* High-contrast metallic silver */
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #475569; /* High-contrast slate */
     font-size: 1.7em; /* Set to 1.7em as requested */
     margin-left: 1px;
     display: inline-block;
@@ -715,7 +709,7 @@ a {
 /* Secondary product grid */
 .products-subgrid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 2.5rem;
 }
 
@@ -956,6 +950,10 @@ footer {
    Responsive Breakpoints
    ========================================== */
 @media (max-width: 1024px) {
+    .products-subgrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
     .glass-nav {
         padding: 1.25rem 5%;
     }
