@@ -13,32 +13,32 @@
         gtag('js', new Date());
         gtag('config', 'G-JK61WGNC8G');
     </script>
-    <title>PlayGround - Interactive Scripting & Debugging Tool | drDEVX</title>
+    <title>Finsight - Custom Tally ERP to Cloud & Mobile Sync System | drDEVX</title>
     <link rel="icon" type="image/png" href="../assets/dlogo.png">
 
     <!-- SEO Meta Tags -->
     <meta name="description"
-        content="PlayGround - Boost QA scripting productivity. Record steps, test multiple locators, run snippets in live Chrome Scratchpad, and connect to AI coding agents via MCP.">
+        content="Finsight - A custom enterprise bridge developed for Finite Global. Securely sync Tally ERP local accounts data to cloud databases and view balance sheets, profit & loss, and daybooks in real time via mobile app.">
     <meta name="keywords"
-        content="PlayGround, automation scripting, QA testing tool, MCP server, live chrome scratchpad, locator prompt, playwright debugger, AI test builder, drDEVX">
+        content="Finsight, Tally connector, Tally to cloud, Tally mobile app, Finite Global, financial dashboard, custom accounting software, ERP bridge, C#, Flutter, drDEVX">
     <meta name="author" content="drDEVX">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://drdevx.pages.dev/Playground/project-playground.html">
+    <link rel="canonical" href="https://drdevx.pages.dev/Finsight/">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://drdevx.pages.dev/Playground/project-playground.html">
-    <meta property="og:title" content="PlayGround - Elite Scripting Workspace">
-    <meta property="og:description" content="Supercharge your Playwright scripting workflow. Interactive locator tests, live scratchpad executions, and direct MCP connection.">
-    <meta property="og:image" content="https://drdevx.pages.dev/Playground/2026-06-07_09h37_10.png">
+    <meta property="og:url" content="https://drdevx.pages.dev/Finsight/">
+    <meta property="og:title" content="Finsight - Tally ERP Cloud Sync Solution">
+    <meta property="og:description" content="Securely sync Tally ERP accounting data to cloud databases and view financial reports on dynamic mobile dashboards. Engineered custom for Finite Global.">
+    <meta property="og:image" content="https://drdevx.pages.dev/Finsight/desktopApp.png">
     <meta property="og:site_name" content="drDEVX">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://drdevx.pages.dev/Playground/project-playground.html">
-    <meta name="twitter:title" content="PlayGround - Elite Scripting Workspace">
-    <meta name="twitter:description" content="Supercharge your Playwright scripting workflow. Interactive locator tests, live scratchpad executions, and direct MCP connection.">
-    <meta name="twitter:image" content="https://drdevx.pages.dev/Playground/2026-06-07_09h37_10.png">
+    <meta name="twitter:url" content="https://drdevx.pages.dev/Finsight/">
+    <meta name="twitter:title" content="Finsight - Tally ERP Cloud Sync Solution">
+    <meta name="twitter:description" content="Securely sync Tally ERP accounting data to cloud databases and view financial reports on dynamic mobile dashboards. Engineered custom for Finite Global.">
+    <meta name="twitter:image" content="https://drdevx.pages.dev/Finsight/desktopApp.png">
 
     <!-- Google Fonts -->
     <link
@@ -49,11 +49,9 @@
 
     <style>
         :root {
-            --playground-emerald: #1e40af; /* Premium Dark Blue instead of emerald */
-            --playground-cyan: #1e3a8a; /* Deep Navy Blue */
-            --playground-blue: #1e40af; /* Playground primary blue */
-            --playground-teal-glow: rgba(30, 64, 175, 0.08);
-            --playground-bg-dark: #f8fafc;
+            --finsight-blue: #1e40af; /* Solid Dark Blue */
+            --finsight-deep: #1e3a8a; /* Deep Navy Blue */
+            --finsight-bg-dark: #f8fafc;
             --glass-bg: rgba(255, 255, 255, 0.75);
             --glass-border: rgba(226, 232, 240, 0.8);
             
@@ -69,7 +67,7 @@
         }
 
         body {
-            background-color: var(--playground-bg-dark);
+            background-color: var(--finsight-bg-dark);
             background-image:
                 radial-gradient(circle at 10% 20%, rgba(30, 64, 175, 0.03) 0%, transparent 40%),
                 radial-gradient(circle at 90% 80%, rgba(30, 64, 175, 0.02) 0%, transparent 40%),
@@ -91,7 +89,7 @@
         h1 {
             font-size: 3.5rem;
             line-height: 1.1;
-            color: var(--playground-emerald);
+            color: var(--finsight-blue);
             filter: drop-shadow(0 4px 12px rgba(30, 64, 175, 0.08));
         }
 
@@ -115,10 +113,10 @@
         }
 
         /* ========== UTILITIES & ACCENTS ========== */
-        .highlight-emerald { color: var(--playground-emerald); }
-        .highlight-cyan { color: var(--playground-cyan); }
+        .highlight-blue { color: var(--finsight-blue); }
+        .highlight-deep { color: var(--finsight-deep); }
         .gradient-text {
-            color: var(--playground-emerald);
+            color: var(--finsight-blue);
             font-weight: bold;
         }
 
@@ -177,7 +175,7 @@
             align-items: center;
             justify-content: center;
             gap: 0.6rem;
-            background: var(--playground-emerald);
+            background: var(--finsight-blue);
             padding: 12px 30px;
             border-radius: 8px;
             color: #ffffff !important;
@@ -193,6 +191,29 @@
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(30, 64, 175, 0.35);
             color: #ffffff;
+        }
+
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+            background: #ffffff;
+            border: 1px solid var(--glass-border);
+            padding: 12px 30px;
+            border-radius: 8px;
+            color: #0f172a !important;
+            font-weight: 600;
+            font-size: 0.95rem;
+            font-family: 'Outfit', sans-serif;
+            box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            transform: translateY(-2px);
+            background: var(--finsight-bg-dark);
+            border-color: #cbd5e1;
         }
 
         .split-grid {
@@ -217,20 +238,20 @@
 
         ul.feature-list li::before {
             content: "➔";
-            color: var(--playground-emerald);
+            color: var(--finsight-blue);
             margin-right: 12px;
             font-size: 0.8em;
         }
 
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 24px;
             margin-top: 30px;
         }
 
         .panel-info h4 {
-            font-size: 1.35rem;
+            font-size: 1.25rem;
             margin-bottom: 8px;
             display: flex;
             align-items: center;
@@ -238,7 +259,7 @@
         }
 
         .panel-info p {
-            font-size: 0.92rem;
+            font-size: 0.9rem;
             margin-bottom: 0;
             color: #475569;
         }
@@ -246,7 +267,7 @@
         .panel-media {
             border-radius: 8px;
             overflow: hidden;
-            background: #0f172a; /* Unified dark background for dark-themed app screenshots */
+            background: #0f172a;
             border: 1px solid rgba(15, 23, 42, 0.1);
             display: flex;
             justify-content: center;
@@ -275,7 +296,7 @@
             max-width: 1200px;
             width: 100%;
             display: grid;
-            grid-template-columns: 0.96fr 1.04fr;
+            grid-template-columns: 0.92fr 1.08fr;
             gap: 40px;
             align-items: center;
         }
@@ -354,7 +375,7 @@
             transform: translateY(-2px);
             border-color: rgba(30, 64, 175, 0.3);
             background: rgba(30, 64, 175, 0.04);
-            color: var(--playground-emerald);
+            color: var(--finsight-blue);
         }
 
         .hero-cta-group {
@@ -433,7 +454,7 @@
             padding: 4px 10px;
             border-radius: 10px;
             background: rgba(30, 64, 175, 0.06);
-            color: var(--playground-emerald);
+            color: var(--finsight-blue);
             margin-bottom: 15px;
             font-weight: 700;
         }
@@ -472,6 +493,12 @@
 
             .hero-cta-group {
                 justify-content: center;
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .btn-primary, .btn-secondary {
+                width: 100%;
             }
 
             .split-grid {
@@ -499,14 +526,11 @@
                 display: grid;
                 grid-template-columns: 1fr 1fr;
             }
-            .btn-primary {
-                width: 100%;
-            }
         }
 
         /* Scroll Progress */
         .scroll-progress {
-            background: var(--playground-emerald);
+            background: var(--finsight-blue);
             box-shadow: 0 0 10px rgba(30, 64, 175, 0.4);
             height: 3px;
             z-index: 9999;
@@ -597,259 +621,241 @@
             <div class="hero-grid-container">
                 <div class="hero-text-side fade-in-up">
                     <div class="logo-badge-card" style="width: 76px; height: 76px; display: inline-flex; align-items: center; justify-content: center; background: #0f172a; border-radius: 14px; border: 1px solid rgba(255, 255, 255, 0.1); margin-bottom: 20px; box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.15), inset 0 1px 1px rgba(255,255,255,0.05);">
-                        <img src="./pG Icon.png" alt="PlayGround Logo" style="width: 48px; height: 48px; object-fit: contain; filter: drop-shadow(0 4px 10px rgba(30,64,175,0.35));">
+                        <i class="fas fa-sync" style="font-size: 2.2rem; color: #38bdf8; filter: drop-shadow(0 4px 10px rgba(30,64,175,0.35));"></i>
                     </div>
-                    <h1 class="hero-title">PlayGround</h1>
-                    <h3 class="hero-subtitle">The ultimate developer workbench for Playwright. Supercharge script authoring, test dynamic selectors instantly, and inspect browser interactions in real-time.</h3>
+                    <span class="badge" style="background: rgba(30, 64, 175, 0.08); color: var(--finsight-blue); border-color: rgba(30, 64, 175, 0.2); width: fit-content; margin-bottom: 15px;">Client Solution</span>
+                    <h1 class="hero-title">Finsight</h1>
+                    <h3 class="hero-subtitle">A custom corporate financial data sync and reporting platform engineered for Finite Global. Bridges local Tally ERP software securely to executive web and mobile dashboards.</h3>
 
                     <div class="hero-badges">
-                        <div class="badge"><span>Playwright Core</span></div>
-                        <div class="badge"><span>Live Chrome Tunnel</span></div>
-                        <div class="badge"><span>MCP Agent Host</span></div>
-                        <div class="badge"><span>Interactive Codegen</span></div>
+                        <div class="badge"><span>Tally ERP ODBC</span></div>
+                        <div class="badge"><span>Desktop Connector</span></div>
+                        <div class="badge"><span>Flutter Mobile App</span></div>
+                        <div class="badge"><span>Secure Cloud Storage</span></div>
                     </div>
 
-                    <div class="hero-cta-group" id="download">
-                        <a href="https://github.com/drDEV-Creator/drdev/releases/download/Playground_V1/Playground.Setup.1.0.0.exe"
-                            class="btn-primary" id="download-alpha-btn" target="_blank"><i class="fas fa-download"></i> Download for Windows</a>
+                    <div class="hero-cta-group">
+                        <a href="../index.html#contact" class="btn-primary" id="request-quote-btn"><i class="fas fa-envelope"></i> Request Similar Solution</a>
+                        <a href="https://www.finiteglobal.com/" target="_blank" class="btn-secondary" id="client-website-btn"><i class="fas fa-external-link-alt"></i> Visit Client Website</a>
                     </div>
-                    <p style="margin-top: 10px; font-size: 0.82rem; opacity: 0.65;">
-                        Runs locally on Windows 10 & 11 (requires Node.js)
+                    <p style="margin-top: 15px; font-size: 0.82rem; opacity: 0.65;">
+                        Developed custom for Finite Tax & Global Corp.
                     </p>
                 </div>
                 <div class="hero-visual-side fade-in-up">
                     <div class="hero-mockup-wrapper">
-                        <!-- Displays the main workspace -->
-                        <img src="./2026-06-07_09h37_10.png" class="hero-mockup-img" alt="PlayGround Main Workspace">
+                        <!-- Displays the Tally Connector Desktop Sync Utility -->
+                        <img src="./desktopApp.png" class="hero-mockup-img" alt="Tally Connector Desktop Utility">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- PROBLEM & SOLUTION COMPARISON -->
-    <section id="problem-solution">
+    <!-- PROJECT OVERVIEW -->
+    <section id="project-overview">
         <div class="container">
             <div class="section-header reveal-on-scroll">
-                <h2 class="section-title">Reimagining Test Scripting</h2>
-                <p class="section-subtitle">Why traditional automation workflows break, and how PlayGround patches the leak.</p>
+                <h2 class="section-title">Bridging Offline Accounting & Mobile Executives</h2>
+                <p class="section-subtitle">Tally ERP is the industry standard for financial bookkeeping, but its data remains locked on local desktop office machines. Finsight bridges this gap securely.</p>
             </div>
             
             <div class="split-grid">
-                <!-- Problem Card -->
-                <div class="glass-card reveal-on-scroll" style="border-left: 4px solid var(--playground-cyan);">
-                    <h3 style="font-size: 1.35rem; margin-bottom: 15px; display: flex; align-items: center; gap: 8px; color: var(--playground-cyan);">
-                        <i class="fas fa-exclamation-triangle"></i> The Scripting Nightmare
-                    </h3>
-                    <ul class="feature-list">
-                        <li>Constantly re-running entire test files to debug a single dynamic selector</li>
-                        <li>Standard codegen tools produce fragile, unconfigurable locators</li>
-                        <li>Dynamic, shadowed, or deep DOM elements break auto-selectors</li>
-                        <li>AIs struggle to script pages due to complex navigation states</li>
-                    </ul>
+                <div class="reveal-on-scroll">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: var(--finsight-blue);">The Business Requirement</h3>
+                    <p style="color: #475569; font-size: 1.02rem; line-height: 1.7;">
+                        Finite Global required a secure, background automation bridge that could extract accounting ledgers, invoices, vouchers, and receivables directly from local desktop computers running Tally ERP, transmit them securely to a cloud datastore, and display beautiful financial insights on the client's mobile devices.
+                    </p>
+                    <p style="color: #475569; font-size: 1.02rem; line-height: 1.7;">
+                        The system is split into two primary components: the **Tally Connector Desktop Utility** and the **Finsight Mobile Dashboard App**.
+                    </p>
                 </div>
-                
-                <!-- Solution Card -->
-                <div class="glass-card reveal-on-scroll" style="border-left: 4px solid var(--playground-emerald);">
-                    <h3 style="font-size: 1.35rem; margin-bottom: 15px; display: flex; align-items: center; gap: 8px; color: var(--playground-emerald);">
-                        <i class="fas fa-magic"></i> The PlayGround Solution
-                    </h3>
+                <div class="glass-card reveal-on-scroll" style="border-left: 4px solid var(--finsight-blue);">
+                    <h4 style="font-size: 1.25rem; margin-bottom: 12px;"><i class="fas fa-shield-alt" style="color: var(--finsight-blue);"></i> Core Architecture Attributes</h4>
                     <ul class="feature-list">
-                        <li>Locate once, generate multiple selector candidates instantly</li>
-                        <li>Write, compile, and run code snippets directly on the active browser state</li>
-                        <li>Auto-compile structural element features into high-context LLM prompts</li>
-                        <li>Direct MCP host connects live Chrome sessions to coding agents</li>
+                        <li>ODBC data fetching query cycles running locally</li>
+                        <li>Automated, secure cloud payloads using REST API hooks</li>
+                        <li>Multi-tenant cloud structure partitioned by credentials</li>
+                        <li>Flutter mobile dashboard compiling real-time Tally states</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- PRODUCT CAPABILITIES SECTION (Redesigned Alternating Rows + Grid) -->
-    <section id="features">
+    <!-- ARCHITECTURAL COMPONENTS -->
+    <section id="components">
         <div class="container">
             <div class="section-header reveal-on-scroll">
-                <h2 class="section-title">Product Capabilities</h2>
-                <p class="section-subtitle">A powerful array of diagnostic and scripting facilities designed for automation engineers.</p>
+                <h2 class="section-title">Architectural Components</h2>
+                <p class="section-subtitle">How data travels from local office PCs to secure mobile devices.</p>
             </div>
 
-            <!-- Capability 1: Codegen Showcase (Alternating Layout - Image Right) -->
+            <!-- Component 1: Tally Connector (Image Right) -->
             <div class="split-grid reveal-on-scroll" style="margin-bottom: 60px;">
                 <div>
-                    <span class="badge" style="background: rgba(30, 64, 175, 0.08); color: var(--playground-emerald); border-color: rgba(30, 64, 175, 0.2); width: fit-content; margin-bottom: 15px;">Smart Recording</span>
-                    <h3 style="font-size: 1.8rem; margin-bottom: 15px;"><i class="fas fa-keyboard" style="color: var(--playground-emerald);"></i> Multi-Locator Codegen & Validation</h3>
+                    <span class="badge" style="background: rgba(30, 64, 175, 0.08); color: var(--finsight-blue); border-color: rgba(30, 64, 175, 0.2); width: fit-content; margin-bottom: 15px;">Desktop Daemon</span>
+                    <h3 style="font-size: 1.8rem; margin-bottom: 15px;"><i class="fas fa-desktop" style="color: var(--finsight-blue);"></i> Tally Desktop Connector</h3>
                     <p style="font-size: 1.05rem; line-height: 1.7; color: #475569; margin-bottom: 20px;">
-                        Generate script actions as you click and type. Unlike normal Playwright codegen, PlayGround produces multiple locator options concurrently (CSS, XPath, text, test-id). Toggle between them to test compatibility right away on the live browser.
+                        The desktop application is installed locally on the accountant's PC where Tally runs. It operates quietly in the background, communicating with Tally via local ports to fetch active company books. Once fetched, it structuralizes company ledgers and compiles upload payloads to push to the cloud.
                     </p>
                     <ul class="feature-list">
-                        <li>Records user actions dynamically as Playwright script blocks</li>
-                        <li>Generates multiple robust locator candidates for every element</li>
-                        <li>Toggle and verify selectors instantly in the live browser</li>
+                        <li>Automatic local port verification and connection diagnostics</li>
+                        <li>Active company list loading with individual fetch controls</li>
+                        <li>Encrypted cloud sync status logs showing precise upload histories</li>
                     </ul>
                 </div>
                 <div class="glass-card" style="padding: 12px; display: flex; justify-content: center; align-items: center; background: #0f172a;">
-                    <img src="./2026-06-07_09h37_17.png" class="hol-image" alt="Selector Strategy Selector Panel" style="border-radius: 8px; width: 100%;">
+                    <img src="./desktopApp.png" class="hol-image" alt="Tally Connector Desktop Utility UI" style="border-radius: 8px; width: 100%;">
                 </div>
             </div>
 
-            <!-- Capability 2: Scratchpad Showcase (Alternating Layout - Image Left) -->
+            <!-- Component 2: Mobile App Dashboard (Image Left) -->
             <div class="split-grid reveal-on-scroll" style="margin-bottom: 80px;">
-                <div class="glass-card" style="padding: 12px; display: flex; justify-content: center; align-items: center; background: #0f172a;">
-                    <img src="./2026-06-07_09h38_01.png" class="hol-image" alt="Live Chrome Scratchpad Code Runner" style="border-radius: 8px; width: 100%;">
+                <div class="glass-card" style="padding: 12px; display: flex; justify-content: center; align-items: center; background: #0f172a; max-width: 380px; margin: 0 auto;">
+                    <img src="./Mobile app/mobile_dashboard.jpeg" class="hol-image" alt="Finsight Mobile Dashboard Screen" style="border-radius: 8px; width: 100%;">
                 </div>
                 <div>
-                    <span class="badge" style="background: rgba(30, 64, 175, 0.08); color: var(--playground-emerald); border-color: rgba(30, 64, 175, 0.2); width: fit-content; margin-bottom: 15px;">Sandbox Testing</span>
-                    <h3 style="font-size: 1.8rem; margin-bottom: 15px;"><i class="fas fa-terminal" style="color: var(--playground-emerald);"></i> Live Chrome Scratchpad</h3>
+                    <span class="badge" style="background: rgba(30, 64, 175, 0.08); color: var(--finsight-blue); border-color: rgba(30, 64, 175, 0.2); width: fit-content; margin-bottom: 15px;">Flutter Mobile App</span>
+                    <h3 style="font-size: 1.8rem; margin-bottom: 15px;"><i class="fas fa-mobile-alt" style="color: var(--finsight-blue);"></i> Executive Mobile Dashboard</h3>
                     <p style="font-size: 1.05rem; line-height: 1.7; color: #475569; margin-bottom: 20px;">
-                        Test script modifications instantly. Open your target state, enter code snippets directly into the scratchpad editor, and run them. PlayGround compiles and triggers them on your active browser instance, outputting console variables and stacktraces in real time.
+                        The client-side mobile app acts as the front-end dashboard for business owners. After passing credential validation, executives view outstanding receivables and payables, check live bank ledger balances, and drill down into orders and deliveries instantly.
                     </p>
                     <ul class="feature-list">
-                        <li>Run isolated playwright code blocks directly against live Chromium</li>
-                        <li>Eliminate the need to repeatedly run setup steps or full test files</li>
-                        <li>View console logs and runtime variables in a unified debugger panel</li>
+                        <li>Secure user profiles matched with cloud-synced databases</li>
+                        <li>Outstanding receivables/payables tiles updated in real time</li>
+                        <li>Clean UI displaying order statuses and delivery summaries</li>
                     </ul>
-                </div>
-            </div>
-
-            <!-- 3-Column Grid for AI & Connection Assistants -->
-            <div class="features-grid reveal-on-scroll">
-                <!-- Helper Tool 1: Locator Prompt -->
-                <div class="glass-card" style="display: flex; flex-direction: column; justify-content: space-between;">
-                    <div class="panel-info">
-                        <h4 style="font-size: 1.25rem; margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
-                            <i class="fas fa-bullhorn" style="color: var(--playground-emerald);"></i> Locator Prompter
-                        </h4>
-                        <p style="font-size: 0.9rem; color: #475569;">
-                            Struggling with a complex, nested element? Pick the target element; PlayGround compiles its DOM footprint, styles, and context into a prompt you can paste in LLMs to get clean scripts.
-                        </p>
-                    </div>
-                    <div class="panel-media" style="margin-top: 15px; padding: 8px; background: #0f172a; border-radius: 8px;">
-                        <img src="./2026-06-07_09h45_16.png" class="hol-image" alt="Locator prompt generation modal" style="width: 100%; border-radius: 6px;">
-                    </div>
-                </div>
-
-                <!-- Helper Tool 2: AI Script Assistant -->
-                <div class="glass-card" style="display: flex; flex-direction: column; justify-content: space-between;">
-                    <div class="panel-info">
-                        <h4 style="font-size: 1.25rem; margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
-                            <i class="fas fa-comments" style="color: var(--playground-emerald);"></i> AI Script Assistant
-                        </h4>
-                        <p style="font-size: 0.9rem; color: #475569;">
-                            Need writing help? Chat directly with the integrated assistant to debug code errors, verify selector stability, or refactor scripts inside your active workspace.
-                        </p>
-                    </div>
-                    <div class="panel-media" style="margin-top: 15px; padding: 8px; background: #0f172a; border-radius: 8px;">
-                        <img src="./2026-06-07_09h45_32.png" class="hol-image" alt="AI Debugger Chat Panel" style="width: 100%; border-radius: 6px;">
-                    </div>
-                </div>
-
-                <!-- Helper Tool 3: MCP Host -->
-                <div class="glass-card" style="display: flex; flex-direction: column; justify-content: space-between;">
-                    <div class="panel-info">
-                        <h4 style="font-size: 1.25rem; margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
-                            <i class="fas fa-network-wired" style="color: var(--playground-emerald);"></i> MCP Host (Port 4567)
-                        </h4>
-                        <p style="font-size: 0.9rem; color: #475569;">
-                            Connect your active Chrome instance directly to external coding agents (Claude, Copilot). AI inspects and executes commands on active pages in real time.
-                        </p>
-                    </div>
-                    <div class="panel-media" style="margin-top: 15px; padding: 12px; background: #0f172a; border-radius: 8px; display: flex; align-items: center; justify-content: center; min-height: 80px;">
-                        <img src="./2026-06-07_09h38_22.png" class="hol-image" alt="MCP Server Port Status Indicator" style="width: 100%; max-height: 50px; object-fit: contain; border-radius: 6px;">
-                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- INTERACTIVE VERIFICATION SECTION (Alternating Layout) -->
-    <section id="step-testing">
+    <!-- MOBILE REPORTS GALLERY -->
+    <section id="gallery">
         <div class="container">
-            <div class="split-grid">
-                <div class="reveal-on-scroll">
-                    <span class="badge" style="background: rgba(30, 64, 175, 0.08); color: var(--playground-emerald); border-color: rgba(30, 64, 175, 0.2); width: fit-content; margin-bottom: 15px;">Dynamic Validation</span>
-                    <h2 style="font-size: 2.25rem; margin-bottom: 20px;">Run & Check Steps Individually</h2>
-                    <p style="color: #475569; font-size: 1.05rem; line-height: 1.7; margin-bottom: 25px;">
-                        Avoid running massive test files to evaluate minor script tweaks. PlayGround allows you to isolate a single action, select a selector, and hit "Run step in browser" to check execution accuracy on the spot.
-                    </p>
-                    <ul class="feature-list">
-                        <li>Evaluate dynamic timers and click responses immediately</li>
-                        <li>Assert class triggers and visibility attributes on active pages</li>
-                        <li>Save hours of environment teardowns and setup cycles</li>
-                    </ul>
+            <div class="section-header reveal-on-scroll">
+                <h2 class="section-title">Mobile Reporting Suite</h2>
+                <p class="section-subtitle">Drill down into standard compliance statements and daily books on the go.</p>
+            </div>
+
+            <div class="features-grid reveal-on-scroll">
+                <!-- Report Card 1: Balance Sheet -->
+                <div class="glass-card" style="display: flex; flex-direction: column; justify-content: space-between; align-items: center; text-align: center;">
+                    <div class="panel-info">
+                        <h4 style="font-size: 1.15rem; margin-bottom: 8px; justify-content: center;">
+                            <i class="fas fa-balance-scale" style="color: var(--finsight-blue);"></i> Balance Sheet
+                        </h4>
+                        <p style="font-size: 0.88rem; color: #475569; margin-bottom: 15px;">
+                            Check assets, dynamic current liabilities, net profit reserves, and capitals in a structured format.
+                        </p>
+                    </div>
+                    <div style="background: #0f172a; padding: 8px; border-radius: 8px; max-width: 180px; margin-top: auto; border: 1px solid rgba(15, 23, 42, 0.1);">
+                        <img src="./Mobile app/mobile_balance_sheet.jpeg" class="hol-image" alt="Mobile Balance Sheet" style="width: 100%; border-radius: 6px;">
+                    </div>
                 </div>
-                <div class="glass-card reveal-on-scroll">
-                    <div class="panel-media" style="padding: 12px; background: #0f172a;">
-                        <img src="./2026-06-07_09h38_53.png" class="hol-image" alt="Run step in browser screenshot" style="border-radius: 8px; width: 100%;">
+
+                <!-- Report Card 2: Profit & Loss -->
+                <div class="glass-card" style="display: flex; flex-direction: column; justify-content: space-between; align-items: center; text-align: center;">
+                    <div class="panel-info">
+                        <h4 style="font-size: 1.15rem; margin-bottom: 8px; justify-content: center;">
+                            <i class="fas fa-chart-line" style="color: var(--finsight-blue);"></i> Profit & Loss
+                        </h4>
+                        <p style="font-size: 0.88rem; color: #475569; margin-bottom: 15px;">
+                            Monitor sales records, closing stocks, purchase expenses, indirect charges, and net profits.
+                        </p>
+                    </div>
+                    <div style="background: #0f172a; padding: 8px; border-radius: 8px; max-width: 180px; margin-top: auto; border: 1px solid rgba(15, 23, 42, 0.1);">
+                        <img src="./Mobile app/mobile_profit_loss.jpeg" class="hol-image" alt="Mobile Profit & Loss" style="width: 100%; border-radius: 6px;">
+                    </div>
+                </div>
+
+                <!-- Report Card 3: Daybook -->
+                <div class="glass-card" style="display: flex; flex-direction: column; justify-content: space-between; align-items: center; text-align: center;">
+                    <div class="panel-info">
+                        <h4 style="font-size: 1.15rem; margin-bottom: 8px; justify-content: center;">
+                            <i class="fas fa-book" style="color: var(--finsight-blue);"></i> Daybook Logs
+                        </h4>
+                        <p style="font-size: 0.88rem; color: #475569; margin-bottom: 15px;">
+                            Track daily transactions, vouchers, debit notes, and payment releases with filters.
+                        </p>
+                    </div>
+                    <div style="background: #0f172a; padding: 8px; border-radius: 8px; max-width: 180px; margin-top: auto; border: 1px solid rgba(15, 23, 42, 0.1);">
+                        <img src="./Mobile app/mobile_daybook.jpeg" class="hol-image" alt="Mobile Daybook Logs" style="width: 100%; border-radius: 6px;">
+                    </div>
+                </div>
+
+                <!-- Report Card 4: Reports Menu -->
+                <div class="glass-card" style="display: flex; flex-direction: column; justify-content: space-between; align-items: center; text-align: center;">
+                    <div class="panel-info">
+                        <h4 style="font-size: 1.15rem; margin-bottom: 8px; justify-content: center;">
+                            <i class="fas fa-folder-open" style="color: var(--finsight-blue);"></i> Reports Menu
+                        </h4>
+                        <p style="font-size: 0.88rem; color: #475569; margin-bottom: 15px;">
+                            Toggle smoothly between Daybooks, Balance Sheets, and Profit & Loss cards from a central panel.
+                        </p>
+                    </div>
+                    <div style="background: #0f172a; padding: 8px; border-radius: 8px; max-width: 180px; margin-top: auto; border: 1px solid rgba(15, 23, 42, 0.1);">
+                        <img src="./Mobile app/mobile_reports.jpeg" class="hol-image" alt="Mobile Reports List" style="width: 100%; border-radius: 6px;">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ARCHITECTURE & SPEED -->
-    <section style="position: relative;" id="performance">
+    <!-- ARCHITECTURE SPECIFICATIONS -->
+    <section style="position: relative;" id="specifications">
         <div class="container reveal-on-scroll">
             <div class="section-header">
-                <h2 style="font-size: 2.25rem;">Built for Productivity</h2>
-                <p>An elite runtime architecture designed to eliminate friction in test script creation.</p>
+                <h2 style="font-size: 2.25rem;">Technical Infrastructure</h2>
+                <p>A secure, low-overhead sync pipeline connecting local bookkeeping systems to mobile devices.</p>
             </div>
 
             <div class="tech-spec-grid">
-                <!-- Card 1: Core Architecture -->
+                <!-- Specification 1: ODBC Gateway -->
                 <div class="tech-card">
-                    <div class="tech-icon-circle" style="border-color: var(--playground-emerald);">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--playground-emerald)"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
-                        </svg>
+                    <div class="tech-icon-circle" style="border-color: var(--finsight-blue);">
+                        <i class="fas fa-network-wired" style="color: var(--finsight-blue);"></i>
                     </div>
-                    <span class="tech-tag">Runtime Engine</span>
-                    <h4>Playwright Core</h4>
-                    <p style="font-size: 0.88rem; margin: 0; color: #475569;">Directly binds to the official Playwright APIs, guaranteeing complete compatibility with standard test runners and page objects.</p>
+                    <span class="tech-tag">ODBC Query Engine</span>
+                    <h4>Local Tally API Bridge</h4>
+                    <p style="font-size: 0.88rem; margin: 0; color: #475569;">Binds locally to Tally's local server port (typically 9000), using XML payload fetches to retrieve ledger accounts, daybooks, and outstanding balance sheets without affecting database runtime performance.</p>
                 </div>
 
-                <!-- Card 2: Rendering Engine -->
+                <!-- Specification 2: Cloud Sync -->
                 <div class="tech-card">
-                    <div class="tech-icon-circle" style="border-color: var(--playground-emerald);">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--playground-emerald)"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <line x1="2" y1="12" x2="22" y2="12"></line>
-                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-                        </svg>
+                    <div class="tech-icon-circle" style="border-color: var(--finsight-blue);">
+                        <i class="fas fa-cloud-upload-alt" style="color: var(--finsight-blue);"></i>
                     </div>
-                    <span class="tech-tag" style="background: rgba(30, 64, 175, 0.06); color: var(--playground-emerald);">Browser Layer</span>
-                    <h4>Live CDP Connection</h4>
-                    <p style="font-size: 0.88rem; margin: 0; color: #475569;">Bridges scripts and views using raw Chrome DevTools Protocol (CDP) commands, letting you execute code on active, visible browser windows.</p>
+                    <span class="tech-tag">Cloud Daemon</span>
+                    <h4>Sync Service Gateway</h4>
+                    <p style="font-size: 0.88rem; margin: 0; color: #475569;">Encrypts Tally data packets using AES-256 standard protocols before transmitting them over secure HTTP interfaces. Upload logs show successful sync records.</p>
                 </div>
 
-                <!-- Card 3: Protocol -->
+                <!-- Specification 3: Flutter Mobile App -->
                 <div class="tech-card">
-                    <div class="tech-icon-circle" style="border-color: var(--playground-emerald);">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--playground-emerald)" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="4 17 10 11 10 17"></polyline>
-                            <line x1="12" y1="19" x2="20" y2="19"></line>
-                            <polyline points="4 7 10 13 10 7"></polyline>
-                            <line x1="12" y1="5" x2="20" y2="5"></line>
-                        </svg>
+                    <div class="tech-icon-circle" style="border-color: var(--finsight-blue);">
+                        <i class="fas fa-code" style="color: var(--finsight-blue);"></i>
                     </div>
-                    <span class="tech-tag">Agent Gateway</span>
-                    <h4>MCP Server (Port 4567)</h4>
-                    <p style="font-size: 0.88rem; margin: 0; color: #475569;">Hosts a Model Context Protocol server. External AI assistants query page information and run operations instantly without navigation overhead.</p>
+                    <span class="tech-tag">Mobile Framework</span>
+                    <h4>Flutter Client Dashboard</h4>
+                    <p style="font-size: 0.88rem; margin: 0; color: #475569;">A unified Android & iOS dashboard compiled in Flutter, ensuring smooth rendering speeds, visual chart updates, and secure auth verification routines.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- FOOTER CTA -->
-    <section style="text-align: center; padding: 60px 0;" id="download-footer">
+    <section style="text-align: center; padding: 60px 0;" id="request-footer">
         <div class="container reveal-on-scroll">
-            <h2 class="gradient-text" style="font-size: 3.5rem; margin-bottom: 8px;">Script Faster with PlayGround</h2>
-            <p style="font-size: 1.1rem; margin-bottom: 30px; color: #475569;">Supercharge your Playwright workflow with interactive locators, scratchpads, and MCP integrations.</p>
-            <a href="https://github.com/drDEV-Creator/drdev/releases/download/Playground_V1/Playground.Setup.1.0.0.exe"
-                class="btn-primary" id="download-alpha-btn-footer" target="_blank"><i class="fas fa-download"></i> Download for Windows</a>
-            <p style="margin-top: 20px; font-size: 0.9rem; color: #64748b;">If you face any issues in installation or usage, <a href="../index.html#contact" style="color: var(--playground-blue); text-decoration: underline; font-weight: 500;">connect with us</a>.</p>
+            <h2 style="font-size: 3rem; margin-bottom: 8px; color: var(--finsight-blue);">Need a Custom Sync Bridge?</h2>
+            <p style="font-size: 1.1rem; margin-bottom: 30px; color: #475569; max-width: 700px; margin-left: auto; margin-right: auto;">
+                We partner with corporate clients to build custom background sync utilities, cloud bridges, and mobile reporting dashboards. Get in touch to engineer a solution tailored to your operational workflows.
+            </p>
+            <div style="display: flex; gap: 15px; justify-content: center; align-items: center; flex-wrap: wrap;">
+                <a href="../index.html#contact" class="btn-primary"><i class="fas fa-envelope"></i> Request Similar Solution</a>
+                <a href="https://www.finiteglobal.com/" target="_blank" class="btn-secondary"><i class="fas fa-external-link-alt"></i> Visit Client Site</a>
+            </div>
         </div>
     </section>
 
@@ -984,14 +990,9 @@
                     particle.style.setProperty('--tx', tx);
                     particle.style.setProperty('--ty', ty);
 
-                    // Add dynamic coloring matching the PlayGround dark blue theme
-                    if (Math.random() > 0.5) {
-                        particle.style.background = 'var(--playground-emerald)';
-                        particle.style.boxShadow = '0 0 8px rgba(30, 64, 175, 0.6)';
-                    } else {
-                        particle.style.background = 'var(--playground-cyan)';
-                        particle.style.boxShadow = '0 0 8px rgba(30, 64, 175, 0.6)';
-                    }
+                    // Add dynamic coloring matching the Finsight dark blue theme
+                    particle.style.background = 'var(--finsight-blue)';
+                    particle.style.boxShadow = '0 0 8px rgba(30, 64, 175, 0.6)';
 
                     document.body.appendChild(particle);
                     setTimeout(() => particle.remove(), 600);

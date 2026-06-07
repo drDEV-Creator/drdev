@@ -13,32 +13,32 @@
         gtag('js', new Date());
         gtag('config', 'G-JK61WGNC8G');
     </script>
-    <title>Finsight - Custom Tally ERP to Cloud & Mobile Sync System | drDEVX</title>
+    <title>Saudi Cashbook - Fast-Entry Desktop Ledger & VAT Analytics | drDEVX</title>
     <link rel="icon" type="image/png" href="../assets/dlogo.png">
 
     <!-- SEO Meta Tags -->
     <meta name="description"
-        content="Finsight - A custom enterprise bridge developed for Finite Global. Securely sync Tally ERP local accounts data to cloud databases and view balance sheets, profit & loss, and daybooks in real time via mobile app.">
+        content="Saudi Cashbook - A simplified desktop cashbook and tally utility built for fast transaction entry and quick business insights. Offline-first with integrated KSA VAT calculations.">
     <meta name="keywords"
-        content="Finsight, Tally connector, Tally to cloud, Tally mobile app, Finite Global, financial dashboard, custom accounting software, ERP bridge, C#, Flutter, drDEVX">
+        content="Saudi Cashbook, Cashbook desktop app, Tally utility, WPF, C#, SQLite, KSA VAT, offline-first ledger, accounting software, drDEVX">
     <meta name="author" content="drDEVX">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://drdevx.pages.dev/Finsight/project-finsight.html">
+    <link rel="canonical" href="https://drdevx.pages.dev/Saudi-Cashbook/">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://drdevx.pages.dev/Finsight/project-finsight.html">
-    <meta property="og:title" content="Finsight - Tally ERP Cloud Sync Solution">
-    <meta property="og:description" content="Securely sync Tally ERP accounting data to cloud databases and view financial reports on dynamic mobile dashboards. Engineered custom for Finite Global.">
-    <meta property="og:image" content="https://drdevx.pages.dev/Finsight/desktopApp.png">
+    <meta property="og:url" content="https://drdevx.pages.dev/Saudi-Cashbook/">
+    <meta property="og:title" content="Saudi Cashbook - Fast-Entry Desktop Ledger & VAT Analytics">
+    <meta property="og:description" content="A simplified offline-first cashbook utility designed for rapid data entry and automatic VAT reporting. Built for desktop speed with C# and WPF.">
+    <meta property="og:image" content="https://drdevx.pages.dev/Saudi-Cashbook/dashboard.png">
     <meta property="og:site_name" content="drDEVX">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://drdevx.pages.dev/Finsight/project-finsight.html">
-    <meta name="twitter:title" content="Finsight - Tally ERP Cloud Sync Solution">
-    <meta name="twitter:description" content="Securely sync Tally ERP accounting data to cloud databases and view financial reports on dynamic mobile dashboards. Engineered custom for Finite Global.">
-    <meta name="twitter:image" content="https://drdevx.pages.dev/Finsight/desktopApp.png">
+    <meta name="twitter:url" content="https://drdevx.pages.dev/Saudi-Cashbook/">
+    <meta name="twitter:title" content="Saudi Cashbook - Fast-Entry Desktop Ledger & VAT Analytics">
+    <meta name="twitter:description" content="A simplified offline-first cashbook utility designed for rapid data entry and automatic VAT reporting. Built for desktop speed with C# and WPF.">
+    <meta name="twitter:image" content="https://drdevx.pages.dev/Saudi-Cashbook/dashboard.png">
 
     <!-- Google Fonts -->
     <link
@@ -49,9 +49,9 @@
 
     <style>
         :root {
-            --finsight-blue: #1e40af; /* Solid Dark Blue */
-            --finsight-deep: #1e3a8a; /* Deep Navy Blue */
-            --finsight-bg-dark: #f8fafc;
+            --cashbook-blue: #1e40af; /* Solid Dark Blue */
+            --cashbook-deep: #1e3a8a; /* Deep Navy Blue */
+            --cashbook-bg-dark: #f8fafc;
             --glass-bg: rgba(255, 255, 255, 0.75);
             --glass-border: rgba(226, 232, 240, 0.8);
             
@@ -67,7 +67,7 @@
         }
 
         body {
-            background-color: var(--finsight-bg-dark);
+            background-color: var(--cashbook-bg-dark);
             background-image:
                 radial-gradient(circle at 10% 20%, rgba(30, 64, 175, 0.03) 0%, transparent 40%),
                 radial-gradient(circle at 90% 80%, rgba(30, 64, 175, 0.02) 0%, transparent 40%),
@@ -89,7 +89,7 @@
         h1 {
             font-size: 3.5rem;
             line-height: 1.1;
-            color: var(--finsight-blue);
+            color: var(--cashbook-blue);
             filter: drop-shadow(0 4px 12px rgba(30, 64, 175, 0.08));
         }
 
@@ -113,10 +113,10 @@
         }
 
         /* ========== UTILITIES & ACCENTS ========== */
-        .highlight-blue { color: var(--finsight-blue); }
-        .highlight-deep { color: var(--finsight-deep); }
+        .highlight-blue { color: var(--cashbook-blue); }
+        .highlight-deep { color: var(--cashbook-deep); }
         .gradient-text {
-            color: var(--finsight-blue);
+            color: var(--cashbook-blue);
             font-weight: bold;
         }
 
@@ -175,7 +175,7 @@
             align-items: center;
             justify-content: center;
             gap: 0.6rem;
-            background: var(--finsight-blue);
+            background: var(--cashbook-blue);
             padding: 12px 30px;
             border-radius: 8px;
             color: #ffffff !important;
@@ -212,7 +212,7 @@
 
         .btn-secondary:hover {
             transform: translateY(-2px);
-            background: var(--finsight-bg-dark);
+            background: var(--cashbook-bg-dark);
             border-color: #cbd5e1;
         }
 
@@ -238,7 +238,7 @@
 
         ul.feature-list li::before {
             content: "➔";
-            color: var(--finsight-blue);
+            color: var(--cashbook-blue);
             margin-right: 12px;
             font-size: 0.8em;
         }
@@ -375,7 +375,7 @@
             transform: translateY(-2px);
             border-color: rgba(30, 64, 175, 0.3);
             background: rgba(30, 64, 175, 0.04);
-            color: var(--finsight-blue);
+            color: var(--cashbook-blue);
         }
 
         .hero-cta-group {
@@ -454,7 +454,7 @@
             padding: 4px 10px;
             border-radius: 10px;
             background: rgba(30, 64, 175, 0.06);
-            color: var(--finsight-blue);
+            color: var(--cashbook-blue);
             margin-bottom: 15px;
             font-weight: 700;
         }
@@ -530,7 +530,7 @@
 
         /* Scroll Progress */
         .scroll-progress {
-            background: var(--finsight-blue);
+            background: var(--cashbook-blue);
             box-shadow: 0 0 10px rgba(30, 64, 175, 0.4);
             height: 3px;
             z-index: 9999;
@@ -621,31 +621,30 @@
             <div class="hero-grid-container">
                 <div class="hero-text-side fade-in-up">
                     <div class="logo-badge-card" style="width: 76px; height: 76px; display: inline-flex; align-items: center; justify-content: center; background: #0f172a; border-radius: 14px; border: 1px solid rgba(255, 255, 255, 0.1); margin-bottom: 20px; box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.15), inset 0 1px 1px rgba(255,255,255,0.05);">
-                        <i class="fas fa-sync" style="font-size: 2.2rem; color: #38bdf8; filter: drop-shadow(0 4px 10px rgba(30,64,175,0.35));"></i>
+                        <i class="fas fa-calculator" style="font-size: 2.2rem; color: #38bdf8; filter: drop-shadow(0 4px 10px rgba(30,64,175,0.35));"></i>
                     </div>
-                    <span class="badge" style="background: rgba(30, 64, 175, 0.08); color: var(--finsight-blue); border-color: rgba(30, 64, 175, 0.2); width: fit-content; margin-bottom: 15px;">Client Solution</span>
-                    <h1 class="hero-title">Finsight</h1>
-                    <h3 class="hero-subtitle">A custom corporate financial data sync and reporting platform engineered for Finite Global. Bridges local Tally ERP software securely to executive web and mobile dashboards.</h3>
+                    <span class="badge" style="background: rgba(30, 64, 175, 0.08); color: var(--cashbook-blue); border-color: rgba(30, 64, 175, 0.2); width: fit-content; margin-bottom: 15px;">Client Solution</span>
+                    <h1 class="hero-title">Saudi Cashbook</h1>
+                    <h3 class="hero-subtitle">A simplified offline cashbook and bookkeeping application built for ultra-fast data entry and quick business reporting. Engineered as a native, offline-first desktop application.</h3>
 
                     <div class="hero-badges">
-                        <div class="badge"><span>Tally ERP ODBC</span></div>
-                        <div class="badge"><span>Desktop Connector</span></div>
-                        <div class="badge"><span>Flutter Mobile App</span></div>
-                        <div class="badge"><span>Secure Cloud Storage</span></div>
+                        <div class="badge"><span>C# WPF .NET Core</span></div>
+                        <div class="badge"><span>SQLite Offline DB</span></div>
+                        <div class="badge"><span>KSA VAT Engine</span></div>
+                        <div class="badge"><span>Hotkey Fast Entry</span></div>
                     </div>
 
                     <div class="hero-cta-group">
                         <a href="../index.html#contact" class="btn-primary" id="request-quote-btn"><i class="fas fa-envelope"></i> Request Similar Solution</a>
-                        <a href="https://www.finiteglobal.com/" target="_blank" class="btn-secondary" id="client-website-btn"><i class="fas fa-external-link-alt"></i> Visit Client Website</a>
                     </div>
                     <p style="margin-top: 15px; font-size: 0.82rem; opacity: 0.65;">
-                        Developed custom for Finite Tax & Global Corp.
+                        Developed custom for a private retail client operating in Saudi Arabia.
                     </p>
                 </div>
                 <div class="hero-visual-side fade-in-up">
                     <div class="hero-mockup-wrapper">
-                        <!-- Displays the Tally Connector Desktop Sync Utility -->
-                        <img src="./desktopApp.png" class="hero-mockup-img" alt="Tally Connector Desktop Utility">
+                        <!-- Displays the Saudi Cashbook main dashboard -->
+                        <img src="./dashboard.png" class="hero-mockup-img" alt="Saudi Cashbook Desktop Dashboard">
                     </div>
                 </div>
             </div>
@@ -656,27 +655,27 @@
     <section id="project-overview">
         <div class="container">
             <div class="section-header reveal-on-scroll">
-                <h2 class="section-title">Bridging Offline Accounting & Mobile Executives</h2>
-                <p class="section-subtitle">Tally ERP is the industry standard for financial bookkeeping, but its data remains locked on local desktop office machines. Finsight bridges this gap securely.</p>
+                <h2 class="section-title">Ultra-Fast Ledger Logging & VAT Tracking</h2>
+                <p class="section-subtitle">A simplified tally solution built for desktop speed, minimal keyboard actions, and local compliance accounting.</p>
             </div>
             
             <div class="split-grid">
                 <div class="reveal-on-scroll">
-                    <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: var(--finsight-blue);">The Business Requirement</h3>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: var(--cashbook-blue);">The Business Requirement</h3>
                     <p style="color: #475569; font-size: 1.02rem; line-height: 1.7;">
-                        Finite Global required a secure, background automation bridge that could extract accounting ledgers, invoices, vouchers, and receivables directly from local desktop computers running Tally ERP, transmit them securely to a cloud datastore, and display beautiful financial insights on the client's mobile devices.
+                        Modern cloud-based POS and accounting packages often introduce significant friction for high-speed cashiers and manual ledger entry. The client required a desktop utility capable of running without internet connectivity, utilizing local hotkeys to submit credit/debit records in under 3 seconds, and compiling tax-compliant VAT sheets dynamically.
                     </p>
                     <p style="color: #475569; font-size: 1.02rem; line-height: 1.7;">
-                        The system is split into two primary components: the **Tally Connector Desktop Utility** and the **Finsight Mobile Dashboard App**.
+                        By pairing a lightweight WPF interface with SQLite database indexes, we achieved zero-overhead voucher processing, instantaneous record searching, and offline KSA regulatory reports.
                     </p>
                 </div>
-                <div class="glass-card reveal-on-scroll" style="border-left: 4px solid var(--finsight-blue);">
-                    <h4 style="font-size: 1.25rem; margin-bottom: 12px;"><i class="fas fa-shield-alt" style="color: var(--finsight-blue);"></i> Core Architecture Attributes</h4>
+                <div class="glass-card reveal-on-scroll" style="border-left: 4px solid var(--cashbook-blue);">
+                    <h4 style="font-size: 1.25rem; margin-bottom: 12px;"><i class="fas fa-bolt" style="color: var(--cashbook-blue);"></i> Core Operational Principles</h4>
                     <ul class="feature-list">
-                        <li>ODBC data fetching query cycles running locally</li>
-                        <li>Automated, secure cloud payloads using REST API hooks</li>
-                        <li>Multi-tenant cloud structure partitioned by credentials</li>
-                        <li>Flutter mobile dashboard compiling real-time Tally states</li>
+                        <li>Keyboard-only focus: complete vouchers without using a mouse</li>
+                        <li>Offline availability: 100% operation with local SQL backups</li>
+                        <li>Automated tax calculations compliant with KSA VAT laws</li>
+                        <li>High-framerate rendering UI utilizing WPF layout composition</li>
                     </ul>
                 </div>
             </div>
@@ -687,116 +686,116 @@
     <section id="components">
         <div class="container">
             <div class="section-header reveal-on-scroll">
-                <h2 class="section-title">Architectural Components</h2>
-                <p class="section-subtitle">How data travels from local office PCs to secure mobile devices.</p>
+                <h2 class="section-title">Key Operational Interfaces</h2>
+                <p class="section-subtitle">Engineered workflows targeting speed, layout readability, and account overview.</p>
             </div>
 
-            <!-- Component 1: Tally Connector (Image Right) -->
+            <!-- Component 1: Dashboard (Image Right) -->
             <div class="split-grid reveal-on-scroll" style="margin-bottom: 60px;">
                 <div>
-                    <span class="badge" style="background: rgba(30, 64, 175, 0.08); color: var(--finsight-blue); border-color: rgba(30, 64, 175, 0.2); width: fit-content; margin-bottom: 15px;">Desktop Daemon</span>
-                    <h3 style="font-size: 1.8rem; margin-bottom: 15px;"><i class="fas fa-desktop" style="color: var(--finsight-blue);"></i> Tally Desktop Connector</h3>
+                    <span class="badge" style="background: rgba(30, 64, 175, 0.08); color: var(--cashbook-blue); border-color: rgba(30, 64, 175, 0.2); width: fit-content; margin-bottom: 15px;">Executive Overview</span>
+                    <h3 style="font-size: 1.8rem; margin-bottom: 15px;"><i class="fas fa-tachometer-alt" style="color: var(--cashbook-blue);"></i> SAR KPI Dashboard</h3>
                     <p style="font-size: 1.05rem; line-height: 1.7; color: #475569; margin-bottom: 20px;">
-                        The desktop application is installed locally on the accountant's PC where Tally runs. It operates quietly in the background, communicating with Tally via local ports to fetch active company books. Once fetched, it structuralizes company ledgers and compiles upload payloads to push to the cloud.
+                        The main landing layout provides cashiers and owners with immediate insight into the store's current financial status. Large telemetry cards track total cash-in, cash-out, outstanding vat receivables, and net balances in Saudi Riyal (SAR).
                     </p>
                     <ul class="feature-list">
-                        <li>Automatic local port verification and connection diagnostics</li>
-                        <li>Active company list loading with individual fetch controls</li>
-                        <li>Encrypted cloud sync status logs showing precise upload histories</li>
+                        <li>Real-time telemetry counters tracking active cash inflows/outflows</li>
+                        <li>Integrated visual reports indicating weekly ledger growth</li>
+                        <li>Dynamic account ledger quick-access columns</li>
                     </ul>
                 </div>
                 <div class="glass-card" style="padding: 12px; display: flex; justify-content: center; align-items: center; background: #0f172a;">
-                    <img src="./desktopApp.png" class="hol-image" alt="Tally Connector Desktop Utility UI" style="border-radius: 8px; width: 100%;">
+                    <img src="./dashboard.png" class="hol-image" alt="Saudi Cashbook Dashboard UI" style="border-radius: 8px; width: 100%;">
                 </div>
             </div>
 
-            <!-- Component 2: Mobile App Dashboard (Image Left) -->
+            <!-- Component 2: Sales Voucher Dialog (Image Left) -->
             <div class="split-grid reveal-on-scroll" style="margin-bottom: 80px;">
-                <div class="glass-card" style="padding: 12px; display: flex; justify-content: center; align-items: center; background: #0f172a; max-width: 380px; margin: 0 auto;">
-                    <img src="./Mobile app/mobile_dashboard.jpeg" class="hol-image" alt="Finsight Mobile Dashboard Screen" style="border-radius: 8px; width: 100%;">
+                <div class="glass-card" style="padding: 12px; display: flex; justify-content: center; align-items: center; background: #0f172a;">
+                    <img src="./sales_voucher.png" class="hol-image" alt="Saudi Cashbook Sales Voucher Billing Dialog" style="border-radius: 8px; width: 100%;">
                 </div>
                 <div>
-                    <span class="badge" style="background: rgba(30, 64, 175, 0.08); color: var(--finsight-blue); border-color: rgba(30, 64, 175, 0.2); width: fit-content; margin-bottom: 15px;">Flutter Mobile App</span>
-                    <h3 style="font-size: 1.8rem; margin-bottom: 15px;"><i class="fas fa-mobile-alt" style="color: var(--finsight-blue);"></i> Executive Mobile Dashboard</h3>
+                    <span class="badge" style="background: rgba(30, 64, 175, 0.08); color: var(--cashbook-blue); border-color: rgba(30, 64, 175, 0.2); width: fit-content; margin-bottom: 15px;">Data Entry Engine</span>
+                    <h3 style="font-size: 1.8rem; margin-bottom: 15px;"><i class="fas fa-edit" style="color: var(--cashbook-blue);"></i> Rapid Voucher Billing</h3>
                     <p style="font-size: 1.05rem; line-height: 1.7; color: #475569; margin-bottom: 20px;">
-                        The client-side mobile app acts as the front-end dashboard for business owners. After passing credential validation, executives view outstanding receivables and payables, check live bank ledger balances, and drill down into orders and deliveries instantly.
+                        The sales and purchase entry screens are optimized for maximum efficiency. cashiers use local shortcuts to open billing vouchers, quickly autocomplete client ledgers, type invoice values, and hit enter to submit. The system handles automated credit/debit dual balancing.
                     </p>
                     <ul class="feature-list">
-                        <li>Secure user profiles matched with cloud-synced databases</li>
-                        <li>Outstanding receivables/payables tiles updated in real time</li>
-                        <li>Clean UI displaying order statuses and delivery summaries</li>
+                        <li>Automatic VAT ledger balancing and percentage tracking</li>
+                        <li>Predictive client account dropdown matching based on keystrokes</li>
+                        <li>Sub-millisecond data commit loop targeting local SQLite indexes</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- MOBILE REPORTS GALLERY -->
+    <!-- REPORTS GALLERY -->
     <section id="gallery">
         <div class="container">
             <div class="section-header reveal-on-scroll">
-                <h2 class="section-title">Mobile Reporting Suite</h2>
-                <p class="section-subtitle">Drill down into standard compliance statements and daily books on the go.</p>
+                <h2 class="section-title">Local Accounting & Auditing Suite</h2>
+                <p class="section-subtitle">Offline reporting forms ensuring accurate tax returns and ledger transparency.</p>
             </div>
 
             <div class="features-grid reveal-on-scroll">
-                <!-- Report Card 1: Balance Sheet -->
+                <!-- Report Card 1: Reports Menu -->
                 <div class="glass-card" style="display: flex; flex-direction: column; justify-content: space-between; align-items: center; text-align: center;">
                     <div class="panel-info">
                         <h4 style="font-size: 1.15rem; margin-bottom: 8px; justify-content: center;">
-                            <i class="fas fa-balance-scale" style="color: var(--finsight-blue);"></i> Balance Sheet
+                            <i class="fas fa-folder" style="color: var(--cashbook-blue);"></i> Reports Hub
                         </h4>
                         <p style="font-size: 0.88rem; color: #475569; margin-bottom: 15px;">
-                            Check assets, dynamic current liabilities, net profit reserves, and capitals in a structured format.
+                            Quickly access Day Books, VAT sheets, stock logs, and detailed ledgers from a keyboard-guided hub.
                         </p>
                     </div>
-                    <div style="background: #0f172a; padding: 8px; border-radius: 8px; max-width: 180px; margin-top: auto; border: 1px solid rgba(15, 23, 42, 0.1);">
-                        <img src="./Mobile app/mobile_balance_sheet.jpeg" class="hol-image" alt="Mobile Balance Sheet" style="width: 100%; border-radius: 6px;">
+                    <div style="background: #0f172a; padding: 8px; border-radius: 8px; margin-top: auto; border: 1px solid rgba(15, 23, 42, 0.1);">
+                        <img src="./reports_menu.png" class="hol-image" alt="Reports Hub Selection" style="width: 100%; border-radius: 6px;">
                     </div>
                 </div>
 
-                <!-- Report Card 2: Profit & Loss -->
+                <!-- Report Card 2: Transactions Search -->
                 <div class="glass-card" style="display: flex; flex-direction: column; justify-content: space-between; align-items: center; text-align: center;">
                     <div class="panel-info">
                         <h4 style="font-size: 1.15rem; margin-bottom: 8px; justify-content: center;">
-                            <i class="fas fa-chart-line" style="color: var(--finsight-blue);"></i> Profit & Loss
+                            <i class="fas fa-search" style="color: var(--cashbook-blue);"></i> Search Ledger
                         </h4>
                         <p style="font-size: 0.88rem; color: #475569; margin-bottom: 15px;">
-                            Monitor sales records, closing stocks, purchase expenses, indirect charges, and net profits.
+                            Search through thousands of historical vouchers instantly. Filter by date, amount, account, or number.
                         </p>
                     </div>
-                    <div style="background: #0f172a; padding: 8px; border-radius: 8px; max-width: 180px; margin-top: auto; border: 1px solid rgba(15, 23, 42, 0.1);">
-                        <img src="./Mobile app/mobile_profit_loss.jpeg" class="hol-image" alt="Mobile Profit & Loss" style="width: 100%; border-radius: 6px;">
+                    <div style="background: #0f172a; padding: 8px; border-radius: 8px; margin-top: auto; border: 1px solid rgba(15, 23, 42, 0.1);">
+                        <img src="./transactions_list.png" class="hol-image" alt="Ledger Search Listing" style="width: 100%; border-radius: 6px;">
                     </div>
                 </div>
 
-                <!-- Report Card 3: Daybook -->
+                <!-- Report Card 3: Day Book -->
                 <div class="glass-card" style="display: flex; flex-direction: column; justify-content: space-between; align-items: center; text-align: center;">
                     <div class="panel-info">
                         <h4 style="font-size: 1.15rem; margin-bottom: 8px; justify-content: center;">
-                            <i class="fas fa-book" style="color: var(--finsight-blue);"></i> Daybook Logs
+                            <i class="fas fa-book" style="color: var(--cashbook-blue);"></i> Day Book
                         </h4>
                         <p style="font-size: 0.88rem; color: #475569; margin-bottom: 15px;">
-                            Track daily transactions, vouchers, debit notes, and payment releases with filters.
+                            Review chronological credit/debit records, tally totals, and inspect daily net cashier transactions.
                         </p>
                     </div>
-                    <div style="background: #0f172a; padding: 8px; border-radius: 8px; max-width: 180px; margin-top: auto; border: 1px solid rgba(15, 23, 42, 0.1);">
-                        <img src="./Mobile app/mobile_daybook.jpeg" class="hol-image" alt="Mobile Daybook Logs" style="width: 100%; border-radius: 6px;">
+                    <div style="background: #0f172a; padding: 8px; border-radius: 8px; margin-top: auto; border: 1px solid rgba(15, 23, 42, 0.1);">
+                        <img src="./day_book.png" class="hol-image" alt="Day Book Statement" style="width: 100%; border-radius: 6px;">
                     </div>
                 </div>
 
-                <!-- Report Card 4: Reports Menu -->
+                <!-- Report Card 4: Purchase Entry -->
                 <div class="glass-card" style="display: flex; flex-direction: column; justify-content: space-between; align-items: center; text-align: center;">
                     <div class="panel-info">
                         <h4 style="font-size: 1.15rem; margin-bottom: 8px; justify-content: center;">
-                            <i class="fas fa-folder-open" style="color: var(--finsight-blue);"></i> Reports Menu
+                            <i class="fas fa-receipt" style="color: var(--cashbook-blue);"></i> Purchase Forms
                         </h4>
                         <p style="font-size: 0.88rem; color: #475569; margin-bottom: 15px;">
-                            Toggle smoothly between Daybooks, Balance Sheets, and Profit & Loss cards from a central panel.
+                            Quickly log supplier invoices, calculate tax splits, and track active accounts payable.
                         </p>
                     </div>
-                    <div style="background: #0f172a; padding: 8px; border-radius: 8px; max-width: 180px; margin-top: auto; border: 1px solid rgba(15, 23, 42, 0.1);">
-                        <img src="./Mobile app/mobile_reports.jpeg" class="hol-image" alt="Mobile Reports List" style="width: 100%; border-radius: 6px;">
+                    <div style="background: #0f172a; padding: 8px; border-radius: 8px; margin-top: auto; border: 1px solid rgba(15, 23, 42, 0.1);">
+                        <img src="./purchase_voucher.png" class="hol-image" alt="Purchase Entry Screen" style="width: 100%; border-radius: 6px;">
                     </div>
                 </div>
             </div>
@@ -808,38 +807,38 @@
         <div class="container reveal-on-scroll">
             <div class="section-header">
                 <h2 style="font-size: 2.25rem;">Technical Infrastructure</h2>
-                <p>A secure, low-overhead sync pipeline connecting local bookkeeping systems to mobile devices.</p>
+                <p>Designed for sub-millisecond local latency, absolute data safety, and zero external software dependencies.</p>
             </div>
 
             <div class="tech-spec-grid">
-                <!-- Specification 1: ODBC Gateway -->
+                <!-- Specification 1: WPF Snappy UI -->
                 <div class="tech-card">
-                    <div class="tech-icon-circle" style="border-color: var(--finsight-blue);">
-                        <i class="fas fa-network-wired" style="color: var(--finsight-blue);"></i>
+                    <div class="tech-icon-circle" style="border-color: var(--cashbook-blue);">
+                        <i class="fas fa-window-restore" style="color: var(--cashbook-blue);"></i>
                     </div>
-                    <span class="tech-tag">ODBC Query Engine</span>
-                    <h4>Local Tally API Bridge</h4>
-                    <p style="font-size: 0.88rem; margin: 0; color: #475569;">Binds locally to Tally's local server port (typically 9000), using XML payload fetches to retrieve ledger accounts, daybooks, and outstanding balance sheets without affecting database runtime performance.</p>
+                    <span class="tech-tag">Desktop Framework</span>
+                    <h4>WPF & MVVM Architecture</h4>
+                    <p style="font-size: 0.88rem; margin: 0; color: #475569;">Written entirely using modern C# WPF structures. Keeps memory footprint extremely low (under 60MB) while maintaining instantaneous keyboard input responses and rendering speeds.</p>
                 </div>
 
-                <!-- Specification 2: Cloud Sync -->
+                <!-- Specification 2: SQLite Local Store -->
                 <div class="tech-card">
-                    <div class="tech-icon-circle" style="border-color: var(--finsight-blue);">
-                        <i class="fas fa-cloud-upload-alt" style="color: var(--finsight-blue);"></i>
+                    <div class="tech-icon-circle" style="border-color: var(--cashbook-blue);">
+                        <i class="fas fa-database" style="color: var(--cashbook-blue);"></i>
                     </div>
-                    <span class="tech-tag">Cloud Daemon</span>
-                    <h4>Sync Service Gateway</h4>
-                    <p style="font-size: 0.88rem; margin: 0; color: #475569;">Encrypts Tally data packets using AES-256 standard protocols before transmitting them over secure HTTP interfaces. Upload logs show successful sync records.</p>
+                    <span class="tech-tag">Storage Layer</span>
+                    <h4>Offline-First SQLite</h4>
+                    <p style="font-size: 0.88rem; margin: 0; color: #475569;">Uses local, transactional SQLite file databases. Ensures ACID compliance so that data remains undamaged even during sudden cashier system power cuts or OS crashes.</p>
                 </div>
 
-                <!-- Specification 3: Flutter Mobile App -->
+                <!-- Specification 3: VAT Calculation Engine -->
                 <div class="tech-card">
-                    <div class="tech-icon-circle" style="border-color: var(--finsight-blue);">
-                        <i class="fas fa-code" style="color: var(--finsight-blue);"></i>
+                    <div class="tech-icon-circle" style="border-color: var(--cashbook-blue);">
+                        <i class="fas fa-percent" style="color: var(--cashbook-blue);"></i>
                     </div>
-                    <span class="tech-tag">Mobile Framework</span>
-                    <h4>Flutter Client Dashboard</h4>
-                    <p style="font-size: 0.88rem; margin: 0; color: #475569;">A unified Android & iOS dashboard compiled in Flutter, ensuring smooth rendering speeds, visual chart updates, and secure auth verification routines.</p>
+                    <span class="tech-tag">Calculation Engine</span>
+                    <h4>Regulatory VAT Parser</h4>
+                    <p style="font-size: 0.88rem; margin: 0; color: #475569;">A strict local calculation class mapped to official Saudi KSA tax brackets. Handles multi-ledger allocations, roundings, and tax breakdown splits automatically.</p>
                 </div>
             </div>
         </div>
@@ -848,13 +847,12 @@
     <!-- FOOTER CTA -->
     <section style="text-align: center; padding: 60px 0;" id="request-footer">
         <div class="container reveal-on-scroll">
-            <h2 style="font-size: 3rem; margin-bottom: 8px; color: var(--finsight-blue);">Need a Custom Sync Bridge?</h2>
+            <h2 style="font-size: 3rem; margin-bottom: 8px; color: var(--cashbook-blue);">Need a Custom Desktop Utility?</h2>
             <p style="font-size: 1.1rem; margin-bottom: 30px; color: #475569; max-width: 700px; margin-left: auto; margin-right: auto;">
-                We partner with corporate clients to build custom background sync utilities, cloud bridges, and mobile reporting dashboards. Get in touch to engineer a solution tailored to your operational workflows.
+                We partner with businesses to engineer offline-first desktop tools, fast data entry panels, and customized transaction ledgers. Get in touch to build a solution tailored for your team.
             </p>
             <div style="display: flex; gap: 15px; justify-content: center; align-items: center; flex-wrap: wrap;">
                 <a href="../index.html#contact" class="btn-primary"><i class="fas fa-envelope"></i> Request Similar Solution</a>
-                <a href="https://www.finiteglobal.com/" target="_blank" class="btn-secondary"><i class="fas fa-external-link-alt"></i> Visit Client Site</a>
             </div>
         </div>
     </section>
@@ -947,9 +945,12 @@
                         card.style.boxShadow = `0 20px 45px -10px rgba(30, 64, 175, 0.12), 0 0 1px rgba(30, 64, 175, 0.1)`;
                     });
 
+                    card.style.transition = 'transform 0.1s ease, box-shadow 0.1s ease';
+
                     card.addEventListener('mouseleave', () => {
                         card.style.transform = 'perspective(1000px) scale(1) rotateX(0) rotateY(0)';
                         card.style.boxShadow = '';
+                        card.style.transition = 'transform 0.4s ease, box-shadow 0.4s ease';
                     });
                 });
             }
@@ -990,8 +991,8 @@
                     particle.style.setProperty('--tx', tx);
                     particle.style.setProperty('--ty', ty);
 
-                    // Add dynamic coloring matching the Finsight dark blue theme
-                    particle.style.background = 'var(--finsight-blue)';
+                    // Add dynamic coloring matching the cashbook dark blue theme
+                    particle.style.background = 'var(--cashbook-blue)';
                     particle.style.boxShadow = '0 0 8px rgba(30, 64, 175, 0.6)';
 
                     document.body.appendChild(particle);
