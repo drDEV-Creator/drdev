@@ -1,7 +1,7 @@
-# drDEV Website
+# drDEVX Website
 
 User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://drdev.pages.dev/sitemap.xml
+Sitemap: https://drdevx.pages.dev/sitemap.xml
